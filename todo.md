@@ -17,4 +17,4 @@
 - [x] Verify the semantic color-token fix after a clean development-server restart.
 - [x] Capture clean desktop and mobile screenshots showing the protected dashboard and always-visible safety panel.
 - [x] Repair the missing dashboard-layout import and verify the private workspace page renders.
-- [ ] Save a final checkpoint after all completed TODO items are marked complete.
+- [x] Save a final checkpoint after all completed TODO items are marked complete.
