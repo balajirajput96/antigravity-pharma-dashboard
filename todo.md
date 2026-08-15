@@ -59,3 +59,8 @@
 - [x] Run local build and safety validation for the completed Firebase Hosting migration package.
 - [x] Align the Firebase Hosting client, shared policy, functions policy, and migration manifest on `workspaceFiles` metadata and the approved `hindi-report` / `jsonl-audit` import vocabulary.
 - [x] Re-run Hosting, Functions, and root-package validation after the unified Firebase migration contract is in place.
+- [x] Create a separate free, no-data Firebase Hosting placeholder that has no Firebase SDK configuration, owner data, automation, callable Functions, or outreach capability.
+- [x] Configure Firebase Hosting to publish only the validated free placeholder while retaining the secured migration package unchanged for a future Blaze deployment.
+- [x] Build and inspect the free placeholder locally to verify it contains no private workspace data or service integrations.
+- [ ] Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL.
+- [x] Document the public placeholder boundary and the preserved secured Firebase migration path for a future owner-approved Blaze deployment.

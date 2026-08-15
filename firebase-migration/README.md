@@ -25,3 +25,9 @@ All private data must live beneath `owners/{ownerUid}/...`. The rules deny every
 ## Manual import manifest
 
 Use `migration-manifest.example.json` only as a field-level mapping guide. It is not data and must not be populated with private values in a browser prompt or public repository.
+
+## Free Firebase Hosting placeholder
+
+`firebase.json` currently publishes only `free-hosting/public` when deployed with `firebase deploy --only hosting`. This is a deliberately static, public placeholder with **no Firebase configuration, authentication, Firestore, Storage, Functions, job-search automation, report content, JSONL audits, drafts, contacts, forms, or outreach capability**. It does not migrate or expose any private workspace record.
+
+The full owner-only Firebase client remains under `hosting/` together with the Firestore, Storage, and callable Functions package. It is retained for a later migration only after the owner independently completes billing setup, explicitly approves a Blaze deployment, configures the `OWNER_EMAIL` server secret, and separately authorizes any private-data transfer. Until then, the Manus-hosted workspace remains the sole functional private dashboard.
