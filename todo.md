@@ -18,3 +18,9 @@
 - [x] Capture clean desktop and mobile screenshots showing the protected dashboard and always-visible safety panel.
 - [x] Repair the missing dashboard-layout import and verify the private workspace page renders.
 - [x] Save a final checkpoint after all completed TODO items are marked complete.
+- [x] Add an import-progress loading animation for the first verified lead import.
+- [x] Add an import-success notification that summarizes the completed first verified lead import.
+- [x] Test and visually verify the import feedback states on desktop and mobile.
+- [x] Refresh the dashboard while the first import is pending so completion feedback appears without a manual page reload.
+- [x] Capture desktop and mobile evidence for the pending-import panel and completion notification using a non-production preview state.
+- [x] Save a checkpoint for the verified-lead import feedback update.

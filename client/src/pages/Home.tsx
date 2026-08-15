@@ -5,9 +5,10 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { trpc } from "@/lib/trpc";
+import { isFirstImportPending as isFirstImportPendingState, shouldAnnounceFirstImport } from "@shared/importFeedback";
 import { toast } from "sonner";
-import { useMemo, useState } from "react";
-import { AlertTriangle, ArrowUpRight, CheckCircle2, Clock3, FileDown, FileText, FolderOpen, LockKeyhole, MailCheck, Play, ShieldCheck, Sparkles, XCircle } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { AlertTriangle, ArrowUpRight, CheckCircle2, Clock3, FileDown, FileText, FolderOpen, LoaderCircle, LockKeyhole, MailCheck, Play, ShieldCheck, Sparkles, XCircle } from "lucide-react";
 
 const safetyRules = [
   "No email, form, or external submission without Confirm & Send.",
@@ -31,7 +32,20 @@ function formatDate(value?: Date | string | null) {
 export default function Home() {
   const dashboard = trpc.workspace.dashboard.useQuery(undefined, { retry: false });
   const initialize = trpc.workspace.initialize.useMutation({ onSuccess: () => { toast.success("Daily instructions saved to your private workspace."); dashboard.refetch(); } });
-  const activateSchedule = trpc.workspace.activateDailySchedule.useMutation({ onSuccess: result => { toast.success(`Daily 10:00 IST schedule is active. Next run: ${result.nextExecutionAt ? formatDate(result.nextExecutionAt) : "platform pending"}`); dashboard.refetch(); } });
+  const [awaitingFirstImport, setAwaitingFirstImport] = useState(false);
+  const firstObservedRunId = useRef<number | null | undefined>(undefined);
+  const firstImportToastRunId = useRef<number | null>(null);
+  const activateSchedule = trpc.workspace.activateDailySchedule.useMutation({
+    onSuccess: result => {
+      if (!latest) setAwaitingFirstImport(true);
+      toast.success(`Daily 10:00 IST schedule is active. Next run: ${result.nextExecutionAt ? formatDate(result.nextExecutionAt) : "platform pending"}`);
+      dashboard.refetch();
+    },
+    onError: () => {
+      setAwaitingFirstImport(false);
+      toast.error("The daily schedule could not be activated. Your current workspace data was not changed.");
+    },
+  });
   const sendDraft = trpc.workspace.confirmAndSend.useMutation({ onSuccess: result => { toast.success(result.deliverySent ? "Email was accepted by the configured delivery provider and recorded as Verified-Sent." : "Confirmation was recorded, but no email provider is configured—nothing was sent."); dashboard.refetch(); } });
   const [selectedDraft, setSelectedDraft] = useState<any>(null);
   const data: any = dashboard.data;
@@ -39,7 +53,33 @@ export default function Home() {
   const files = data?.files ?? [];
   const drafts = data?.drafts ?? [];
   const leads = data?.recentLeads ?? [];
+  const isFirstImportPending = isFirstImportPendingState(Boolean(latest), awaitingFirstImport, activateSchedule.isPending);
   const statusCounts = useMemo(() => leads.reduce((acc: Record<string, number>, lead: any) => ({ ...acc, [lead.status]: (acc[lead.status] ?? 0) + 1 }), {}), [leads]);
+  useEffect(() => {
+    if (dashboard.isLoading || !data) return;
+    const currentRunId = latest?.id ?? null;
+    if (firstObservedRunId.current === undefined) {
+      firstObservedRunId.current = currentRunId;
+      if (!currentRunId && data.settings?.scheduleEnabled) setAwaitingFirstImport(true);
+      return;
+    }
+    if (!currentRunId && data.settings?.scheduleEnabled && firstObservedRunId.current === null) {
+      setAwaitingFirstImport(true);
+      return;
+    }
+    if (shouldAnnounceFirstImport(firstObservedRunId.current, currentRunId, firstImportToastRunId.current)) {
+      firstImportToastRunId.current = currentRunId;
+      setAwaitingFirstImport(false);
+      toast.success("First verified lead import complete", {
+        description: `${latest.totalAudited} leads audited · ${latest.preparedCount} draft${latest.preparedCount === 1 ? "" : "s"} ready · ${latest.skippedCount} safely skipped. Your Hindi report and JSONL audit are available in Workspace files.`,
+      });
+    }
+  }, [dashboard.isLoading, data, latest]);
+  useEffect(() => {
+    if (!isFirstImportPending) return;
+    const refreshInterval = window.setInterval(() => dashboard.refetch(), 15_000);
+    return () => window.clearInterval(refreshInterval);
+  }, [dashboard.refetch, isFirstImportPending]);
   const cards = [
     { label: "Leads audited", value: latest?.totalAudited ?? 0, note: latest ? `Run: ${latest.runDate}` : "Awaiting first run", icon: Sparkles, tone: "bg-[#e8f8ed] text-[#1d7a44]" },
     { label: "Drafts ready", value: latest?.preparedCount ?? 0, note: "Confirmation required", icon: MailCheck, tone: "bg-[#fff5dc] text-[#a66a00]" },
@@ -62,7 +102,8 @@ export default function Home() {
 
       <section className="grid gap-7 xl:grid-cols-[1.35fr_0.65fr]">
         <div className="space-y-7">
-          <section className="rounded-[1.65rem] border border-black/[0.05] bg-white p-5 shadow-sm sm:p-6"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="text-sm font-semibold">Latest job-search run</p><p className="mt-1 text-sm text-[#718078]">{latest ? `Completed ${formatDate(latest.completedAt)}` : "No job-search run has been recorded yet."}</p></div><div className="flex flex-wrap gap-2">{!data?.settings?.agentInstructionFileId && <Button variant="outline" onClick={() => initialize.mutate()} disabled={initialize.isPending}><Play size={15} /> Initialize workspace</Button>}<Button onClick={() => activateSchedule.mutate()} disabled={activateSchedule.isPending} className="bg-[#10221c] hover:bg-[#1b382d]"><Clock3 size={15} /> {activateSchedule.isPending ? "Activating…" : data?.settings?.scheduleEnabled ? "Refresh schedule" : "Activate 10:00 IST"}</Button></div></div>
+          <section className="rounded-[1.65rem] border border-black/[0.05] bg-white p-5 shadow-sm sm:p-6"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="text-sm font-semibold">Latest job-search run</p><p className="mt-1 text-sm text-[#718078]">{latest ? `Completed ${formatDate(latest.completedAt)}` : "No job-search run has been recorded yet."}</p></div><div className="flex flex-wrap gap-2">{!data?.settings?.agentInstructionFileId && <Button variant="outline" onClick={() => initialize.mutate()} disabled={initialize.isPending}><Play size={15} /> Initialize workspace</Button>}<Button onClick={() => { if (!latest) setAwaitingFirstImport(true); activateSchedule.mutate(); }} disabled={activateSchedule.isPending} className="bg-[#10221c] hover:bg-[#1b382d]"><Clock3 size={15} /> {activateSchedule.isPending ? "Activating…" : data?.settings?.scheduleEnabled ? "Refresh schedule" : "Activate 10:00 IST"}</Button></div></div>
+            {isFirstImportPending && <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4" role="status" aria-live="polite" data-testid="first-import-progress"><div className="flex items-start gap-3"><div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-emerald-100 text-emerald-700"><LoaderCircle size={18} className="animate-spin" /></div><div className="min-w-0"><p className="text-sm font-semibold text-emerald-950">First verified lead import is in progress</p><p className="mt-1 text-xs leading-5 text-emerald-800">Waiting for verified public-vacancy leads. No outreach, account creation, or document sharing will occur during this step.</p></div><Badge variant="outline" className="ml-auto shrink-0 border-emerald-200 bg-white text-emerald-700">Safety-gated</Badge></div><Progress value={62} className="mt-4 animate-pulse bg-emerald-900/10 [&_[data-slot=progress-indicator]]:bg-emerald-600" /></div>}
             <div className="mt-7 grid gap-3 sm:grid-cols-4">{["Prepared", "Verified-Sent", "Skipped-Role mismatch", "Skipped-Duplicate"].map(status => <div key={status} className="rounded-2xl bg-[#f7f9f7] p-4"><p className="text-xl font-semibold">{statusCounts[status] ?? 0}</p><p className="mt-1 text-xs leading-5 text-[#68776e]">{status}</p></div>)}</div>
             <div className="mt-7 h-px bg-black/[0.06]" />
             <div className="mt-5 space-y-3">{dashboard.isLoading ? <><Skeleton className="h-16" /><Skeleton className="h-16" /></> : leads.length ? leads.slice(0, 5).map((lead: any) => <div key={lead.id} className="flex flex-col justify-between gap-3 rounded-2xl border border-black/[0.05] px-4 py-3 sm:flex-row sm:items-center"><div className="min-w-0"><p className="truncate text-sm font-medium">{lead.employer} <span className="font-normal text-[#75837b]">· {lead.roleTitle}</span></p><p className="mt-1 truncate text-xs text-[#75837b]">{lead.location || "Location not stated"} · Posted {lead.postingDate || "date to verify"}</p></div><Badge variant="outline" className={`w-fit whitespace-nowrap ${statusTone[lead.status] ?? "bg-slate-50"}`}>{lead.status}</Badge></div>) : <div className="rounded-2xl border border-dashed border-black/10 px-5 py-8 text-center text-sm text-[#718078]">The private workspace is ready. The first verified run will appear here after the production schedule is activated.</div>}</div>
