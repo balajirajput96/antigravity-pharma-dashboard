@@ -46,3 +46,9 @@ The staged retry encountered the same internal generation error. The user select
 ## Primary live workspace verification
 
 The retained production URL `https://antigravdash-o59hxjz4.manus.space/` is reachable and redirects unauthenticated visitors to the branded “Sign in to Antigravity Pharma Workspace” OAuth page. This confirms the live workspace keeps an authentication gate rather than exposing dashboard data publicly.
+
+## Non-published Firebase migration package
+
+The repository now contains a no-data `firebase-migration/` package that can be used when the unpublished AI Studio draft becomes usable. It includes deny-by-default Firestore and Storage rules, an owner-claim bootstrap callable function that reads `OWNER_EMAIL` only as a Firebase server secret, and an explicit `recordConfirmationHold` function with no email, Gmail, HTTP delivery, or web-form code. Its manifest accepts only report and audit migration kinds and explicitly disallows resumes, passwords, OTPs, Aadhaar, PAN, bank data, attachments, and unrelated private documents.
+
+The package was validated locally without a Firebase project, credentials, records, or publication: the repository regression suite passed 13 tests, the root TypeScript check passed, and the Firebase Functions scaffold passed its own strict TypeScript lint step. The remaining external blocker is Google AI Studio’s repeated internal code-generation error; no technical package or private-data blocker remains for a later no-billing eligibility check and Firebase project setup.

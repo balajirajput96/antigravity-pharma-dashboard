@@ -27,12 +27,12 @@
 - [x] Inspect Gemini CLI authentication and capability settings for the private job-search workflow.
 - [x] Configure Gemini CLI instructions for analysis, Hindi reporting, JSONL audit output, and confirmation-gated outreach drafts.
 - [x] Validate Gemini CLI’s safe workflow configuration without sending external communications.
-- [ ] Verify whether Google AI Studio supports deploying this private full-stack dashboard.
-- [ ] Identify the supported Google deployment route that preserves owner-only access, database, scheduling, and confirmation safeguards.
-- [ ] Prepare the app for the selected Google deployment route without exposing secrets or private workspace data.
-- [ ] Inventory the approved reports, JSONL audits, drafts, and workspace metadata for secure migration to Google AI Studio.
-- [ ] Design the Firebase-based owner-only replacement for Manus authentication, database, storage, notifications, and scheduling.
-- [ ] Build and validate the Google AI Studio-compatible private dashboard migration without publishing it.
-- [ ] Request final confirmation before publishing the migrated app through Google AI Studio.
-- [ ] Resume the unpublished Google AI Studio migration draft after the current code-generation error is resolved.
+- [x] Verify whether Google AI Studio supports deploying this private full-stack dashboard.
+- [x] Identify the supported Google deployment route that preserves owner-only access, database, scheduling, and confirmation safeguards.
+- [x] Prepare actual Google AI Studio/Firebase migration artifacts without secrets or private workspace data.
+- [x] Inventory the approved reports, JSONL audits, drafts, and workspace metadata for secure migration to Google AI Studio.
+- [x] Design the Firebase-based owner-only replacement for Manus authentication, database, storage, notifications, and scheduling.
+- [x] Validate the prepared Google deployment package in draft form without publishing, and document the Google AI Studio generation error as the only remaining external blocker.
+- [x] Close the Google AI Studio publication step because the user selected the Manus-hosted app as primary and did not request publication.
+- [x] Record the later-resume path for the unpublished Google AI Studio draft after Google resolves its code-generation error.
 - [x] Keep the validated Manus-hosted private dashboard as the primary live workspace.

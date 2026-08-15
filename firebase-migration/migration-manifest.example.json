@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "source": "approved-private-workspace",
+  "targetPathTemplate": "owners/{ownerUid}",
+  "collections": {
+    "settings": "owners/{ownerUid}/settings/current",
+    "runs": "owners/{ownerUid}/runs/{runId}",
+    "leads": "owners/{ownerUid}/leads/{leadId}",
+    "drafts": "owners/{ownerUid}/drafts/{draftId}",
+    "workspaceFiles": "owners/{ownerUid}/workspaceFiles/{fileId}",
+    "deliveryEvents": "owners/{ownerUid}/deliveryEvents/{eventId}"
+  },
+  "storagePathTemplate": "owners/{ownerUid}/workspace/{fileId}",
+  "allowedImportKinds": ["report", "audit"],
+  "disallowedContent": ["resumes", "passwords", "OTPs", "Aadhaar", "PAN", "bank-data", "attachments", "private-documents"]
+}
