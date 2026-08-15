@@ -6,15 +6,15 @@ export const workflowStatuses = [
 ] as const;
 
 export type WorkflowStatus = (typeof workflowStatuses)[number];
-export type ApprovedImportKind = "report" | "audit";
+export type ApprovedImportKind = "hindi-report" | "jsonl-audit";
 
 export function isWorkflowStatus(value: string): value is WorkflowStatus {
   return workflowStatuses.includes(value as WorkflowStatus);
 }
 
 export function isApprovedImport(kind: string, mimeType: string) {
-  return (kind === "report" && (mimeType === "text/markdown" || mimeType === "text/plain"))
-    || (kind === "audit" && (mimeType === "application/x-ndjson" || mimeType === "application/jsonl" || mimeType === "text/plain"));
+  return (kind === "hindi-report" && mimeType === "text/markdown")
+    || (kind === "jsonl-audit" && mimeType === "application/x-ndjson");
 }
 
 export function canRecordConfirmationHold(status: string, deliveryProviderConfigured: boolean) {

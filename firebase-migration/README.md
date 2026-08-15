@@ -12,10 +12,11 @@ All private data must live beneath `owners/{ownerUid}/...`. The rules deny every
 
 1. Create a new Firebase project only after confirming a no-billing-compatible setup is available.
 2. Copy `.firebaserc.example` to `.firebaserc` and replace only `YOUR_FIREBASE_PROJECT_ID`.
-3. Install dependencies in `functions/`, deploy Firestore/Storage rules and callable functions, then set the server secret with the Firebase CLI. Do **not** put `OWNER_EMAIL` in source or `.env` files.
-4. Sign in with the owner Google account and call `ownerBootstrap` once to obtain the server-managed owner claim.
-5. Use the owner-only import UI or a reviewed server-side tool to transfer only approved Hindi reports and JSONL audits. Never import resumes, passwords, OTPs, Aadhaar, PAN, bank information, attachments, or unrelated private documents.
-6. Keep the existing Manus-hosted workspace as the primary app until Firebase migration validation is complete. This package does not publish an app, create a scheduler, connect Gmail, or send outreach.
+3. In `hosting/`, obtain only the public Firebase web configuration listed in `FIREBASE_WEB_CONFIG.md` and provide it through the selected deployment environment. The build intentionally refuses to operate without it.
+4. Install dependencies in `functions/` and `hosting/`. Deploy Firestore/Storage rules, Hosting, and callable functions, then set the server secret with the Firebase CLI. Do **not** put `OWNER_EMAIL` in source or `.env` files.
+5. Sign in with the owner Google account and call `ownerBootstrap` once to obtain the server-managed owner claim. The Hosting client cannot read data until that server-side check succeeds.
+6. Use the owner-only import UI or a reviewed server-side tool to transfer only approved Hindi reports and JSONL audits. Never import resumes, passwords, OTPs, Aadhaar, PAN, bank information, attachments, or unrelated private documents.
+7. Keep the existing Manus-hosted workspace as the primary app until Firebase migration validation is complete. This package does not create a scheduler, connect Gmail, or send outreach.
 
 ## Confirmation gate
 

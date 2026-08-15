@@ -11,6 +11,6 @@
     "deliveryEvents": "owners/{ownerUid}/deliveryEvents/{eventId}"
   },
   "storagePathTemplate": "owners/{ownerUid}/workspace/{fileId}",
-  "allowedImportKinds": ["report", "audit"],
+  "allowedImportKinds": ["hindi-report", "jsonl-audit"],
   "disallowedContent": ["resumes", "passwords", "OTPs", "Aadhaar", "PAN", "bank-data", "attachments", "private-documents"]
 }

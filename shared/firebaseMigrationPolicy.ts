@@ -10,7 +10,7 @@ export function allowsFirebaseConfirmationHold(status: string, deliveryProviderC
 }
 
 export function isApprovedFirebaseMigrationFile(kind: string, mimeType: string) {
-  if (kind === "report") return mimeType === "text/markdown" || mimeType === "text/plain";
-  if (kind === "audit") return ["application/x-ndjson", "application/jsonl", "text/plain"].includes(mimeType);
+  if (kind === "hindi-report") return mimeType === "text/markdown";
+  if (kind === "jsonl-audit") return mimeType === "application/x-ndjson";
   return false;
 }

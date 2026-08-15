@@ -36,3 +36,26 @@
 - [x] Close the Google AI Studio publication step because the user selected the Manus-hosted app as primary and did not request publication.
 - [x] Record the later-resume path for the unpublished Google AI Studio draft after Google resolves its code-generation error.
 - [x] Keep the validated Manus-hosted private dashboard as the primary live workspace.
+- [ ] Confirm Firebase Spark/Starter Tier eligibility after the owner explicitly accepts Firebase terms and advances the wizard without creating a project.
+- [x] Prepare the owner-only Firebase setup steps without creating a Firebase project, setting secrets, deploying, or publishing.
+- [ ] Request approval before any Firebase project creation, secret configuration, rule deployment, or publication.
+- [ ] Request approval to accept Firebase terms and advance one non-creating wizard step solely to inspect the no-billing Spark/Starter option.
+- [ ] Create a Firebase project only if the Spark/Starter no-billing path is confirmed.
+- [ ] Configure and deploy owner-only Firebase rules and confirmation-hold functions without migrating private workspace records.
+- [ ] Verify the deployed Firebase safeguards and report the live Google deployment outcome.
+- [ ] Inspect the existing Google Cloud project as a no-billing alternative for Firebase attachment without modifying it.
+- [ ] Determine whether the owner-only Firebase migration package can use the existing Google Cloud project without billing.
+- [ ] Verify the exact identifier and billing status of My First Project before Firebase attachment.
+- [ ] Attach Firebase to My First Project through the verified command-line route without enabling billing or modifying Gemini projects.
+- [x] Identify Blaze billing prerequisites and document project-scoped budget-safeguard options without linking a billing account.
+- [ ] Prepare the full owner-only Firebase deployment package without migrating private workspace records.
+- [ ] Obtain final confirmation before linking a billing account, upgrading to Blaze, or publishing the Firebase application.
+- [ ] Deploy and verify the secured Firebase application only after approved billing setup.
+- [x] Inspect Antigravity CLI deployment capabilities and project handoff options for the private dashboard.
+- [x] Complete all non-sensitive deployment preparation and recovery steps through available tools.
+- [ ] Document the remaining billing, account, data-transfer, or publication actions that require owner participation.
+- [x] Audit the Firebase migration package for a complete Hosting client, authentication flow, and deployment integration.
+- [x] Build any missing Firebase Hosting application components without secrets or private workspace records.
+- [x] Run local build and safety validation for the completed Firebase Hosting migration package.
+- [x] Align the Firebase Hosting client, shared policy, functions policy, and migration manifest on `workspaceFiles` metadata and the approved `hindi-report` / `jsonl-audit` import vocabulary.
+- [x] Re-run Hosting, Functions, and root-package validation after the unified Firebase migration contract is in place.
