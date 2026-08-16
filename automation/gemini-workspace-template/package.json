@@ -1,0 +1,14 @@
+{
+  "name": "agy-pharma-job-task",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local Gemini CLI runner for a confirmation-gated pharmaceutical job research workflow.",
+  "scripts": {
+    "gemini": "gemini",
+    "validate-safety": "bash ./validate_safety_policy.sh"
+  },
+  "devDependencies": {
+    "@google/gemini-cli": "0.55.1"
+  }
+}
+

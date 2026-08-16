@@ -1,0 +1,18 @@
+[workflow]
+workspace = "/home/ubuntu/agy_pharma_job_task"
+timezone = "Asia/Kolkata"
+schedule = "daily 10:00"
+
+[allowed]
+actions = ["public-web-research", "local-report-writing", "local-jsonl-audit-writing", "local-unsent-draft-writing", "historical-duplicate-checking"]
+roles = ["QA", "IPQA", "QMS", "OSD", "related-quality-roles"]
+levels = ["entry", "mid"]
+
+[prohibited]
+actions = ["email-send", "message-send", "form-submit", "job-application", "account-create", "password-use", "otp-use", "captcha-bypass", "sensitive-document-attach", "private-data-collect", "external-outreach"]
+private_data = ["aadhaar", "pan", "bank", "salary", "gender", "native-place", "password", "otp", "identity-document", "attachment"]
+
+[completion]
+require_local_outputs = ["dated-hindi-report", "jsonl-audit", "truthful-unsent-drafts"]
+require_statement = "No external action was taken. Direct user confirmation is required before any outreach or submission."
+

@@ -1,0 +1,39 @@
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { describe, expect, it } from "vitest";
+
+const templateDir = resolve(process.cwd(), "automation/gemini-workspace-template");
+
+describe("Gemini workspace recovery template", () => {
+  it("preserves the required research-only safety gates", () => {
+    const instructions = readFileSync(resolve(templateDir, "GEMINI.md"), "utf8");
+    const policy = readFileSync(resolve(templateDir, "gemini_pharma_safety.toml"), "utf8");
+
+    expect(instructions).toContain("Never send an email");
+    expect(instructions).toContain("Never submit a form");
+    expect(instructions).toContain("no external action was taken");
+    expect(instructions).toContain("direct user confirmation is required");
+    expect(policy).toContain('"email-send"');
+    expect(policy).toContain('"form-submit"');
+    expect(policy).toContain('"password-use"');
+    expect(policy).toContain('"otp-use"');
+    expect(policy).toContain('"captcha-bypass"');
+    expect(policy).toContain('"external-outreach"');
+  });
+
+  it("contains only non-secret recovery source files", () => {
+    for (const filename of [
+      "GEMINI.md",
+      "gemini_pharma_safety.toml",
+      "package.json",
+      "validate_safety_policy.sh",
+      "gemini_pharma",
+    ]) {
+      expect(existsSync(resolve(templateDir, filename))).toBe(true);
+    }
+
+    const launcher = readFileSync(resolve(templateDir, "gemini_pharma"), "utf8");
+    expect(launcher).toContain('workspace="/home/ubuntu/agy_pharma_job_task"');
+    expect(launcher).not.toContain("GEMINI_API_KEY=");
+  });
+});

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+workspace="/home/ubuntu/agy_pharma_job_task"
+cd "$workspace"
+
+if [[ -x "$workspace/node_modules/.bin/gemini" ]]; then
+  exec "$workspace/node_modules/.bin/gemini" "$@"
+fi
+
+if command -v gemini >/dev/null 2>&1; then
+  exec gemini "$@"
+fi
+
+echo "Gemini CLI is not installed in $workspace. Run pnpm install from that workspace before invoking this launcher." >&2
+exit 1
+

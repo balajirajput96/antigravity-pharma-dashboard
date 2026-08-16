@@ -64,3 +64,7 @@
 - [x] Build and inspect the free placeholder locally to verify it contains no private workspace data or service integrations.
 - [ ] Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL.
 - [x] Document the public placeholder boundary and the preserved secured Firebase migration path for a future owner-approved Blaze deployment.
+- [x] Verify the existing 10:00 AM IST Gemini CLI schedule, its working directory, and its no-external-action boundary against the user’s renewed instructions.
+- [x] Update the Gemini CLI workflow instructions or schedule only if they differ from the required research-only, confirmation-gated policy (no schedule change was needed; the restored workspace instructions now match it).
+- [x] Validate the scheduled instruction payload explicitly prohibits sending, submissions, account creation, sensitive-data handling, and any action after the report-and-drafts stage.
+- [x] Preserve a non-secret Gemini workspace recovery template inside the project so the daily workflow can be reconstructed after a sandbox reset.
