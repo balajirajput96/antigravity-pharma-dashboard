@@ -53,7 +53,7 @@
 - [ ] Deploy and verify the secured Firebase application only after approved billing setup.
 - [x] Inspect Antigravity CLI deployment capabilities and project handoff options for the private dashboard.
 - [x] Complete all non-sensitive deployment preparation and recovery steps through available tools.
-- [ ] Document the remaining billing, account, data-transfer, or publication actions that require owner participation.
+- [x] Document the remaining billing, account, data-transfer, or publication actions that require owner participation.
 - [x] Audit the Firebase migration package for a complete Hosting client, authentication flow, and deployment integration.
 - [x] Build any missing Firebase Hosting application components without secrets or private workspace records.
 - [x] Run local build and safety validation for the completed Firebase Hosting migration package.
@@ -68,3 +68,4 @@
 - [x] Update the Gemini CLI workflow instructions or schedule only if they differ from the required research-only, confirmation-gated policy (no schedule change was needed; the restored workspace instructions now match it).
 - [x] Validate the scheduled instruction payload explicitly prohibits sending, submissions, account creation, sensitive-data handling, and any action after the report-and-drafts stage.
 - [x] Preserve a non-secret Gemini workspace recovery template inside the project so the daily workflow can be reconstructed after a sandbox reset.
+- [ ] Harden the active daily Gemini schedule so a missing local workspace is restored only from the non-secret project template before research begins.

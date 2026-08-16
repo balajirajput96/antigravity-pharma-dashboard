@@ -30,4 +30,6 @@ Use `migration-manifest.example.json` only as a field-level mapping guide. It is
 
 `firebase.json` currently publishes only `free-hosting/public` when deployed with `firebase deploy --only hosting`. This is a deliberately static, public placeholder with **no Firebase configuration, authentication, Firestore, Storage, Functions, job-search automation, report content, JSONL audits, drafts, contacts, forms, or outreach capability**. It does not migrate or expose any private workspace record.
 
+To publish this free placeholder, the owner must complete the Firebase CLI Google sign-in in a browser. This is an account authorization step, not a billing step. After the CLI is authenticated, the explicitly owner-approved command is `firebase deploy --only hosting --project PROJECT_ID`. No Firestore rules, Storage rules, Functions, owner secret, or private-data import is included in that command.
+
 The full owner-only Firebase client remains under `hosting/` together with the Firestore, Storage, and callable Functions package. It is retained for a later migration only after the owner independently completes billing setup, explicitly approves a Blaze deployment, configures the `OWNER_EMAIL` server secret, and separately authorizes any private-data transfer. Until then, the Manus-hosted workspace remains the sole functional private dashboard.
