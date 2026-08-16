@@ -69,3 +69,4 @@
 - [x] Validate the scheduled instruction payload explicitly prohibits sending, submissions, account creation, sensitive-data handling, and any action after the report-and-drafts stage.
 - [x] Preserve a non-secret Gemini workspace recovery template inside the project so the daily workflow can be reconstructed after a sandbox reset.
 - [x] Harden the active daily Gemini schedule so a missing local workspace is restored only from the non-secret project template before research begins.
+- [x] Add and validate a no-data Firebase Hosting deployment helper that runs only `firebase deploy --only hosting` for the known free placeholder directory after owner authentication.
