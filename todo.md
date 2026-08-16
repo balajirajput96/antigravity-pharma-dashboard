@@ -68,4 +68,4 @@
 - [x] Update the Gemini CLI workflow instructions or schedule only if they differ from the required research-only, confirmation-gated policy (no schedule change was needed; the restored workspace instructions now match it).
 - [x] Validate the scheduled instruction payload explicitly prohibits sending, submissions, account creation, sensitive-data handling, and any action after the report-and-drafts stage.
 - [x] Preserve a non-secret Gemini workspace recovery template inside the project so the daily workflow can be reconstructed after a sandbox reset.
-- [ ] Harden the active daily Gemini schedule so a missing local workspace is restored only from the non-secret project template before research begins.
+- [x] Harden the active daily Gemini schedule so a missing local workspace is restored only from the non-secret project template before research begins.
