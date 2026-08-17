@@ -70,3 +70,5 @@
 - [x] Preserve a non-secret Gemini workspace recovery template inside the project so the daily workflow can be reconstructed after a sandbox reset.
 - [x] Harden the active daily Gemini schedule so a missing local workspace is restored only from the non-secret project template before research begins.
 - [x] Add and validate a no-data Firebase Hosting deployment helper that runs only `firebase deploy --only hosting` for the known free placeholder directory after owner authentication.
+- [x] Compare the renewed daily Gemini instruction with the active schedule and persisted non-secret template, then record whether a safety-preserving update is needed (the active schedule already matches; no update was needed).
+- [x] Restore the missing local Gemini workspace from the project-backed non-secret template and validate its safety policy without opening any login flow.
