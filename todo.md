@@ -82,3 +82,6 @@
 - [ ] BLOCKED — Complete the owner-controlled Google authentication step before invoking the static Hosting-only deployment helper.
 - [x] Audit currently accessible account sessions, including GitHub availability, without exposing credentials or tokens.
 - [x] Prepare a downloadable archive of the project source and a sanitized record of relevant terminal commands.
+- [x] Verify the current Google Gemini browser authentication state without exposing credentials.
+- [x] Verify the Google Antigravity account/session state through an authenticated service surface (owner Google browser session verified through the official Antigravity account-entry route; no local Antigravity CLI is installed).
+- [x] Open the official Antigravity-linked Google sign-in page and provide a one-time owner takeover path; owner completed the browser sign-in.
