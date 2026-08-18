@@ -1,3 +1,7 @@
+/**
+ * Controlled Lab Ledger: preserve authenticated tRPC workspace actions while presenting them as a compact, owner-reviewed record.
+ * The interface never implies that a draft, schedule, or delivery has occurred without the existing guarded server mutation.
+ */
 import DashboardLayout from "@/components/DashboardLayout";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,7 +12,24 @@ import { trpc } from "@/lib/trpc";
 import { isFirstImportPending as isFirstImportPendingState, shouldAnnounceFirstImport } from "@shared/importFeedback";
 import { toast } from "sonner";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AlertTriangle, ArrowUpRight, CheckCircle2, Clock3, FileDown, FileText, FolderOpen, LoaderCircle, LockKeyhole, MailCheck, Play, ShieldCheck, Sparkles, XCircle } from "lucide-react";
+import {
+  AlertTriangle,
+  ArrowUpRight,
+  CalendarDays,
+  CheckCircle2,
+  Clock3,
+  FileDown,
+  FileText,
+  FolderOpen,
+  LoaderCircle,
+  LockKeyhole,
+  MailCheck,
+  Play,
+  SearchCheck,
+  Send,
+  ShieldCheck,
+  XCircle,
+} from "lucide-react";
 
 const safetyRules = [
   "No email, form, or external submission without Confirm & Send.",
@@ -18,10 +39,10 @@ const safetyRules = [
 ];
 
 const statusTone: Record<string, string> = {
-  "Prepared": "bg-amber-50 text-amber-700 border-amber-200",
-  "Verified-Sent": "bg-emerald-50 text-emerald-700 border-emerald-200",
-  "Skipped-Role mismatch": "bg-rose-50 text-rose-700 border-rose-200",
-  "Skipped-Duplicate": "bg-slate-100 text-slate-600 border-slate-200",
+  Prepared: "border-amber-200/25 bg-amber-200/10 text-amber-100",
+  "Verified-Sent": "border-[#b6d74a]/25 bg-[#b6d74a]/10 text-[#d7ee88]",
+  "Skipped-Role mismatch": "border-rose-200/20 bg-rose-200/10 text-rose-100",
+  "Skipped-Duplicate": "border-white/10 bg-white/[0.04] text-zinc-300",
 };
 
 function formatDate(value?: Date | string | null) {
@@ -29,12 +50,45 @@ function formatDate(value?: Date | string | null) {
   return new Intl.DateTimeFormat("en-IN", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Kolkata" }).format(new Date(value));
 }
 
+function LedgerStamp({ children, tone = "neutral" }: { children: React.ReactNode; tone?: "neutral" | "signal" | "warning" }) {
+  const tones = {
+    neutral: "border-white/10 bg-white/[0.035] text-zinc-300",
+    signal: "border-[#b6d74a]/35 bg-[#b6d74a]/10 text-[#d7ee88]",
+    warning: "border-amber-200/20 bg-amber-200/10 text-amber-100",
+  };
+  return <span className={`inline-flex items-center gap-1.5 rounded-sm border px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.18em] ${tones[tone]}`}>{children}</span>;
+}
+
+function MetricCard({ label, value, note, icon: Icon, position }: { label: string; value: number | string; note: string; icon: typeof SearchCheck; position: number }) {
+  const spans = ["sm:col-span-4 xl:col-span-5", "sm:col-span-3 xl:col-span-2", "sm:col-span-3 xl:col-span-3", "sm:col-span-2 xl:col-span-2"];
+  return (
+    <article className={`ledger-card group relative overflow-hidden p-5 ${spans[position]}`}>
+      <span className="signal-notch" />
+      <span className="absolute right-4 top-4 font-mono text-[9px] tracking-[0.18em] text-zinc-700">0{position + 1}</span>
+      <div className="flex items-start justify-between gap-4">
+        <div><p className="ledger-micro text-zinc-500">{label}</p><p className="ledger-metric mt-3 text-4xl text-white">{value}</p></div>
+        <Icon className="mt-1 h-4 w-4 text-[#b6d74a] transition-transform duration-200 group-hover:-translate-y-0.5" strokeWidth={1.7} />
+      </div>
+      <p className="mt-4 text-xs leading-5 text-zinc-500">{note}</p>
+    </article>
+  );
+}
+
 export default function Home() {
   const dashboard = trpc.workspace.dashboard.useQuery(undefined, { retry: false });
-  const initialize = trpc.workspace.initialize.useMutation({ onSuccess: () => { toast.success("Daily instructions saved to your private workspace."); dashboard.refetch(); } });
   const [awaitingFirstImport, setAwaitingFirstImport] = useState(false);
   const firstObservedRunId = useRef<number | null | undefined>(undefined);
   const firstImportToastRunId = useRef<number | null>(null);
+  const [selectedDraft, setSelectedDraft] = useState<any>(null);
+  const data: any = dashboard.data;
+  const latest = data?.latest;
+  const files = data?.files ?? [];
+  const drafts = data?.drafts ?? [];
+  const leads = data?.recentLeads ?? [];
+
+  const initialize = trpc.workspace.initialize.useMutation({
+    onSuccess: () => { toast.success("Daily instructions saved to your private workspace."); dashboard.refetch(); },
+  });
   const activateSchedule = trpc.workspace.activateDailySchedule.useMutation({
     onSuccess: result => {
       if (!latest) setAwaitingFirstImport(true);
@@ -46,15 +100,22 @@ export default function Home() {
       toast.error("The daily schedule could not be activated. Your current workspace data was not changed.");
     },
   });
-  const sendDraft = trpc.workspace.confirmAndSend.useMutation({ onSuccess: result => { toast.success(result.deliverySent ? "Email was accepted by the configured delivery provider and recorded as Verified-Sent." : "Confirmation was recorded, but no email provider is configured—nothing was sent."); dashboard.refetch(); } });
-  const [selectedDraft, setSelectedDraft] = useState<any>(null);
-  const data: any = dashboard.data;
-  const latest = data?.latest;
-  const files = data?.files ?? [];
-  const drafts = data?.drafts ?? [];
-  const leads = data?.recentLeads ?? [];
+  const sendDraft = trpc.workspace.confirmAndSend.useMutation({
+    onSuccess: result => {
+      toast.success(result.deliverySent ? "Email was accepted by the configured delivery provider and recorded as Verified-Sent." : "Confirmation was recorded, but no email provider is configured—nothing was sent.");
+      dashboard.refetch();
+    },
+  });
+
   const isFirstImportPending = isFirstImportPendingState(Boolean(latest), awaitingFirstImport, activateSchedule.isPending);
   const statusCounts = useMemo(() => leads.reduce((acc: Record<string, number>, lead: any) => ({ ...acc, [lead.status]: (acc[lead.status] ?? 0) + 1 }), {}), [leads]);
+  const cards = [
+    { label: "Leads audited", value: latest?.totalAudited ?? 0, note: latest ? `Run: ${latest.runDate}` : "Awaiting first verified run", icon: SearchCheck },
+    { label: "Drafts ready", value: latest?.preparedCount ?? 0, note: "Owner review required", icon: FileText },
+    { label: "Verified sent", value: latest?.sentCount ?? 0, note: "Delivery audit recorded", icon: CheckCircle2 },
+    { label: "Skipped safely", value: latest?.skippedCount ?? 0, note: "Mismatch or duplicate", icon: ShieldCheck },
+  ];
+
   useEffect(() => {
     if (dashboard.isLoading || !data) return;
     const currentRunId = latest?.id ?? null;
@@ -75,51 +136,61 @@ export default function Home() {
       });
     }
   }, [dashboard.isLoading, data, latest]);
+
   useEffect(() => {
     if (!isFirstImportPending) return;
     const refreshInterval = window.setInterval(() => dashboard.refetch(), 15_000);
     return () => window.clearInterval(refreshInterval);
   }, [dashboard.refetch, isFirstImportPending]);
-  const cards = [
-    { label: "Leads audited", value: latest?.totalAudited ?? 0, note: latest ? `Run: ${latest.runDate}` : "Awaiting first run", icon: Sparkles, tone: "bg-[#e8f8ed] text-[#1d7a44]" },
-    { label: "Drafts ready", value: latest?.preparedCount ?? 0, note: "Confirmation required", icon: MailCheck, tone: "bg-[#fff5dc] text-[#a66a00]" },
-    { label: "Verified sent", value: latest?.sentCount ?? 0, note: "Delivery audit recorded", icon: CheckCircle2, tone: "bg-[#e7f1ff] text-[#2763aa]" },
-    { label: "Skipped safely", value: latest?.skippedCount ?? 0, note: "Mismatch or duplicate", icon: XCircle, tone: "bg-[#fbecef] text-[#b54a59]" },
-  ];
 
-  return <DashboardLayout>
-    <div className="mx-auto max-w-[1480px] space-y-7 text-[#18251f]">
-      <section id="overview" className="overflow-hidden rounded-[2rem] bg-[#10221c] p-6 text-white shadow-[0_18px_50px_rgba(16,34,28,0.16)] sm:p-8">
-        <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
-          <div className="max-w-2xl"><div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-300/15 bg-white/5 px-3 py-1 text-xs font-medium text-emerald-200"><span className="h-1.5 w-1.5 rounded-full bg-emerald-300" /> PRIVATE • BALAJI RAJPUT</div><h1 className="text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Your job-search control room.</h1><p className="mt-3 max-w-xl text-base leading-7 text-white/65">A safety-first workspace for daily pharmaceutical QA, IPQA, QMS and OSD opportunities. Every lead is verified, every draft stays in review, and every send needs your direct approval.</p></div>
-          <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4"><p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/45">Next scheduled run</p><p className="mt-1 flex items-center gap-2 text-lg font-semibold"><Clock3 size={17} className="text-emerald-300" /> Daily · 10:00 AM IST</p><p className="mt-1 text-xs text-white/45">{data?.settings?.scheduleEnabled ? "Production schedule active" : "Activate after the site is published"}</p></div>
-        </div>
-      </section>
+  const beginSchedule = () => {
+    if (!latest) setAwaitingFirstImport(true);
+    activateSchedule.mutate();
+  };
 
-      {dashboard.isError && <section className="rounded-2xl border border-rose-200 bg-rose-50 p-5 text-sm text-rose-800"><div className="flex gap-3"><AlertTriangle size={18} className="shrink-0" /><div><strong>Private access check</strong><p className="mt-1">This signed-in account is not permitted to access Balaji Rajput’s workspace. Sign out and use the owner account.</p></div></div></section>}
+  return (
+    <DashboardLayout>
+      <div className="app-grain pointer-events-none fixed inset-0 z-0 opacity-25" />
+      <div className="relative z-10 mx-auto max-w-[1540px] text-zinc-100">
+        <section id="overview" className="content-enter grid gap-5 xl:grid-cols-[minmax(0,1fr)_398px]">
+          <div className="ledger-hero relative min-h-[322px] overflow-hidden border border-white/10 p-6 sm:p-8">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_84%_20%,rgba(182,215,74,0.13),transparent_30%),linear-gradient(124deg,rgba(255,255,255,0.04),transparent_30%)]" />
+            <div className="absolute inset-y-0 right-[20%] w-px bg-white/[0.06]" />
+            <div className="absolute bottom-0 right-0 border-l border-t border-white/10 bg-[#111311]/75 px-3 py-2 backdrop-blur-sm"><p className="ledger-micro text-zinc-500">Private record / A-001</p></div>
+            <div className="relative flex h-full min-h-[274px] flex-col justify-between">
+              <div className="flex items-start justify-between gap-4"><LedgerStamp tone="signal"><span className="status-dot" /> Owner review active</LedgerStamp><span className="font-mono text-xs text-zinc-500">A-001</span></div>
+              <div className="max-w-2xl"><p className="ledger-micro text-zinc-400">Antigravity Pharma / overview</p><h1 className="ledger-title mt-3 text-5xl leading-[0.95] text-white sm:text-6xl lg:text-7xl">Your job-search<br /><em>control room.</em></h1><p className="mt-5 max-w-xl text-sm leading-6 text-zinc-300 sm:text-base">Every lead is verified, every draft stays in review, and every send needs direct approval.</p></div>
+            </div>
+          </div>
 
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">{cards.map(card => <article key={card.label} className="rounded-[1.5rem] border border-black/[0.05] bg-white p-5 shadow-sm"><div className="flex items-start justify-between"><div className={`grid h-10 w-10 place-items-center rounded-xl ${card.tone}`}><card.icon size={19} /></div><span className="text-2xl font-semibold tracking-tight">{dashboard.isLoading ? "—" : card.value}</span></div><p className="mt-6 text-sm font-medium">{card.label}</p><p className="mt-1 text-xs text-[#64736b]">{card.note}</p></article>)}</section>
+          <aside className="ledger-card flex min-h-[322px] flex-col justify-between overflow-hidden p-6">
+            <div><div className="flex items-center justify-between"><p className="ledger-micro text-zinc-500">Daily review window</p><CalendarDays className="h-4 w-4 text-[#b6d74a]" /></div><div className="mt-8 flex items-baseline gap-2"><span className="ledger-metric text-5xl text-white">10:00</span><span className="text-sm font-medium text-zinc-400">AM IST</span></div><p className="mt-3 max-w-[29ch] text-sm leading-6 text-zinc-500">The backend schedule remains safety-gated and only activates through your owner-reviewed workspace.</p></div>
+            <div className="mt-7 border-t border-white/10 pt-5"><div className="flex items-center justify-between text-xs"><span className="text-zinc-500">Next status</span><span className={data?.settings?.scheduleEnabled ? "font-semibold text-[#d7ee88]" : "font-semibold text-zinc-300"}>{data?.settings?.scheduleEnabled ? "Schedule active" : "Review required"}</span></div><Button onClick={beginSchedule} disabled={activateSchedule.isPending} variant="outline" className="mt-4 w-full border-white/15 bg-white/[0.035] text-zinc-100 hover:border-[#b6d74a]/50 hover:bg-[#b6d74a]/10 hover:text-[#e5f5a8]"><Play className="mr-2 h-3.5 w-3.5 fill-current" /> {activateSchedule.isPending ? "Activating…" : data?.settings?.scheduleEnabled ? "Refresh schedule" : "Activate 10:00 IST"}</Button></div>
+          </aside>
+        </section>
 
-      <section className="grid gap-7 xl:grid-cols-[1.35fr_0.65fr]">
-        <div className="space-y-7">
-          <section className="rounded-[1.65rem] border border-black/[0.05] bg-white p-5 shadow-sm sm:p-6"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="text-sm font-semibold">Latest job-search run</p><p className="mt-1 text-sm text-[#718078]">{latest ? `Completed ${formatDate(latest.completedAt)}` : "No job-search run has been recorded yet."}</p></div><div className="flex flex-wrap gap-2">{!data?.settings?.agentInstructionFileId && <Button variant="outline" onClick={() => initialize.mutate()} disabled={initialize.isPending}><Play size={15} /> Initialize workspace</Button>}<Button onClick={() => { if (!latest) setAwaitingFirstImport(true); activateSchedule.mutate(); }} disabled={activateSchedule.isPending} className="bg-[#10221c] hover:bg-[#1b382d]"><Clock3 size={15} /> {activateSchedule.isPending ? "Activating…" : data?.settings?.scheduleEnabled ? "Refresh schedule" : "Activate 10:00 IST"}</Button></div></div>
-            {isFirstImportPending && <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4" role="status" aria-live="polite" data-testid="first-import-progress"><div className="flex items-start gap-3"><div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-emerald-100 text-emerald-700"><LoaderCircle size={18} className="animate-spin" /></div><div className="min-w-0"><p className="text-sm font-semibold text-emerald-950">First verified lead import is in progress</p><p className="mt-1 text-xs leading-5 text-emerald-800">Waiting for verified public-vacancy leads. No outreach, account creation, or document sharing will occur during this step.</p></div><Badge variant="outline" className="ml-auto shrink-0 border-emerald-200 bg-white text-emerald-700">Safety-gated</Badge></div><Progress value={62} className="mt-4 animate-pulse bg-emerald-900/10 [&_[data-slot=progress-indicator]]:bg-emerald-600" /></div>}
-            <div className="mt-7 grid gap-3 sm:grid-cols-4">{["Prepared", "Verified-Sent", "Skipped-Role mismatch", "Skipped-Duplicate"].map(status => <div key={status} className="rounded-2xl bg-[#f7f9f7] p-4"><p className="text-xl font-semibold">{statusCounts[status] ?? 0}</p><p className="mt-1 text-xs leading-5 text-[#68776e]">{status}</p></div>)}</div>
-            <div className="mt-7 h-px bg-black/[0.06]" />
-            <div className="mt-5 space-y-3">{dashboard.isLoading ? <><Skeleton className="h-16" /><Skeleton className="h-16" /></> : leads.length ? leads.slice(0, 5).map((lead: any) => <div key={lead.id} className="flex flex-col justify-between gap-3 rounded-2xl border border-black/[0.05] px-4 py-3 sm:flex-row sm:items-center"><div className="min-w-0"><p className="truncate text-sm font-medium">{lead.employer} <span className="font-normal text-[#75837b]">· {lead.roleTitle}</span></p><p className="mt-1 truncate text-xs text-[#75837b]">{lead.location || "Location not stated"} · Posted {lead.postingDate || "date to verify"}</p></div><Badge variant="outline" className={`w-fit whitespace-nowrap ${statusTone[lead.status] ?? "bg-slate-50"}`}>{lead.status}</Badge></div>) : <div className="rounded-2xl border border-dashed border-black/10 px-5 py-8 text-center text-sm text-[#718078]">The private workspace is ready. The first verified run will appear here after the production schedule is activated.</div>}</div>
-          </section>
+        {dashboard.isError && <section className="mt-5 border border-rose-200/20 bg-rose-200/10 p-5 text-sm text-rose-100"><div className="flex gap-3"><AlertTriangle size={18} className="shrink-0" /><div><strong>Private access check</strong><p className="mt-1 text-rose-100/80">This signed-in account is not permitted to access Balaji Rajput’s workspace. Sign out and use the owner account.</p></div></div></section>}
 
-          <section id="drafts" className="rounded-[1.65rem] border border-black/[0.05] bg-white p-5 shadow-sm sm:p-6"><div className="flex items-start justify-between gap-4"><div><p className="text-sm font-semibold">Outreach drafts awaiting review</p><p className="mt-1 text-sm text-[#718078]">Only you can approve a send. No background delivery is allowed.</p></div><Badge className="bg-amber-100 text-amber-800 hover:bg-amber-100">{drafts.length} ready</Badge></div>
-            <div className="mt-4 flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800"><AlertTriangle size={14} /> {data?.deliveryConfigured ? "A delivery provider is connected. Only Confirm & Send can invoke it." : "Email delivery is not connected. Confirm & Send will record your approval but cannot send anything."}</div><div className="mt-4 space-y-3">{drafts.length ? drafts.map((item: any) => <article key={item.draft.id} className="rounded-2xl border border-black/[0.06] p-4"><div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start"><div className="min-w-0"><p className="truncate text-sm font-semibold">{item.lead.employer}</p><p className="mt-1 text-xs text-[#718078]">{item.lead.roleTitle} · {item.draft.recipientEmail}</p><p className="mt-3 line-clamp-2 text-sm leading-6 text-[#516058]">{item.draft.subject}</p></div><Button size="sm" onClick={() => setSelectedDraft(item)} className="bg-[#10221c] hover:bg-[#1b382d]">Review draft <ArrowUpRight size={14} /></Button></div></article>) : <div className="rounded-2xl bg-[#fafbf9] p-6 text-sm text-[#718078]">No prepared drafts are waiting for review.</div>}</div>
-          </section>
-        </div>
+        <section className="mt-5 grid gap-3 sm:grid-cols-12">{cards.map((card, position) => <MetricCard key={card.label} {...card} position={position} />)}</section>
 
-        <aside className="space-y-7">
-          <section id="safety" className="rounded-[1.65rem] border border-emerald-900/10 bg-[#dff4e5] p-6"><div className="flex items-center gap-2 text-[#126539]"><ShieldCheck size={19} /><p className="text-sm font-semibold">Hard safety gate</p></div><p className="mt-3 text-sm leading-6 text-[#2b5b40]">Always active. These rules cannot be bypassed by the daily workflow.</p><ul className="mt-5 space-y-3">{safetyRules.map(rule => <li key={rule} className="flex gap-3 text-sm leading-5 text-[#29563c]"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#167243]" />{rule}</li>)}</ul><div className="mt-6 flex items-center gap-2 rounded-xl bg-white/65 px-3 py-3 text-xs font-medium text-[#26543a]"><LockKeyhole size={14} /> Owner confirmation is mandatory.</div></section>
-          <section id="workspace" className="rounded-[1.65rem] border border-black/[0.05] bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><div><p className="text-sm font-semibold">Workspace files</p><p className="mt-1 text-xs text-[#718078]">Private reports & audit logs</p></div><FolderOpen size={19} className="text-[#517260]" /></div><div className="mt-5 space-y-2">{files.length ? files.slice(0, 6).map((file: any) => <a key={file.id} href={file.storageUrl} target="_blank" rel="noreferrer" className="group flex items-center gap-3 rounded-xl px-2 py-3 transition hover:bg-[#f4f7f4]"><div className="grid h-8 w-8 place-items-center rounded-lg bg-[#eef4ef] text-[#2c6b45]"><FileText size={15} /></div><span className="min-w-0 flex-1 truncate text-xs font-medium">{file.filename}</span><FileDown size={15} className="text-[#829087] group-hover:text-[#10221c]" /></a>) : <p className="rounded-xl bg-[#f8faf8] p-4 text-xs leading-5 text-[#718078]">Reports, JSONL audit files, and daily instructions will appear here after initialization.</p>}</div></section>
-        </aside>
-      </section>
-    </div>
-    <Dialog open={Boolean(selectedDraft)} onOpenChange={open => !open && setSelectedDraft(null)}><DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto"><DialogHeader><DialogTitle>Review outreach draft</DialogTitle><DialogDescription>Confirm only if the content is truthful, the public recipient is correct, and you want to send this exact email.</DialogDescription></DialogHeader>{selectedDraft && <div className="space-y-4 rounded-2xl bg-[#f7f9f7] p-4 text-sm"><p><span className="font-semibold">To:</span> {selectedDraft.draft.recipientEmail}</p><p><span className="font-semibold">Subject:</span> {selectedDraft.draft.subject}</p><div className="rounded-xl border border-black/[0.06] bg-white p-4 whitespace-pre-wrap leading-6">{selectedDraft.draft.body}</div></div>}<DialogFooter><Button variant="outline" onClick={() => setSelectedDraft(null)}>Cancel</Button><Button disabled={sendDraft.isPending} onClick={() => { sendDraft.mutate({ draftId: selectedDraft.draft.id }); setSelectedDraft(null); }} className="bg-emerald-700 hover:bg-emerald-800">{sendDraft.isPending ? "Confirming…" : "Confirm & Send"}</Button></DialogFooter></DialogContent></Dialog>
-  </DashboardLayout>;
+        <section className="mt-5 grid gap-5 2xl:grid-cols-[minmax(0,1.45fr)_minmax(340px,0.55fr)]">
+          <div className="space-y-5">
+            <section id="runs" className="ledger-card overflow-hidden">
+              <div className="flex flex-col gap-4 border-b border-white/10 px-6 py-5 sm:flex-row sm:items-center sm:justify-between"><div><p className="ledger-micro text-zinc-500">Latest job-search run</p><h2 className="mt-1 text-lg font-semibold text-zinc-100">{latest ? `Completed ${formatDate(latest.completedAt)}` : "No job-search run recorded"}</h2></div><div className="flex flex-wrap gap-2">{!data?.settings?.agentInstructionFileId && <Button variant="outline" onClick={() => initialize.mutate()} disabled={initialize.isPending} className="border-white/15 bg-white/[0.035] text-zinc-100 hover:bg-white/[0.08]"><Play size={15} /> {initialize.isPending ? "Initializing…" : "Initialize workspace"}</Button>}<Button onClick={beginSchedule} disabled={activateSchedule.isPending} className="bg-[#b6d74a] text-[#141714] hover:bg-[#c9e76e]"><Clock3 size={15} /> {activateSchedule.isPending ? "Activating…" : "Review schedule"}</Button></div></div>
+              {isFirstImportPending && <div className="mx-6 mt-6 border border-[#b6d74a]/25 bg-[#b6d74a]/10 p-4" role="status" aria-live="polite" data-testid="first-import-progress"><div className="flex items-start gap-3"><div className="grid h-9 w-9 shrink-0 place-items-center bg-[#b6d74a]/15 text-[#d7ee88]"><LoaderCircle size={18} className="animate-spin" /></div><div className="min-w-0"><p className="text-sm font-semibold text-[#ecf7c4]">First verified lead import is in progress</p><p className="mt-1 text-xs leading-5 text-[#d7ee88]/80">Waiting for verified public-vacancy leads. No outreach, account creation, or document sharing will occur during this step.</p></div><LedgerStamp tone="signal">Safety-gated</LedgerStamp></div><Progress value={62} className="mt-4 bg-[#b6d74a]/15 [&_[data-slot=progress-indicator]]:bg-[#b6d74a]" /></div>}
+              <div className="grid gap-3 px-6 py-6 sm:grid-cols-4">{["Prepared", "Verified-Sent", "Skipped-Role mismatch", "Skipped-Duplicate"].map(status => <div key={status} className="border border-white/[0.07] bg-white/[0.025] p-4"><p className="ledger-metric text-2xl text-white">{statusCounts[status] ?? 0}</p><p className="mt-1 text-xs leading-5 text-zinc-500">{status}</p></div>)}</div>
+              <div className="border-t border-white/10 px-6 py-5"><div className="space-y-3">{dashboard.isLoading ? <><Skeleton className="h-16 bg-white/10" /><Skeleton className="h-16 bg-white/10" /></> : leads.length ? leads.slice(0, 5).map((lead: any) => <div key={lead.id} className="flex flex-col justify-between gap-3 border border-white/[0.08] bg-black/10 px-4 py-3 sm:flex-row sm:items-center"><div className="min-w-0"><p className="truncate text-sm font-medium text-zinc-100">{lead.employer} <span className="font-normal text-zinc-500">· {lead.roleTitle}</span></p><p className="mt-1 truncate text-xs text-zinc-500">{lead.location || "Location not stated"} · Posted {lead.postingDate || "date to verify"}</p></div><Badge variant="outline" className={`w-fit whitespace-nowrap ${statusTone[lead.status] ?? "border-white/10 bg-white/[0.04] text-zinc-300"}`}>{lead.status}</Badge></div>) : <div className="border border-dashed border-white/15 px-5 py-8 text-center text-sm text-zinc-500">The private workspace is ready. The first verified run will appear here after the production schedule is activated.</div>}</div></div>
+            </section>
+
+            <section id="drafts" className="ledger-card overflow-hidden"><div className="flex items-start justify-between gap-4 border-b border-white/10 px-6 py-5"><div><p className="ledger-micro text-zinc-500">Outreach drafts awaiting review</p><h2 className="mt-1 text-lg font-semibold text-zinc-100">Nothing sends without your approval.</h2></div><LedgerStamp tone="warning">{drafts.length} ready</LedgerStamp></div><div className="mx-6 mt-5 flex items-center gap-2 border border-amber-200/20 bg-amber-200/10 px-3 py-2 text-xs text-amber-100"><AlertTriangle size={14} /> {data?.deliveryConfigured ? "A delivery provider is connected. Only Confirm & Send can invoke it." : "Email delivery is not connected. Confirm & Send records approval but cannot send an email."}</div><div className="space-y-3 px-6 py-5">{drafts.length ? drafts.map((item: any) => <article key={item.draft.id} className="border border-white/[0.08] bg-black/10 p-4"><div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start"><div className="min-w-0"><p className="truncate text-sm font-semibold text-zinc-100">{item.lead.employer}</p><p className="mt-1 text-xs text-zinc-500">{item.lead.roleTitle} · {item.draft.recipientEmail}</p><p className="mt-3 line-clamp-2 text-sm leading-6 text-zinc-400">{item.draft.subject}</p></div><Button size="sm" onClick={() => setSelectedDraft(item)} className="bg-[#b6d74a] text-[#141714] hover:bg-[#c9e76e]">Review draft <ArrowUpRight size={14} /></Button></div></article>) : <div className="border border-dashed border-white/15 px-5 py-7 text-sm text-zinc-500">No prepared drafts are waiting for review.</div>}</div></section>
+          </div>
+
+          <aside className="space-y-5"><section id="safety" className="ledger-card overflow-hidden border-[#b6d74a]/20 bg-[#b6d74a]/[0.07] p-6"><div className="flex items-center gap-2 text-[#d7ee88]"><ShieldCheck size={19} /><p className="ledger-micro">Hard safety gate</p></div><p className="mt-4 text-sm leading-6 text-zinc-300">Always active. These rules cannot be bypassed by the daily workflow.</p><ul className="mt-5 space-y-3">{safetyRules.map(rule => <li key={rule} className="flex gap-3 text-sm leading-5 text-zinc-300"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#b6d74a]" />{rule}</li>)}</ul><div className="mt-6 flex items-center gap-2 border-t border-[#b6d74a]/20 pt-4 text-xs font-medium text-[#d7ee88]"><LockKeyhole size={14} /> Owner confirmation is mandatory.</div></section>
+          <section id="workspace" className="ledger-card overflow-hidden"><div className="flex items-center justify-between border-b border-white/10 px-6 py-5"><div><p className="ledger-micro text-zinc-500">Workspace files</p><p className="mt-1 text-sm font-semibold text-zinc-100">Private reports & audit logs</p></div><FolderOpen size={19} className="text-[#b6d74a]" /></div><div className="space-y-2 px-4 py-4">{files.length ? files.slice(0, 6).map((file: any) => <a key={file.id} href={file.storageUrl} target="_blank" rel="noreferrer" className="group flex items-center gap-3 px-2 py-3 transition hover:bg-white/[0.045]"><div className="grid h-8 w-8 place-items-center border border-white/10 bg-white/[0.03] text-[#b6d74a]"><FileText size={15} /></div><span className="min-w-0 flex-1 truncate text-xs font-medium text-zinc-300">{file.filename}</span><FileDown size={15} className="text-zinc-600 group-hover:text-[#d7ee88]" /></a>) : <p className="px-2 py-3 text-xs leading-5 text-zinc-500">Reports, JSONL audit files, and daily instructions will appear here after initialization.</p>}</div></section></aside>
+        </section>
+      </div>
+
+      <Dialog open={Boolean(selectedDraft)} onOpenChange={open => !open && setSelectedDraft(null)}><DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto border-white/10 bg-[#1a1e1a] text-zinc-100"><DialogHeader><DialogTitle className="ledger-title text-3xl text-white">Review outreach draft</DialogTitle><DialogDescription className="text-zinc-400">Confirm only if the content is truthful, the public recipient is correct, and you want to send this exact email.</DialogDescription></DialogHeader>{selectedDraft && <div className="space-y-4 border border-white/10 bg-black/15 p-4 text-sm"><p><span className="font-semibold text-zinc-200">To:</span> <span className="text-zinc-400">{selectedDraft.draft.recipientEmail}</span></p><p><span className="font-semibold text-zinc-200">Subject:</span> <span className="text-zinc-400">{selectedDraft.draft.subject}</span></p><div className="max-h-[38vh] overflow-y-auto border border-white/10 bg-white/[0.025] p-4 whitespace-pre-wrap leading-6 text-zinc-300">{selectedDraft.draft.body}</div></div>}<DialogFooter><Button variant="outline" onClick={() => setSelectedDraft(null)} className="border-white/15 bg-transparent text-zinc-200 hover:bg-white/[0.05]">Cancel</Button><Button onClick={() => { if (selectedDraft) sendDraft.mutate({ draftId: selectedDraft.draft.id }); setSelectedDraft(null); }} disabled={sendDraft.isPending} className="bg-[#b6d74a] text-[#141714] hover:bg-[#c9e76e]"><Send size={15} /> {sendDraft.isPending ? "Recording…" : "Confirm & Send"}</Button></DialogFooter></DialogContent></Dialog>
+    </DashboardLayout>
+  );
 }

@@ -1,0 +1,8 @@
+node_modules
+dist
+.git
+.manus-logs
+firebase-migration/**/node_modules
+firebase-migration/**/dist
+automation/*.json
+*.log
