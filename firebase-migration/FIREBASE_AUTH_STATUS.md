@@ -2,10 +2,10 @@
 
 **Recorded:** 2026-08-18
 
-The free, static, no-data Firebase Hosting placeholder remains validated locally and has not been published.
+The free, static, no-data Firebase Hosting placeholder was published successfully on 2026-08-18.
 
-Firebase CLI authorization is blocked on the owner-controlled Google sign-in and any required device verification. No password, OTP, security code, billing change, Firebase Functions deployment, Firestore/Storage configuration, or private-data transfer has been performed.
+The owner completed the Google sign-in and reviewed/approved the Firebase CLI OAuth consent flow. No password, OTP, passkey, or security code was entered by the agent. No billing change, Firebase Functions deployment, Firestore/Storage configuration, or private-data transfer was performed.
 
-**Latest check:** The Firebase CLI was restored in the current sandbox and its login-state check reports no authorized accounts. The static-only deployment helper and no-runtime-integration boundary were revalidated locally; no deployment has been started. A fresh Firebase authorization session is open for the intended owner account and Google is waiting for an owner-controlled passkey confirmation. A final browser recheck remained on that screen; selecting the offered alternative-method control did not reveal another usable path in the sandbox. The owner must complete Google verification on a trusted device before the Firebase CLI can finish. No login URL, authorization code, verification value, or credential is stored here.
+**Publication verification:** Firebase CLI authenticated as `balajirajputparuluniversity@gmail.com`. The constrained helper deployed only `free-hosting/public` to Firebase project `project-23447353-9f40-4f75-a8b`. The verified public URL is `https://project-23447353-9f40-4f75-a8b.web.app`. The page states that it is a public no-data placeholder and includes no sign-in, forms, automation, reports, JSONL audit logs, outreach drafts, email delivery, Firebase configuration, or backend integration. No authorization code, verification value, token, or credential is stored here.
 
-After the owner completes device verification and the Firebase CLI consent finishes, run only `deploy-free-placeholder.sh` from this directory. The helper enforces the static Hosting-only boundary.
+The helper now supports a locally managed Firebase CLI command through `FIREBASE_BIN` while retaining its static Hosting-only checks. Any future deployment must continue to use `deploy-free-placeholder.sh --project project-23447353-9f40-4f75-a8b` and must not add Functions, rules, secrets, or private data without a separately approved scoped migration.

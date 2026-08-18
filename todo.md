@@ -62,7 +62,7 @@
 - [x] Create a separate free, no-data Firebase Hosting placeholder that has no Firebase SDK configuration, owner data, automation, callable Functions, or outreach capability.
 - [x] Configure Firebase Hosting to publish only the validated free placeholder while retaining the secured migration package unchanged for a future Blaze deployment.
 - [x] Build and inspect the free placeholder locally to verify it contains no private workspace data or service integrations.
-- [ ] BLOCKED — Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL; requires the owner to complete Google sign-in in Firebase CLI.
+- [x] Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL (https://project-23447353-9f40-4f75-a8b.web.app); static no-data boundary confirmed.
 - [x] Document the public placeholder boundary and the preserved secured Firebase migration path for a future owner-approved Blaze deployment.
 - [x] Verify the existing 10:00 AM IST Gemini CLI schedule, its working directory, and its no-external-action boundary against the user’s renewed instructions.
 - [x] Update the Gemini CLI workflow instructions or schedule only if they differ from the required research-only, confirmation-gated policy (no schedule change was needed; the restored workspace instructions now match it).
@@ -72,14 +72,14 @@
 - [x] Add and validate a no-data Firebase Hosting deployment helper that runs only `firebase deploy --only hosting` for the known free placeholder directory after owner authentication.
 - [x] Compare the renewed daily Gemini instruction with the active schedule and persisted non-secret template, then record whether a safety-preserving update is needed (the active schedule already matches; no update was needed).
 - [x] Restore the missing local Gemini workspace from the project-backed non-secret template and validate its safety policy without opening any login flow.
-- [ ] Obtain explicit owner approval for Firebase CLI’s broad Google OAuth permission screen before granting access or publishing the free static placeholder.
-- [ ] Recover the Firebase CLI OAuth redirect error with a fresh owner-authorized login session before publishing the free static placeholder.
+- [x] Obtain explicit owner approval for Firebase CLI’s broad Google OAuth permission screen before granting access or publishing the free static placeholder.
+- [x] Recover the Firebase CLI OAuth redirect error with a fresh owner-authorized login session before publishing the free static placeholder.
 - [x] Reconcile the updated 10:00 AM IST Gemini research-only instruction across the active workspace, recovery template, and scheduled-task prompt; validate the no-login stop condition.
 - [x] Expand both Gemini workspace instruction files with the approved reset-recovery, local-install, safety-validation, no-login, and launcher-startup requirements.
 - [x] Re-run Gemini policy validation after the expanded instruction update and document the reconciled outcome.
 - [x] Correct the daily-workflow status record to reflect the completed expanded-instruction update and its passing validations.
 - [x] Record the restored Firebase CLI, validated static-only deployment boundary, and remaining owner-sign-in gate.
-- [ ] BLOCKED — Complete the owner-controlled Google authentication step before invoking the static Hosting-only deployment helper.
+- [x] Complete the owner-controlled Google authentication step before invoking the static Hosting-only deployment helper.
 - [x] Audit currently accessible account sessions, including GitHub availability, without exposing credentials or tokens.
 - [x] Prepare a downloadable archive of the project source and a sanitized record of relevant terminal commands.
 - [x] Verify the current Google Gemini browser authentication state without exposing credentials.
@@ -97,3 +97,5 @@
 - [x] Trace and safely remediate the newly detected root `pnpm-lock.yaml` UUID Dependabot alert, then rerun root validation (root workspace UUID 11.1.1 override applied; root and Firebase Functions audits, frozen installs, 19 tests, TypeScript, and production build pass).
 - [x] Push the validated root UUID override and refreshed audit evidence to GitHub, then refresh Dependabot and verify that UUID is closed without creating another alert (commit `6217d56`; UUID is closed; Dependabot shows 1 open and 141 closed alerts).
 - [x] Test a compatibility-preserving esbuild transitive override for the final Drizzle Kit development-only Dependabot alert; retain it only if Drizzle tooling, tests, type checks, and production build pass (the scoped override did not replace `@esbuild-kit/core-utils`’ fixed esbuild 0.18.20 dependency, so it was removed; all validation passed on the retained stable tooling graph).
+- [x] Repair the static-only Firebase deployment helper’s Firebase CLI resolution so it can safely use the locally authenticated pnpm-managed CLI when no global binary is installed.
+- [x] Verify the published Firebase free static placeholder contains only the intended public no-data content and no operational dashboard integration.

@@ -45,10 +45,18 @@ if grep -RInE '<script|apiKey|authDomain|appId|measurementId|initializeApp|fireb
 fi
 
 firebase_bin="${FIREBASE_BIN:-firebase}"
+firebase_args=()
+
+if [[ "$firebase_bin" == *" "* ]]; then
+  read -r -a firebase_parts <<< "$firebase_bin"
+  firebase_bin="${firebase_parts[0]}"
+  firebase_args=("${firebase_parts[@]:1}")
+fi
+
 if ! command -v "$firebase_bin" >/dev/null 2>&1; then
-  echo "Firebase CLI is not available. Install it or set FIREBASE_BIN to its executable path." >&2
+  echo "Firebase CLI is not available. Install it or set FIREBASE_BIN to an executable command." >&2
   exit 69
 fi
 
 echo "Deploying only the static no-data Hosting placeholder to project: $project_id"
-"$firebase_bin" deploy --only hosting --project "$project_id" --non-interactive
+"$firebase_bin" "${firebase_args[@]}" deploy --only hosting --project "$project_id" --non-interactive
