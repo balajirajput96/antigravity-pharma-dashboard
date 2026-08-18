@@ -87,4 +87,4 @@
 - [x] Open the official Antigravity-linked Google sign-in page and provide a one-time owner takeover path; owner completed the browser sign-in.
 - [x] Audit all remaining actionable project tasks, repository state, connector availability, and validation commands; distinguish code defects from owner-controlled external gates.
 - [x] Resolve every actionable code or configuration defect found during the audit and rerun the applicable tests, TypeScript checks, and production build until they pass (migrated deprecated pnpm configuration to `pnpm-workspace.yaml`, removed the Vite 7-incompatible JSX location plugin; 18 tests, TypeScript, production build, frozen install, and formatting checks pass).
-- [ ] Verify the authenticated GitHub repository target, commit the tested remediation state, and synchronize it to the approved repository without exposing credentials.
+- [x] Verify the authenticated GitHub repository target, commit the tested remediation state, and synchronize it to the approved private repository at `https://github.com/balajirajput96/antigravity-pharma-dashboard` without exposing credentials.
