@@ -88,3 +88,6 @@
 - [x] Audit all remaining actionable project tasks, repository state, connector availability, and validation commands; distinguish code defects from owner-controlled external gates.
 - [x] Resolve every actionable code or configuration defect found during the audit and rerun the applicable tests, TypeScript checks, and production build until they pass (migrated deprecated pnpm configuration to `pnpm-workspace.yaml`, removed the Vite 7-incompatible JSX location plugin; 18 tests, TypeScript, production build, frozen install, and formatting checks pass).
 - [x] Verify the authenticated GitHub repository target, commit the tested remediation state, and synchronize it to the approved private repository at `https://github.com/balajirajput96/antigravity-pharma-dashboard` without exposing credentials.
+- [ ] Audit the GitHub-reported dependency security advisories and local package audit output, then classify safe upgrades versus changes requiring compatibility work.
+- [ ] Apply and validate every safe dependency security remediation that does not weaken owner access, confirmation gates, or deployment safety; document any advisories that require a separately scoped major-version migration.
+- [ ] Synchronize any tested dependency-security remediation to the private GitHub repository and verify the resulting branch state.

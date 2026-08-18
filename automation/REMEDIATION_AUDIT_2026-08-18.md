@@ -31,3 +31,15 @@ Firebase Hosting publication remains blocked by the separate Firebase CLI owner-
 ## GitHub readiness
 
 The GitHub CLI is authenticated as `balajirajput96`. The active project’s `origin` remote is the managed project checkpoint remote, not a GitHub repository. Accessible repositories include several pharma-related repositories, but no GitHub target is configured for this dashboard. The next synchronization step must select a repository explicitly or create a new private dashboard repository; the user’s request authorizes synchronization, but choosing an unrelated existing repository without confirming its intended purpose would risk overwriting unrelated work.
+
+## Dependency-security follow-up
+
+After the private GitHub repository was created, GitHub reported dependency advisories on the default branch. The GitHub Dependabot alerts endpoint itself returned HTTP 403 for the current command-line credential, so the local `pnpm audit` report was used as the authoritative remediation input.
+
+The initial local audit reported 3 critical, 49 high, 77 moderate, and 11 low advisories. Direct dependency updates were applied for the audited AWS SDK, tRPC packages, Axios, Tailwind/Vite packages, pnpm, PostCSS, Drizzle ORM, and Vitest. Streamdown was upgraded from 1.x to 2.5.0 after confirming that the dashboard uses its public `Streamdown` component API. The subsequent regression suite, TypeScript check, and production build passed with Vitest 3.2.7 and Vite 7.3.6.
+
+After those validated upgrades, the local audit reported 0 critical, 5 high, 6 moderate, and 2 low advisories. The remaining vulnerable chains are Express 4 (including `qs`, `path-to-regexp`, and `body-parser`), Recharts 2 (`lodash`), the direct NanoID version, Rollup/Picomatch beneath Vite, and esbuild beneath Drizzle Kit. The next remediation pass must update these components individually and preserve the dashboard’s existing routing and chart behavior.
+
+pnpm’s current documentation states that dependency overrides must be declared at the workspace root in `pnpm-workspace.yaml`. The generated override set was therefore migrated out of `package.json`; however, with the installed pnpm 10.4.1 launcher the existing lockfile remained unchanged after the migration. Direct dependency updates are being used first because they have a demonstrable lockfile effect, followed by compatibility-tested major upgrades where required.
+
+Sources consulted: https://pnpm.io/10.x/settings and https://pnpm.io/cli/audit.
