@@ -36,22 +36,8 @@
 - [x] Close the Google AI Studio publication step because the user selected the Manus-hosted app as primary and did not request publication.
 - [x] Record the later-resume path for the unpublished Google AI Studio draft after Google resolves its code-generation error.
 - [x] Keep the validated Manus-hosted private dashboard as the primary live workspace.
-- [ ] Confirm Firebase Spark/Starter Tier eligibility after the owner explicitly accepts Firebase terms and advances the wizard without creating a project.
 - [x] Prepare the owner-only Firebase setup steps without creating a Firebase project, setting secrets, deploying, or publishing.
-- [ ] Request approval before any Firebase project creation, secret configuration, rule deployment, or publication.
-- [ ] Request approval to accept Firebase terms and advance one non-creating wizard step solely to inspect the no-billing Spark/Starter option.
-- [ ] Create a Firebase project only if the Spark/Starter no-billing path is confirmed.
-- [ ] Configure and deploy owner-only Firebase rules and confirmation-hold functions without migrating private workspace records.
-- [ ] Verify the deployed Firebase safeguards and report the live Google deployment outcome.
-- [ ] Inspect the existing Google Cloud project as a no-billing alternative for Firebase attachment without modifying it.
-- [ ] Determine whether the owner-only Firebase migration package can use the existing Google Cloud project without billing.
-- [ ] Verify the exact identifier and billing status of My First Project before Firebase attachment.
-- [ ] Attach Firebase to My First Project through the verified command-line route without enabling billing or modifying Gemini projects.
 - [x] Identify Blaze billing prerequisites and document project-scoped budget-safeguard options without linking a billing account.
-- [ ] Prepare the full owner-only Firebase deployment package without migrating private workspace records.
-- [ ] Obtain final confirmation before linking a billing account, upgrading to Blaze, or publishing the Firebase application.
-- [ ] Deploy and verify the secured Firebase application only after approved billing setup.
-- [x] Inspect Antigravity CLI deployment capabilities and project handoff options for the private dashboard.
 - [x] Complete all non-sensitive deployment preparation and recovery steps through available tools.
 - [x] Document the remaining billing, account, data-transfer, or publication actions that require owner participation.
 - [x] Audit the Firebase migration package for a complete Hosting client, authentication flow, and deployment integration.
@@ -62,40 +48,21 @@
 - [x] Create a separate free, no-data Firebase Hosting placeholder that has no Firebase SDK configuration, owner data, automation, callable Functions, or outreach capability.
 - [x] Configure Firebase Hosting to publish only the validated free placeholder while retaining the secured migration package unchanged for a future Blaze deployment.
 - [x] Build and inspect the free placeholder locally to verify it contains no private workspace data or service integrations.
-- [x] Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL (https://project-23447353-9f40-4f75-a8b.web.app); static no-data boundary confirmed.
+- [x] Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL: https://project-23447353-9f40-4f75-a8b.web.app.
 - [x] Document the public placeholder boundary and the preserved secured Firebase migration path for a future owner-approved Blaze deployment.
 - [x] Verify the existing 10:00 AM IST Gemini CLI schedule, its working directory, and its no-external-action boundary against the user’s renewed instructions.
-- [x] Update the Gemini CLI workflow instructions or schedule only if they differ from the required research-only, confirmation-gated policy (no schedule change was needed; the restored workspace instructions now match it).
+- [x] Update the Gemini CLI workflow instructions or schedule only if they differ from the required research-only, confirmation-gated policy.
 - [x] Validate the scheduled instruction payload explicitly prohibits sending, submissions, account creation, sensitive-data handling, and any action after the report-and-drafts stage.
 - [x] Preserve a non-secret Gemini workspace recovery template inside the project so the daily workflow can be reconstructed after a sandbox reset.
 - [x] Harden the active daily Gemini schedule so a missing local workspace is restored only from the non-secret project template before research begins.
 - [x] Add and validate a no-data Firebase Hosting deployment helper that runs only `firebase deploy --only hosting` for the known free placeholder directory after owner authentication.
-- [x] Compare the renewed daily Gemini instruction with the active schedule and persisted non-secret template, then record whether a safety-preserving update is needed (the active schedule already matches; no update was needed).
-- [x] Restore the missing local Gemini workspace from the project-backed non-secret template and validate its safety policy without opening any login flow.
-- [x] Obtain explicit owner approval for Firebase CLI’s broad Google OAuth permission screen before granting access or publishing the free static placeholder.
-- [x] Recover the Firebase CLI OAuth redirect error with a fresh owner-authorized login session before publishing the free static placeholder.
-- [x] Reconcile the updated 10:00 AM IST Gemini research-only instruction across the active workspace, recovery template, and scheduled-task prompt; validate the no-login stop condition.
-- [x] Expand both Gemini workspace instruction files with the approved reset-recovery, local-install, safety-validation, no-login, and launcher-startup requirements.
-- [x] Re-run Gemini policy validation after the expanded instruction update and document the reconciled outcome.
-- [x] Correct the daily-workflow status record to reflect the completed expanded-instruction update and its passing validations.
-- [x] Record the restored Firebase CLI, validated static-only deployment boundary, and remaining owner-sign-in gate.
-- [x] Complete the owner-controlled Google authentication step before invoking the static Hosting-only deployment helper.
-- [x] Audit currently accessible account sessions, including GitHub availability, without exposing credentials or tokens.
-- [x] Prepare a downloadable archive of the project source and a sanitized record of relevant terminal commands.
-- [x] Verify the current Google Gemini browser authentication state without exposing credentials.
-- [x] Verify the Google Antigravity account/session state through an authenticated service surface (owner Google browser session verified through the official Antigravity account-entry route; no local Antigravity CLI is installed).
-- [x] Open the official Antigravity-linked Google sign-in page and provide a one-time owner takeover path; owner completed the browser sign-in.
-- [x] Audit all remaining actionable project tasks, repository state, connector availability, and validation commands; distinguish code defects from owner-controlled external gates.
-- [x] Resolve every actionable code or configuration defect found during the audit and rerun the applicable tests, TypeScript checks, and production build until they pass (migrated deprecated pnpm configuration to `pnpm-workspace.yaml`, removed the Vite 7-incompatible JSX location plugin; 18 tests, TypeScript, production build, frozen install, and formatting checks pass).
-- [x] Verify the authenticated GitHub repository target, commit the tested remediation state, and synchronize it to the approved private repository at `https://github.com/balajirajput96/antigravity-pharma-dashboard` without exposing credentials.
-- [x] Audit the GitHub-reported dependency security advisories and local package audit output, then classify safe upgrades versus changes requiring compatibility work.
-- [x] Apply and validate every safe dependency security remediation that does not weaken owner access, confirmation gates, or deployment safety; document the one remaining stable-upstream advisory requiring a separately scoped migration.
-- [x] Synchronize any tested dependency-security remediation to the private GitHub repository and verify the resulting branch state (commit `eee287d` was pushed and the remote main ref matches local).
-- [x] Repair the Express 5-incompatible `/manus-storage/*` wildcard route and verify the development server starts and serves the application after the dependency upgrade (19 regression tests, TypeScript, production build, and frozen install pass).
-- [x] Push the final Firebase Functions UUID 11.1.1 lockfile and workspace changes to the private GitHub repository, then verify the remote main branch contains them (commit `eee287d` is on `github/main`).
-- [x] Refresh GitHub Dependabot after the final Firebase UUID remediation push, reconcile the resulting alert count for both lockfiles, and update the persisted remediation audit with the zero-vulnerability Firebase Functions audit and remaining root stable-upstream limitation (Functions UUID alert is closed as fixed; root audit reprocessing surfaced a separate UUID alert and the known root esbuild development-tool alert).
-- [x] Trace and safely remediate the newly detected root `pnpm-lock.yaml` UUID Dependabot alert, then rerun root validation (root workspace UUID 11.1.1 override applied; root and Firebase Functions audits, frozen installs, 19 tests, TypeScript, and production build pass).
-- [x] Push the validated root UUID override and refreshed audit evidence to GitHub, then refresh Dependabot and verify that UUID is closed without creating another alert (commit `6217d56`; UUID is closed; Dependabot shows 1 open and 141 closed alerts).
-- [x] Test a compatibility-preserving esbuild transitive override for the final Drizzle Kit development-only Dependabot alert; retain it only if Drizzle tooling, tests, type checks, and production build pass (the scoped override did not replace `@esbuild-kit/core-utils`’ fixed esbuild 0.18.20 dependency, so it was removed; all validation passed on the retained stable tooling graph).
-- [x] Repair the static-only Firebase deployment helper’s Firebase CLI resolution so it can safely use the locally authenticated pnpm-managed CLI when no global binary is installed.
-- [x] Verify the published Firebase free static placeholder contains only the intended public no-data content and no operational dashboard integration.
+- [x] Restore and validate the safe Gemini workspace and the 10:00 AM IST research-only schedule after sandbox reset.
+- [x] Expand and reconcile the active and recovery Gemini instructions with reset recovery, local install, policy validation, no-login, and launcher requirements.
+- [x] Obtain owner approval for Firebase CLI OAuth and publish only the free static no-data Firebase Hosting placeholder.
+- [x] Audit accessible Google, Gemini, Antigravity, and GitHub sessions without exposing credentials.
+- [x] Export a sanitized project-source and terminal-command archive.
+- [x] Audit, remediate, test, and synchronize actionable project code to the private GitHub repository.
+- [x] Resolve safe dependency security advisories, migrate Express 5 and Recharts compatibility code, and validate 19 regression tests, TypeScript, production build, frozen installs, audits, and Drizzle CLI.
+- [x] Publish and verify the static no-data Firebase Hosting placeholder at https://project-23447353-9f40-4f75-a8b.web.app.
+- [x] Select the completed free-only Firebase route and stop the billing-dependent secure migration; no Blaze upgrade, billing attachment, Functions, rules, private-data migration, or secure Firebase app publication will be performed.
+- [ ] Deferred by owner: create a Cloud Billing account and attach it to My First Project only if a future secure Firebase backend migration is requested.
