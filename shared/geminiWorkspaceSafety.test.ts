@@ -8,6 +8,7 @@ describe("Gemini workspace recovery template", () => {
   it("preserves the required research-only safety gates", () => {
     const instructions = readFileSync(resolve(templateDir, "GEMINI.md"), "utf8");
     const policy = readFileSync(resolve(templateDir, "gemini_pharma_safety.toml"), "utf8");
+    const pnpmWorkspace = readFileSync(resolve(templateDir, "pnpm-workspace.yaml"), "utf8");
 
     expect(instructions).toContain("Never send an email");
     expect(instructions).toContain("Never submit a form");
@@ -24,6 +25,8 @@ describe("Gemini workspace recovery template", () => {
     expect(policy).toContain('"otp-use"');
     expect(policy).toContain('"captcha-bypass"');
     expect(policy).toContain('"external-outreach"');
+    expect(pnpmWorkspace).toContain("'@github/keytar': false");
+    expect(pnpmWorkspace).toContain("node-pty: false");
   });
 
   it("contains only non-secret recovery source files", () => {
@@ -31,6 +34,7 @@ describe("Gemini workspace recovery template", () => {
       "GEMINI.md",
       "gemini_pharma_safety.toml",
       "package.json",
+      "pnpm-workspace.yaml",
       "validate_safety_policy.sh",
       "gemini_pharma",
     ]) {
