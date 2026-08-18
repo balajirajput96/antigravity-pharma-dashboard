@@ -72,3 +72,10 @@
 - [x] Add and validate a no-data Firebase Hosting deployment helper that runs only `firebase deploy --only hosting` for the known free placeholder directory after owner authentication.
 - [x] Compare the renewed daily Gemini instruction with the active schedule and persisted non-secret template, then record whether a safety-preserving update is needed (the active schedule already matches; no update was needed).
 - [x] Restore the missing local Gemini workspace from the project-backed non-secret template and validate its safety policy without opening any login flow.
+- [ ] Obtain explicit owner approval for Firebase CLI’s broad Google OAuth permission screen before granting access or publishing the free static placeholder.
+- [ ] Recover the Firebase CLI OAuth redirect error with a fresh owner-authorized login session before publishing the free static placeholder.
+- [x] Reconcile the updated 10:00 AM IST Gemini research-only instruction across the active workspace, recovery template, and scheduled-task prompt; validate the no-login stop condition.
+- [x] Expand both Gemini workspace instruction files with the approved reset-recovery, local-install, safety-validation, no-login, and launcher-startup requirements.
+- [x] Re-run Gemini policy validation after the expanded instruction update and document the reconciled outcome.
+- [x] Correct the daily-workflow status record to reflect the completed expanded-instruction update and its passing validations.
+- [x] Record the restored Firebase CLI, validated static-only deployment boundary, and remaining owner-sign-in gate.

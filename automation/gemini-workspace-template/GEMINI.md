@@ -2,6 +2,14 @@
 
 This workspace is exclusively for Balaji Rajput’s daily pharmaceutical job-market research. Operate only within `/home/ubuntu/agy_pharma_job_task/`.
 
+## Mandatory pre-research recovery and validation
+
+Before research, check that this workspace’s `GEMINI.md`, `gemini_pharma_safety.toml`, `package.json`, and `validate_safety_policy.sh` files exist and that `/home/ubuntu/gemini_pharma` is present. If any of these non-secret safety files or the launcher is missing after a sandbox reset, run only `/home/ubuntu/antigravity-pharma-dashboard/automation/restore-gemini-workspace.sh`, then return to `/home/ubuntu/agy_pharma_job_task/`.
+
+If the workspace-local Gemini CLI binary is missing, run `pnpm install` only in `/home/ubuntu/agy_pharma_job_task/`. Before every research run, execute `pnpm run validate-safety`. If that validation fails, or existing Gemini authentication is unavailable, stop and report the blocked condition. Do not open, start, or guide any login flow.
+
+After the preflight passes, start the configured local workflow only through `/home/ubuntu/gemini_pharma` from this workspace. Give it only the public-research task and this workspace’s safety instructions. Do not use any other workspace or process private files.
+
 ## Permitted daily scope
 
 Research current **public** entry-to-mid-level pharmaceutical vacancies relevant to QA, IPQA, QMS, OSD, and adjacent quality roles. For every candidate posting, verify the posting freshness, employer identity, role fit, public contact evidence, and historical duplicate records before producing outputs.
@@ -23,4 +31,3 @@ Stop after the report, audit, and unsent-draft stage. Explicitly state that **no
 ## Output status vocabulary
 
 Use these exact status labels: **Prepared**, **Verified-Sent**, **Skipped-Role mismatch**, and **Skipped-Duplicate**. This workflow may create only **Prepared**, **Skipped-Role mismatch**, or **Skipped-Duplicate** records. **Verified-Sent** must never be created by the daily automation.
-

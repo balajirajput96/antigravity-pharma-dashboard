@@ -25,3 +25,8 @@ The restore process never writes an API key, Google credential, password, OTP, o
 
 The only allowed outputs are local dated Markdown reports, local JSONL audit entries, and locally stored truthful drafts labelled **Prepared**. A record labelled **Verified-Sent** can never be created by this scheduled workflow.
 
+## Latest policy reconciliation
+
+On 18 August 2026, the active `Daily Pharma QA IPQA Job Search` schedule and both non-secret `GEMINI.md` copies were compared with the approved 10:00 AM IST instruction. The schedule prompt already matched its full approved wording. Both `GEMINI.md` copies were then expanded to explicitly require the non-secret reset-recovery path, a workspace-only `pnpm install` fallback, mandatory `pnpm run validate-safety`, a no-login blocked-condition rule when existing authentication is unavailable, and launcher-only workflow startup through `/home/ubuntu/gemini_pharma`.
+
+After the update, `pnpm run validate-safety`, the 18-test dashboard regression suite, and `pnpm exec tsc --noEmit` completed successfully. The workspace-local Gemini CLI binary is installed, but no existing local authentication artifact is available in this sandbox. A scheduled run must therefore stop and report that blocked condition without opening any login flow or attempting external action.

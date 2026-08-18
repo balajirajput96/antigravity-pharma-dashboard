@@ -13,6 +13,11 @@ describe("Gemini workspace recovery template", () => {
     expect(instructions).toContain("Never submit a form");
     expect(instructions).toContain("no external action was taken");
     expect(instructions).toContain("direct user confirmation is required");
+    expect(instructions).toContain("restore-gemini-workspace.sh");
+    expect(instructions).toContain("pnpm run validate-safety");
+    expect(instructions).toContain("existing Gemini authentication is unavailable");
+    expect(instructions).toContain("Do not open, start, or guide any login flow");
+    expect(instructions).toContain("/home/ubuntu/gemini_pharma");
     expect(policy).toContain('"email-send"');
     expect(policy).toContain('"form-submit"');
     expect(policy).toContain('"password-use"');
