@@ -80,3 +80,5 @@
 - [x] Correct the daily-workflow status record to reflect the completed expanded-instruction update and its passing validations.
 - [x] Record the restored Firebase CLI, validated static-only deployment boundary, and remaining owner-sign-in gate.
 - [ ] BLOCKED — Complete the owner-controlled Google authentication step before invoking the static Hosting-only deployment helper.
+- [x] Audit currently accessible account sessions, including GitHub availability, without exposing credentials or tokens.
+- [x] Prepare a downloadable archive of the project source and a sanitized record of relevant terminal commands.
