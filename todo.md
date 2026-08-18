@@ -62,7 +62,7 @@
 - [x] Create a separate free, no-data Firebase Hosting placeholder that has no Firebase SDK configuration, owner data, automation, callable Functions, or outreach capability.
 - [x] Configure Firebase Hosting to publish only the validated free placeholder while retaining the secured migration package unchanged for a future Blaze deployment.
 - [x] Build and inspect the free placeholder locally to verify it contains no private workspace data or service integrations.
-- [ ] Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL.
+- [ ] BLOCKED — Publish the user-approved free placeholder to the existing Firebase project and verify the resulting public URL; requires the owner to complete Google sign-in in Firebase CLI.
 - [x] Document the public placeholder boundary and the preserved secured Firebase migration path for a future owner-approved Blaze deployment.
 - [x] Verify the existing 10:00 AM IST Gemini CLI schedule, its working directory, and its no-external-action boundary against the user’s renewed instructions.
 - [x] Update the Gemini CLI workflow instructions or schedule only if they differ from the required research-only, confirmation-gated policy (no schedule change was needed; the restored workspace instructions now match it).
@@ -79,3 +79,4 @@
 - [x] Re-run Gemini policy validation after the expanded instruction update and document the reconciled outcome.
 - [x] Correct the daily-workflow status record to reflect the completed expanded-instruction update and its passing validations.
 - [x] Record the restored Firebase CLI, validated static-only deployment boundary, and remaining owner-sign-in gate.
+- [ ] BLOCKED — Complete the owner-controlled Google authentication step before invoking the static Hosting-only deployment helper.
