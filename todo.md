@@ -92,3 +92,5 @@
 - [x] Apply and validate every safe dependency security remediation that does not weaken owner access, confirmation gates, or deployment safety; document the one remaining stable-upstream advisory requiring a separately scoped migration.
 - [ ] Synchronize any tested dependency-security remediation to the private GitHub repository and verify the resulting branch state.
 - [x] Repair the Express 5-incompatible `/manus-storage/*` wildcard route and verify the development server starts and serves the application after the dependency upgrade (19 regression tests, TypeScript, production build, and frozen install pass).
+- [ ] Push the final Firebase Functions UUID 11.1.1 lockfile and workspace changes to the private GitHub repository, then verify the remote main branch contains them.
+- [ ] Refresh GitHub Dependabot after the final Firebase UUID remediation push, reconcile the resulting alert count for both lockfiles, and update the persisted remediation audit with the zero-vulnerability Firebase Functions audit and remaining root stable-upstream limitation.

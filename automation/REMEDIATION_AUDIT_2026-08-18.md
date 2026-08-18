@@ -31,6 +31,20 @@ The final remaining moderate advisory is inherited from the latest stable `drizz
 
 The production build still emits a bundle-size performance advisory. It is not a security, type, test, or startup failure; the resulting client bundle is smaller after the Vite 8 migration.
 
+## Firebase Functions migration package
+
+The unpublished Firebase Functions migration package was independently upgraded to `firebase-admin@14.2.0` and `firebase-functions@7.3.2`. Its Google Cloud Storage dependency chain retains UUID as an optional transitive dependency, so a package-scoped `pnpm-workspace.yaml` pins UUID to the security-fix release `11.1.1`.
+
+| Check | Result |
+|---|---|
+| Functions frozen install | Passed with ignored build scripts |
+| Functions TypeScript lint | Passed |
+| Functions TypeScript build | Passed |
+| Functions compiled-module import | Passed — no Firebase resources were called |
+| Functions `pnpm audit` | Passed — 0 critical, 0 high, 0 moderate, and 0 low vulnerabilities |
+
+This package remains unpublished. The dependency work did not invoke Firebase CLI deployment, rules deployment, billing, data transfer, or any external outreach.
+
 ## External gates
 
 Firebase Hosting publication remains blocked by the separate Firebase CLI owner-authentication flow. No billing linkage, Firebase Functions deployment, rules deployment, private-record transfer, or external outreach was attempted.
@@ -38,6 +52,17 @@ Firebase Hosting publication remains blocked by the separate Firebase CLI owner-
 ## GitHub readiness
 
 The GitHub CLI is authenticated as `balajirajput96`. The private project repository is `https://github.com/balajirajput96/antigravity-pharma-dashboard`. The final tested remediation commit remains to be synchronized to that repository.
+
+## GitHub Dependabot refresh
+
+The owner-visible GitHub Dependabot refresh was requested after commit `9be26db`. GitHub reprocessed the current dependency files and reduced the repository from 119 open alerts to two open moderate alerts, with 140 alerts closed. The remaining alerts are:
+
+| Alert | Manifest | Classification |
+|---|---|---|
+| UUID buffer bounds check | `firebase-migration/functions/pnpm-lock.yaml` | Safe to remediate in the unpublished Firebase Functions migration package by updating its lockfile and rerunning its package validation. |
+| esbuild development-server request issue | root `pnpm-lock.yaml` | Same stable Drizzle Kit transitive development-tool limitation described above; local audit and GitHub agree that the deployed application bundle is not affected. |
+
+GitHub stated that the alert refresh may take several minutes to finish reflecting changes. The displayed post-refresh count and manifest mapping above were observed on the repository Dependabot page at `https://github.com/balajirajput96/antigravity-pharma-dashboard/security/dependabot`. The UUID remediation is now validated locally and must be pushed before one final Dependabot refresh can close or reconcile that alert; the stable Drizzle Kit/esbuild development-tool advisory is expected to remain.
 
 ## Sources
 
