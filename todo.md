@@ -65,4 +65,4 @@
 - [x] Resolve safe dependency security advisories, migrate Express 5 and Recharts compatibility code, and validate 19 regression tests, TypeScript, production build, frozen installs, audits, and Drizzle CLI.
 - [x] Publish and verify the static no-data Firebase Hosting placeholder at https://project-23447353-9f40-4f75-a8b.web.app.
 - [x] Select the completed free-only Firebase route and stop the billing-dependent secure migration; no Blaze upgrade, billing attachment, Functions, rules, private-data migration, or secure Firebase app publication will be performed.
-- [ ] Deferred by owner: create a Cloud Billing account and attach it to My First Project only if a future secure Firebase backend migration is requested.
+- [x] Deferred by owner: create a Cloud Billing account and attach it to My First Project only if a future secure Firebase backend migration is requested; the current free-only scope is complete.
