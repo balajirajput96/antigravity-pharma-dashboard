@@ -25,9 +25,9 @@ Express 5 rejects anonymous wildcard route paths. The storage proxy now uses the
 
 ## Local security-audit result
 
-The initial local audit reported 3 critical, 49 high, 77 moderate, and 11 low advisories. The final stable dependency graph reports **0 critical, 0 high, 1 moderate, and 0 low** advisories.
+The initial local audit reported 3 critical, 49 high, 77 moderate, and 11 low advisories. The final root production dependency graph reports **0 critical, 0 high, 0 moderate, and 0 low** advisories. The Firebase Functions migration package audit also reports **0 critical, 0 high, 0 moderate, and 0 low** advisories.
 
-The final remaining moderate advisory is inherited from the latest stable `drizzle-kit@0.31.10` development-tooling chain. The available `drizzle-kit@1.0.0-rc.4` release candidate clears that audit item but fails both `drizzle-kit --version` and `--help` against the project’s supported `drizzle-orm@0.45.2` with `ERR_PACKAGE_PATH_NOT_EXPORTED` for `drizzle-orm/_relations`. It was therefore rejected and the latest working stable Drizzle Kit was retained. This advisory is limited to local development tooling; it is not bundled into the deployed application. A future stable Drizzle Kit 1.0 release, paired with a controlled Drizzle ORM migration, is required for a safe final removal.
+GitHub additionally evaluates development dependencies. Its remaining root esbuild alert is inherited from the latest stable `drizzle-kit@0.31.10` development-tooling chain. The available `drizzle-kit@1.0.0-rc.4` release candidate clears that alert but fails both `drizzle-kit --version` and `--help` against the project’s supported `drizzle-orm@0.45.2` with `ERR_PACKAGE_PATH_NOT_EXPORTED` for `drizzle-orm/_relations`. It was therefore rejected and the latest working stable Drizzle Kit was retained. This advisory is limited to local development tooling; it is not bundled into the deployed application. A future stable Drizzle Kit 1.0 release, paired with a controlled Drizzle ORM migration, is required for a safe final removal.
 
 The production build still emits a bundle-size performance advisory. It is not a security, type, test, or startup failure; the resulting client bundle is smaller after the Vite 8 migration.
 
@@ -62,7 +62,7 @@ The owner-visible GitHub Dependabot refresh was requested after commit `9be26db`
 | UUID buffer bounds check | `firebase-migration/functions/pnpm-lock.yaml` | Safe to remediate in the unpublished Firebase Functions migration package by updating its lockfile and rerunning its package validation. |
 | esbuild development-server request issue | root `pnpm-lock.yaml` | Same stable Drizzle Kit transitive development-tool limitation described above; local audit and GitHub agree that the deployed application bundle is not affected. |
 
-GitHub stated that the alert refresh may take several minutes to finish reflecting changes. The displayed post-refresh count and manifest mapping above were observed on the repository Dependabot page at `https://github.com/balajirajput96/antigravity-pharma-dashboard/security/dependabot`. The UUID remediation is now validated locally and must be pushed before one final Dependabot refresh can close or reconcile that alert; the stable Drizzle Kit/esbuild development-tool advisory is expected to remain.
+GitHub stated that the alert refresh may take several minutes to finish reflecting changes. After commit `eee287d` pushed the Firebase Functions UUID 11.1.1 lockfile override, the original UUID alert (`#1`) displayed **closed as fixed**. A later refresh identified a separate root-lockfile UUID alert (`#79`) alongside the root esbuild development-server alert (`#4`). The root workspace now pins UUID to `11.1.1`, which makes both the root production audit and the Firebase Functions audit clean. This final root UUID remediation is validated locally and awaits GitHub synchronization plus one more owner-visible Dependabot refresh. The esbuild alert remains the documented development-scoped stable Drizzle Kit limitation.
 
 ## Sources
 
