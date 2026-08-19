@@ -105,10 +105,7 @@ const ChartTooltip = RechartsPrimitive.Tooltip;
 type ChartTooltipContentProps = React.ComponentProps<"div"> &
   RechartsPrimitive.TooltipProps &
   Partial<
-    Pick<
-      RechartsPrimitive.TooltipContentProps,
-      "active" | "payload" | "label"
-    >
+    Pick<RechartsPrimitive.TooltipContentProps, "active" | "payload" | "label">
   > & {
     hideLabel?: boolean;
     hideIndicator?: boolean;

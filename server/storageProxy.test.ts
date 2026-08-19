@@ -21,7 +21,11 @@ describe("storage proxy route", () => {
 
     const status = vi.fn().mockReturnThis();
     const send = vi.fn();
-    await handler!({ params: {} } as never, { status, send } as never, () => undefined);
+    await handler!(
+      { params: {} } as never,
+      { status, send } as never,
+      () => undefined
+    );
 
     expect(status).toHaveBeenCalledWith(400);
     expect(send).toHaveBeenCalledWith("Missing storage key");

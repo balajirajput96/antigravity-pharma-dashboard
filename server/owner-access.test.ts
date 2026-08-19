@@ -32,16 +32,22 @@ function createContext(user: typeof ownerUser) {
 describe("private workspace owner gate", () => {
   it("accepts only the configured Balaji Rajput owner identity", () => {
     expect(requireOwner(ownerUser as any)).toEqual(ownerUser);
-    expect(() => requireOwner({ ...ownerUser, openId: "another-user" } as any)).toThrow(
-      "This private workspace is available only to Balaji Rajput.",
+    expect(() =>
+      requireOwner({ ...ownerUser, openId: "another-user" } as any)
+    ).toThrow("This private workspace is available only to Balaji Rajput.");
+    expect(() => requireOwner(null)).toThrow(
+      "This private workspace is available only to Balaji Rajput."
     );
-    expect(() => requireOwner(null)).toThrow("This private workspace is available only to Balaji Rajput.");
   });
 
   it("blocks a non-owner before a Confirm & Send action can reach delivery logic", async () => {
-    const caller = appRouter.createCaller(createContext({ ...ownerUser, openId: "another-user" }));
+    const caller = appRouter.createCaller(
+      createContext({ ...ownerUser, openId: "another-user" })
+    );
 
-    await expect(caller.workspace.confirmAndSend({ draftId: 1 })).rejects.toMatchObject({
+    await expect(
+      caller.workspace.confirmAndSend({ draftId: 1 })
+    ).rejects.toMatchObject({
       code: "FORBIDDEN",
     });
   });

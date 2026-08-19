@@ -22,9 +22,17 @@ describe("Firebase migration policy", () => {
   });
 
   it("accepts only Hindi-report and JSONL-audit file types for later owner-only migration", () => {
-    expect(isApprovedFirebaseMigrationFile("hindi-report", "text/markdown")).toBe(true);
-    expect(isApprovedFirebaseMigrationFile("jsonl-audit", "application/x-ndjson")).toBe(true);
-    expect(isApprovedFirebaseMigrationFile("report", "text/markdown")).toBe(false);
-    expect(isApprovedFirebaseMigrationFile("resume", "application/pdf")).toBe(false);
+    expect(
+      isApprovedFirebaseMigrationFile("hindi-report", "text/markdown")
+    ).toBe(true);
+    expect(
+      isApprovedFirebaseMigrationFile("jsonl-audit", "application/x-ndjson")
+    ).toBe(true);
+    expect(isApprovedFirebaseMigrationFile("report", "text/markdown")).toBe(
+      false
+    );
+    expect(isApprovedFirebaseMigrationFile("resume", "application/pdf")).toBe(
+      false
+    );
   });
 });

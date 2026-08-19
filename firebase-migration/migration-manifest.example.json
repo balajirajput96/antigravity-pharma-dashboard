@@ -12,5 +12,14 @@
   },
   "storagePathTemplate": "owners/{ownerUid}/workspace/{fileId}",
   "allowedImportKinds": ["hindi-report", "jsonl-audit"],
-  "disallowedContent": ["resumes", "passwords", "OTPs", "Aadhaar", "PAN", "bank-data", "attachments", "private-documents"]
+  "disallowedContent": [
+    "resumes",
+    "passwords",
+    "OTPs",
+    "Aadhaar",
+    "PAN",
+    "bank-data",
+    "attachments",
+    "private-documents"
+  ]
 }

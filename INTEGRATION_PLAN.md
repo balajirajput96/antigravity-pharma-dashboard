@@ -10,13 +10,13 @@ The local rebuild and this repository are not interchangeable application roots.
 
 For that reason, integration will preserve this repository’s application architecture and adapt the rebuilt interface as a **visual and information-architecture layer**. No Git history will be rewritten and no backend workflow, credential boundary, or scheduled job implementation will be removed.
 
-| Area | Integration treatment |
-|---|---|
-| Authentication and owner access | Preserve existing `DashboardLayout`, login, logout, and owner-only error behaviour. |
-| Workspace data | Preserve the `workspace.dashboard` query and existing loading, error, first-import, and polling handling. |
-| Safety-gated actions | Preserve initialization, schedule activation, draft review, and explicit Confirm & Send mutations. |
-| Ledger styling | Introduce only compatible warm-graphite, mineral-green, compact ledger typography, and accessible contrast tokens. |
-| Deployment package | Add a Cloud Run-compatible Dockerfile and an explicit deployment guide; no deployment, billing, public access change, credential creation, or secret insertion is performed by this integration. |
+| Area                            | Integration treatment                                                                                                                                                                            |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Authentication and owner access | Preserve existing `DashboardLayout`, login, logout, and owner-only error behaviour.                                                                                                              |
+| Workspace data                  | Preserve the `workspace.dashboard` query and existing loading, error, first-import, and polling handling.                                                                                        |
+| Safety-gated actions            | Preserve initialization, schedule activation, draft review, and explicit Confirm & Send mutations.                                                                                               |
+| Ledger styling                  | Introduce only compatible warm-graphite, mineral-green, compact ledger typography, and accessible contrast tokens.                                                                               |
+| Deployment package              | Add a Cloud Run-compatible Dockerfile and an explicit deployment guide; no deployment, billing, public access change, credential creation, or secret insertion is performed by this integration. |
 
 ## Verification Gate
 
