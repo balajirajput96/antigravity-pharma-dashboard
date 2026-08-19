@@ -1,6 +1,6 @@
 # Antigravity Pharma Workspace — Cloud Run Deployment Guide
 
-This repository is an authenticated full-stack workspace. The included `Dockerfile` builds the Vite client and Express/tRPC server, then runs the server on the `PORT` provided by Cloud Run. The runtime entry point serves the compiled application and retains its API, authentication, storage-proxy, and safety-gated workflow routes.
+This repository is an authenticated full-stack workspace managed on Manus hosting. No custom `Dockerfile` is retained because the application does not require an extra runtime or system binary, and a root Dockerfile would replace the managed deployment image without improving the supported hosting path.
 
 ## Verified pre-deployment state
 
@@ -12,7 +12,7 @@ This repository is an authenticated full-stack workspace. The included `Dockerfi
 | Firebase Functions TypeScript compilation | Passed locally |
 | Firebase Hosting TypeScript and Vite build | Passed locally |
 | Google project under consideration | `gemini-api-project-504802` |
-| Cloud Run deployment | Not started |
+| Cloud Run deployment | Deferred; no deployment package is retained |
 
 ## Required decision before deployment
 
@@ -20,7 +20,7 @@ This repository is an authenticated full-stack workspace. The included `Dockerfi
 
 Do not add API keys, OAuth secrets, service-account keys, or database credentials to the repository. If authenticated runtime integrations are needed after deployment, store them only in the platform’s secret-management facility and provide them through the deployment environment; never commit them to Git.
 
-## Proposed deployment parameters
+## Deferred Cloud Run research parameters
 
 | Setting | Proposed value |
 |---|---|
@@ -30,15 +30,6 @@ Do not add API keys, OAuth secrets, service-account keys, or database credential
 | Runtime port | `8080` |
 | Ingress and IAM access | Decide explicitly during deployment; do not enable public access by default. |
 
-## Command template
+## Migration boundary
 
-Run the following from the repository root only after confirming the target project, region, ingress, IAM access, and any required runtime configuration:
-
-```bash
-gcloud run deploy antigravity-pharma-workspace \
-  --source . \
-  --project gemini-api-project-504802 \
-  --region asia-south1
-```
-
-The command template is documentation only. It does not deploy the service, modify billing, create credentials, or make the service public.
+The current production application remains on Manus hosting. A future Cloud Run migration would require a separately reviewed deployment design, including replacement or compatibility planning for Manus authentication, database connectivity, storage access, scheduled jobs, owner-only access control, and runtime secrets. Do not deploy this repository to Cloud Run or enable Google Cloud services from this guide.
