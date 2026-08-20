@@ -18,7 +18,7 @@ This record preserves the **legitimately accessible** execution environment for 
 
 ## Known Boundaries and Blocked Conditions
 
-The browser preview can produce an expected `Please login (10001)` response when viewed without the owner’s Manus session. This is an access-control result, not an application exception. The dashboard’s daily-schedule database record is currently inactive and has no stored task identifier, so creating or activating that owner-protected schedule requires an authenticated owner session. The local Gemini workspace has no confirmed existing authentication artifact; therefore a research run must stop and report the blocked condition without opening a login flow.
+The browser preview can produce an expected `Please login (10001)` response when viewed without the owner’s Manus session. This is an access-control result, not an application exception. The dashboard’s daily-schedule database record is currently inactive and has no stored task identifier, so creating or activating that owner-protected schedule requires an authenticated owner session. Separately, the current Manus task has an active daily 10:00 AM Asia/Kolkata research-only schedule (`febHBhDzaeRYck52jUo2TI`); it does not populate the dashboard database record and must not be conflated with the dashboard-owned Heartbeat control. The local Gemini workspace has no confirmed existing authentication artifact; therefore a research run must stop and report the blocked condition without opening a login flow.
 
 No project code declares a Datadog integration, Google Cloud Run deployment client, Antigravity CLI integration, Gmail delivery integration, or self-hosted runner. These systems are not treated as failures and are not created merely to satisfy a broad audit request.
 
@@ -54,4 +54,4 @@ If the workspace safety files or launcher are missing after reset, restore only 
 
 ## Current Outcome
 
-The repository and safe local controls are validated. The next legitimate operational step is **owner sign-in** to activate and persist the already designed daily schedule. Until then, the correct behavior is to preserve the research-only policy and report the authentication/schedule block rather than emulate or bypass it.
+The repository and safe local controls are validated. The task-level daily research schedule is active, while the independent dashboard-owned schedule remains owner-unactivated. The next legitimate dashboard operation is **owner sign-in** to activate and persist its protected daily schedule. Until then, the correct behavior is to preserve the research-only policy and report the authentication/schedule block rather than emulate or bypass it.
