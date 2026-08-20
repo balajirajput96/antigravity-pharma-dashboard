@@ -6,7 +6,10 @@ export const OWNER_NAME = "Balaji Rajput";
 
 export function requireOwner(user: AuthenticatedUser | null | undefined) {
   if (!user || user.isCron || user.openId !== ENV.ownerOpenId) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "This private workspace is available only to Balaji Rajput." });
+    throw new TRPCError({
+      code: "FORBIDDEN",
+      message: "This private workspace is available only to Balaji Rajput.",
+    });
   }
   return user;
 }

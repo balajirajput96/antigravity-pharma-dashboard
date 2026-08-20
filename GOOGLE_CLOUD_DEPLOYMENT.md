@@ -4,15 +4,15 @@ This repository is an authenticated full-stack workspace managed on Manus hostin
 
 ## Verified pre-deployment state
 
-| Item | Status |
-|---|---|
-| Root TypeScript check | Passed locally |
-| Root unit tests | Passed locally |
-| Root production build | Passed locally |
-| Firebase Functions TypeScript compilation | Passed locally |
-| Firebase Hosting TypeScript and Vite build | Passed locally |
-| Google project under consideration | `gemini-api-project-504802` |
-| Cloud Run deployment | Deferred; no deployment package is retained |
+| Item                                       | Status                                      |
+| ------------------------------------------ | ------------------------------------------- |
+| Root TypeScript check                      | Passed locally                              |
+| Root unit tests                            | Passed locally                              |
+| Root production build                      | Passed locally                              |
+| Firebase Functions TypeScript compilation  | Passed locally                              |
+| Firebase Hosting TypeScript and Vite build | Passed locally                              |
+| Google project under consideration         | `gemini-api-project-504802`                 |
+| Cloud Run deployment                       | Deferred; no deployment package is retained |
 
 ## Required decision before deployment
 
@@ -22,12 +22,12 @@ Do not add API keys, OAuth secrets, service-account keys, or database credential
 
 ## Deferred Cloud Run research parameters
 
-| Setting | Proposed value |
-|---|---|
-| Google Cloud project | `gemini-api-project-504802` |
-| Cloud Run service | `antigravity-pharma-workspace` |
-| Region | `asia-south1` (Mumbai) |
-| Runtime port | `8080` |
+| Setting                | Proposed value                                                               |
+| ---------------------- | ---------------------------------------------------------------------------- |
+| Google Cloud project   | `gemini-api-project-504802`                                                  |
+| Cloud Run service      | `antigravity-pharma-workspace`                                               |
+| Region                 | `asia-south1` (Mumbai)                                                       |
+| Runtime port           | `8080`                                                                       |
 | Ingress and IAM access | Decide explicitly during deployment; do not enable public access by default. |
 
 ## Migration boundary

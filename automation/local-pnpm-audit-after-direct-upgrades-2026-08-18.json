@@ -439,9 +439,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-346"
-      ],
+      "cwe": ["CWE-346"],
       "url": "https://github.com/advisories/GHSA-67mh-4wv8-2f99"
     },
     "1113048": {
@@ -464,9 +462,7 @@
       "reported_by": null,
       "title": "mdast-util-to-hast has unsanitized class attribute",
       "metadata": null,
-      "cves": [
-        "CVE-2025-66400"
-      ],
+      "cves": ["CVE-2025-66400"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mdast-util-to-hast",
@@ -479,10 +475,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-20",
-        "CWE-915"
-      ],
+      "cwe": ["CWE-20", "CWE-915"],
       "url": "https://github.com/advisories/GHSA-4fh9-h7wg-q85m"
     },
     "1113161": {
@@ -505,9 +498,7 @@
       "reported_by": null,
       "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2391"
-      ],
+      "cves": ["CVE-2026-2391"],
       "access": "public",
       "severity": "low",
       "module_name": "qs",
@@ -520,9 +511,7 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-20"
-      ],
+      "cwe": ["CWE-20"],
       "url": "https://github.com/advisories/GHSA-w7fw-mjwx-w883"
     },
     "1113515": {
@@ -549,9 +538,7 @@
       "reported_by": null,
       "title": "Rollup 4 has Arbitrary File Write via Path Traversal",
       "metadata": null,
-      "cves": [
-        "CVE-2026-27606"
-      ],
+      "cves": ["CVE-2026-27606"],
       "access": "public",
       "severity": "high",
       "module_name": "rollup",
@@ -564,9 +551,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-mw96-cpmx-2vgc"
     },
     "1113719": {
@@ -589,9 +574,7 @@
       "reported_by": null,
       "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
       "metadata": null,
-      "cves": [
-        "CVE-2025-15284"
-      ],
+      "cves": ["CVE-2025-15284"],
       "access": "public",
       "severity": "moderate",
       "module_name": "qs",
@@ -604,18 +587,14 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-20"
-      ],
+      "cwe": ["CWE-20"],
       "url": "https://github.com/advisories/GHSA-6rw7-vpxm-498p"
     },
     "1115527": {
       "findings": [
         {
           "version": "0.1.12",
-          "paths": [
-            ". > express@4.21.2 > path-to-regexp@0.1.12"
-          ]
+          "paths": [". > express@4.21.2 > path-to-regexp@0.1.12"]
         }
       ],
       "found_by": null,
@@ -628,9 +607,7 @@
       "reported_by": null,
       "title": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4867"
-      ],
+      "cves": ["CVE-2026-4867"],
       "access": "public",
       "severity": "high",
       "module_name": "path-to-regexp",
@@ -643,9 +620,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-1333"],
       "url": "https://github.com/advisories/GHSA-37ch-88jc-xwx2"
     },
     "1115551": {
@@ -690,9 +665,7 @@
       "reported_by": null,
       "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33672"
-      ],
+      "cves": ["CVE-2026-33672"],
       "access": "public",
       "severity": "moderate",
       "module_name": "picomatch",
@@ -705,9 +678,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p"
     },
     "1115554": {
@@ -752,9 +723,7 @@
       "reported_by": null,
       "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33671"
-      ],
+      "cves": ["CVE-2026-33671"],
       "access": "public",
       "severity": "high",
       "module_name": "picomatch",
@@ -767,18 +736,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-1333"],
       "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj"
     },
     "1115668": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -791,9 +756,7 @@
       "reported_by": null,
       "title": "DOMPurify contains a Cross-site Scripting vulnerability",
       "metadata": null,
-      "cves": [
-        "CVE-2026-0540"
-      ],
+      "cves": ["CVE-2026-0540"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -806,9 +769,7 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-v2wj-7wpq-c8vv"
     },
     "1115805": {
@@ -840,9 +801,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4800"
-      ],
+      "cves": ["CVE-2026-4800"],
       "access": "public",
       "severity": "high",
       "module_name": "lodash-es",
@@ -855,18 +814,14 @@
         "score": 8.1,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc"
     },
     "1115806": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -879,9 +834,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4800"
-      ],
+      "cves": ["CVE-2026-4800"],
       "access": "public",
       "severity": "high",
       "module_name": "lodash",
@@ -894,9 +847,7 @@
         "score": 8.1,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc"
     },
     "1115809": {
@@ -928,9 +879,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2950"
-      ],
+      "cves": ["CVE-2026-2950"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash-es",
@@ -943,18 +892,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh"
     },
     "1115810": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -967,9 +912,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2950"
-      ],
+      "cves": ["CVE-2026-2950"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash",
@@ -982,18 +925,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh"
     },
     "1117138": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1006,9 +945,7 @@
       "reported_by": null,
       "title": "DOMPurify: FORBID_TAGS bypassed by function-based ADD_TAGS predicate (asymmetry with FORBID_ATTR fix)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41240"
-      ],
+      "cves": ["CVE-2026-41240"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1021,19 +958,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-183"
-      ],
+      "cwe": ["CWE-79", "CWE-183"],
       "url": "https://github.com/advisories/GHSA-h7mw-gpvr-xq4m"
     },
     "1117139": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1046,9 +978,7 @@
       "reported_by": null,
       "title": "DOMPurify has a SAFE_FOR_TEMPLATES bypass in RETURN_DOM mode",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41239"
-      ],
+      "cves": ["CVE-2026-41239"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1061,19 +991,14 @@
         "score": 6.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-1289"
-      ],
+      "cwe": ["CWE-79", "CWE-1289"],
       "url": "https://github.com/advisories/GHSA-crv5-9vww-q3g8"
     },
     "1117140": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1086,9 +1011,7 @@
       "reported_by": null,
       "title": "DOMPurify: Prototype Pollution to XSS Bypass via CUSTOM_ELEMENT_HANDLING Fallback",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41238"
-      ],
+      "cves": ["CVE-2026-41238"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1101,19 +1024,14 @@
         "score": 6.9,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-79", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-v9jr-rg53-9pgp"
     },
     "1119441": {
       "findings": [
         {
           "version": "11.1.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > uuid@11.1.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > uuid@11.1.0"]
         }
       ],
       "found_by": null,
@@ -1126,9 +1044,7 @@
       "reported_by": null,
       "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41907"
-      ],
+      "cves": ["CVE-2026-41907"],
       "access": "public",
       "severity": "moderate",
       "module_name": "uuid",
@@ -1141,10 +1057,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
       },
-      "cwe": [
-        "CWE-787",
-        "CWE-1285"
-      ],
+      "cwe": ["CWE-787", "CWE-1285"],
       "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq"
     },
     "1119502": {
@@ -1167,9 +1080,7 @@
       "reported_by": null,
       "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
       "metadata": null,
-      "cves": [
-        "CVE-2026-8723"
-      ],
+      "cves": ["CVE-2026-8723"],
       "access": "public",
       "severity": "moderate",
       "module_name": "qs",
@@ -1182,18 +1093,14 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-476"
-      ],
+      "cwe": ["CWE-476"],
       "url": "https://github.com/advisories/GHSA-q8mj-m7cp-5q26"
     },
     "1120138": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -1206,9 +1113,7 @@
       "reported_by": null,
       "title": "Mermaid: Improper sanitization of `classDef` in state diagrams leads to HTML injection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41149"
-      ],
+      "cves": ["CVE-2026-41149"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -1221,18 +1126,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-ghcm-xqfw-q4vr"
     },
     "1120140": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -1245,9 +1146,7 @@
       "reported_by": null,
       "title": "Mermaid: Improper sanitization of `classDefs` in diagrams leads to CSS injection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41148"
-      ],
+      "cves": ["CVE-2026-41148"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -1260,18 +1159,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-xcj9-5m2h-648r"
     },
     "1120326": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -1284,9 +1179,7 @@
       "reported_by": null,
       "title": "Mermaid Gantt Charts are vulnerable to an Infinite Loop DoS",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41150"
-      ],
+      "cves": ["CVE-2026-41150"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -1299,9 +1192,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-835"
-      ],
+      "cwe": ["CWE-835"],
       "url": "https://github.com/advisories/GHSA-6m6c-36f7-fhxh"
     },
     "1120368": {
@@ -1333,9 +1224,7 @@
       "reported_by": null,
       "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
       "metadata": null,
-      "cves": [
-        "CVE-2025-13465"
-      ],
+      "cves": ["CVE-2025-13465"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash-es",
@@ -1348,18 +1237,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg"
     },
     "1120370": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -1372,9 +1257,7 @@
       "reported_by": null,
       "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
       "metadata": null,
-      "cves": [
-        "CVE-2025-13465"
-      ],
+      "cves": ["CVE-2025-13465"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash",
@@ -1387,18 +1270,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg"
     },
     "1120802": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1411,9 +1290,7 @@
       "reported_by": null,
       "title": "DOMPurify: Cross-realm IN_PLACE sanitization leaves executable markup intact via realm-bound `instanceof` checks",
       "metadata": null,
-      "cves": [
-        "CVE-2026-49458"
-      ],
+      "cves": ["CVE-2026-49458"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1426,20 +1303,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-501",
-        "CWE-693"
-      ],
+      "cwe": ["CWE-79", "CWE-501", "CWE-693"],
       "url": "https://github.com/advisories/GHSA-hpcv-96wg-7vj8"
     },
     "1120803": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1452,9 +1323,7 @@
       "reported_by": null,
       "title": "DOMPurify: IN_PLACE mode preserves attributes of a clobbered root element, allowing XSS via attacker-controlled root DOM",
       "metadata": null,
-      "cves": [
-        "CVE-2026-49459"
-      ],
+      "cves": ["CVE-2026-49459"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1467,20 +1336,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-693",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-79", "CWE-693", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-r47g-fvhr-h676"
     },
     "1120813": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1493,9 +1356,7 @@
       "reported_by": null,
       "title": "DOMPurify IN_PLACE Sanitization Bypass via Attached Shadow Root Inside <template>.content",
       "metadata": null,
-      "cves": [
-        "CVE-2026-49978"
-      ],
+      "cves": ["CVE-2026-49978"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1508,18 +1369,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-rp9w-3fw7-7cwq"
     },
     "1122162": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -1532,9 +1389,7 @@
       "reported_by": null,
       "title": "Mermaid: Improper sanitization of configuration leads to CSS injection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41159"
-      ],
+      "cves": ["CVE-2026-41159"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -1547,18 +1402,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-87f9-hvmw-gh4p"
     },
     "1123977": {
       "findings": [
         {
           "version": "1.20.3",
-          "paths": [
-            ". > express@4.21.2 > body-parser@1.20.3"
-          ]
+          "paths": [". > express@4.21.2 > body-parser@1.20.3"]
         }
       ],
       "found_by": null,
@@ -1571,9 +1422,7 @@
       "reported_by": null,
       "title": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
       "metadata": null,
-      "cves": [
-        "CVE-2026-12590"
-      ],
+      "cves": ["CVE-2026-12590"],
       "access": "public",
       "severity": "low",
       "module_name": "body-parser",
@@ -1586,18 +1435,14 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-v422-hmwv-36x6"
     },
     "1124022": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1623,20 +1468,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-184",
-        "CWE-693"
-      ],
+      "cwe": ["CWE-79", "CWE-184", "CWE-693"],
       "url": "https://github.com/advisories/GHSA-c2j3-45gr-mqc4"
     },
     "1124233": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1649,9 +1488,7 @@
       "reported_by": null,
       "title": "DOMPurify: Permanent `ALLOWED_ATTR` pollution via `setConfig()` bypassing the hook clone-guard (incomplete fix of the 3.4.7 hook-pollution patch)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65898"
-      ],
+      "cves": ["CVE-2026-65898"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1664,20 +1501,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-471",
-        "CWE-665"
-      ],
+      "cwe": ["CWE-79", "CWE-471", "CWE-665"],
       "url": "https://github.com/advisories/GHSA-cmwh-pvxp-8882"
     },
     "1124234": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1690,9 +1521,7 @@
       "reported_by": null,
       "title": "DOMPurify: Trusted Types policy survives `clearConfig()` and can poison later `RETURN_TRUSTED_TYPE` output",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65899"
-      ],
+      "cves": ["CVE-2026-65899"],
       "access": "public",
       "severity": "low",
       "module_name": "dompurify",
@@ -1705,18 +1534,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-693"
-      ],
+      "cwe": ["CWE-693"],
       "url": "https://github.com/advisories/GHSA-vxr8-fq34-vvx9"
     },
     "1124235": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1729,9 +1554,7 @@
       "reported_by": null,
       "title": "DOMPurify: SAFE_FOR_TEMPLATES bypass - template expressions survive sanitization inside <template> content when using DOM output modes",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65900"
-      ],
+      "cves": ["CVE-2026-65900"],
       "access": "public",
       "severity": "low",
       "module_name": "dompurify",
@@ -1744,18 +1567,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-gvmj-g25r-r7wr"
     },
     "1124236": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1768,9 +1587,7 @@
       "reported_by": null,
       "title": "DOMPurify: `IN_PLACE` mode trusts attacker-controlled `nodeName` on live non-form nodes, allowing script retention and XSS via attacker-supplied DOM objects",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65901"
-      ],
+      "cves": ["CVE-2026-65901"],
       "access": "public",
       "severity": "low",
       "module_name": "dompurify",
@@ -1783,18 +1600,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-x4vx-rjvf-j5p4"
     },
     "1124237": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1807,9 +1620,7 @@
       "reported_by": null,
       "title": "DOMPurify: Hook mutation of `data.allowedTags` / `data.allowedAttributes` permanently pollutes `DEFAULT_ALLOWED_TAGS` / `DEFAULT_ALLOWED_ATTR`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65902"
-      ],
+      "cves": ["CVE-2026-65902"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1822,19 +1633,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-501",
-        "CWE-693"
-      ],
+      "cwe": ["CWE-501", "CWE-693"],
       "url": "https://github.com/advisories/GHSA-76mc-f452-cxcm"
     },
     "1124238": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1847,9 +1653,7 @@
       "reported_by": null,
       "title": "DOMPurify's ADD_TAGS function form bypasses FORBID_TAGS due to short-circuit evaluation",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65903"
-      ],
+      "cves": ["CVE-2026-65903"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1862,18 +1666,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-783"
-      ],
+      "cwe": ["CWE-783"],
       "url": "https://github.com/advisories/GHSA-39q2-94rc-95cp"
     },
     "1124239": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1886,9 +1686,7 @@
       "reported_by": null,
       "title": "DOMPurify ADD_ATTR predicate skips URI validation",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65912"
-      ],
+      "cves": ["CVE-2026-65912"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1901,18 +1699,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-183"
-      ],
+      "cwe": ["CWE-183"],
       "url": "https://github.com/advisories/GHSA-cjmm-f4jc-qw8r"
     },
     "1124240": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1925,9 +1719,7 @@
       "reported_by": null,
       "title": "DOMPurify USE_PROFILES prototype pollution allows event handlers",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65913"
-      ],
+      "cves": ["CVE-2026-65913"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1940,18 +1732,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-cj63-jhhr-wcxv"
     },
     "1124241": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -1964,9 +1752,7 @@
       "reported_by": null,
       "title": "DOMPurify is vulnerable to mutation-XSS via Re-Contextualization ",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65914"
-      ],
+      "cves": ["CVE-2026-65914"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -1979,18 +1765,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-h8r8-wccr-v5f2"
     },
     "1138097": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -2003,9 +1785,7 @@
       "reported_by": null,
       "title": "Mermaid configuration APIs allow prototype pollution",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71438"
-      ],
+      "cves": ["CVE-2026-71438"],
       "access": "public",
       "severity": "low",
       "module_name": "mermaid",
@@ -2018,18 +1798,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-c4c3-pg64-4m4v"
     },
     "1138099": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -2042,9 +1818,7 @@
       "reported_by": null,
       "title": "Mermaid allows CSS injection applying to sibling elements of the diagram",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50159"
-      ],
+      "cves": ["CVE-2026-50159"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -2057,18 +1831,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-6x64-9x62-f2gx"
     },
     "1138100": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -2081,9 +1851,7 @@
       "reported_by": null,
       "title": "Mermaid Architecture diagrams are vulnerable to prototype pollution",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71437"
-      ],
+      "cves": ["CVE-2026-71437"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -2096,18 +1864,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3rrr-jr9j-h3q3"
     },
     "1138101": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -2120,9 +1884,7 @@
       "reported_by": null,
       "title": "Mermaid XY Charts are vulnerable to an infinite loop DoS",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71436"
-      ],
+      "cves": ["CVE-2026-71436"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -2135,19 +1897,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-835",
-        "CWE-1325"
-      ],
+      "cwe": ["CWE-835", "CWE-1325"],
       "url": "https://github.com/advisories/GHSA-2v8p-3f2j-5mp7"
     },
     "1138113": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -2160,9 +1917,7 @@
       "reported_by": null,
       "title": "Mermaid radar diagrams are vulnerable to DoS",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71439"
-      ],
+      "cves": ["CVE-2026-71439"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -2175,19 +1930,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-606",
-        "CWE-1322"
-      ],
+      "cwe": ["CWE-606", "CWE-1322"],
       "url": "https://github.com/advisories/GHSA-rhh3-jpg6-66xh"
     },
     "1138538": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.6.11 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -2213,9 +1963,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-55q2-fjhq-7xh7"
     },
     "1138810": {
@@ -2238,9 +1986,7 @@
       "reported_by": null,
       "title": "nanoid: non-secure generators can loop indefinitely with negative size",
       "metadata": null,
-      "cves": [
-        "CVE-2026-67214"
-      ],
+      "cves": ["CVE-2026-67214"],
       "access": "public",
       "severity": "high",
       "module_name": "nanoid",
@@ -2253,9 +1999,7 @@
         "score": 5.9,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-835"
-      ],
+      "cwe": ["CWE-835"],
       "url": "https://github.com/advisories/GHSA-28wg-ghj8-5hjv"
     }
   },

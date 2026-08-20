@@ -164,9 +164,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-346"
-      ],
+      "cwe": ["CWE-346"],
       "url": "https://github.com/advisories/GHSA-67mh-4wv8-2f99"
     },
     "1113161": {
@@ -189,9 +187,7 @@
       "reported_by": null,
       "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2391"
-      ],
+      "cves": ["CVE-2026-2391"],
       "access": "public",
       "severity": "low",
       "module_name": "qs",
@@ -204,9 +200,7 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-20"
-      ],
+      "cwe": ["CWE-20"],
       "url": "https://github.com/advisories/GHSA-w7fw-mjwx-w883"
     },
     "1113515": {
@@ -233,9 +227,7 @@
       "reported_by": null,
       "title": "Rollup 4 has Arbitrary File Write via Path Traversal",
       "metadata": null,
-      "cves": [
-        "CVE-2026-27606"
-      ],
+      "cves": ["CVE-2026-27606"],
       "access": "public",
       "severity": "high",
       "module_name": "rollup",
@@ -248,9 +240,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-mw96-cpmx-2vgc"
     },
     "1113719": {
@@ -273,9 +263,7 @@
       "reported_by": null,
       "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
       "metadata": null,
-      "cves": [
-        "CVE-2025-15284"
-      ],
+      "cves": ["CVE-2025-15284"],
       "access": "public",
       "severity": "moderate",
       "module_name": "qs",
@@ -288,18 +276,14 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-20"
-      ],
+      "cwe": ["CWE-20"],
       "url": "https://github.com/advisories/GHSA-6rw7-vpxm-498p"
     },
     "1115527": {
       "findings": [
         {
           "version": "0.1.12",
-          "paths": [
-            ". > express@4.21.2 > path-to-regexp@0.1.12"
-          ]
+          "paths": [". > express@4.21.2 > path-to-regexp@0.1.12"]
         }
       ],
       "found_by": null,
@@ -312,9 +296,7 @@
       "reported_by": null,
       "title": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4867"
-      ],
+      "cves": ["CVE-2026-4867"],
       "access": "public",
       "severity": "high",
       "module_name": "path-to-regexp",
@@ -327,9 +309,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-1333"],
       "url": "https://github.com/advisories/GHSA-37ch-88jc-xwx2"
     },
     "1115551": {
@@ -374,9 +354,7 @@
       "reported_by": null,
       "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33672"
-      ],
+      "cves": ["CVE-2026-33672"],
       "access": "public",
       "severity": "moderate",
       "module_name": "picomatch",
@@ -389,9 +367,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p"
     },
     "1115554": {
@@ -436,9 +412,7 @@
       "reported_by": null,
       "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33671"
-      ],
+      "cves": ["CVE-2026-33671"],
       "access": "public",
       "severity": "high",
       "module_name": "picomatch",
@@ -451,18 +425,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-1333"],
       "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj"
     },
     "1115806": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -475,9 +445,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4800"
-      ],
+      "cves": ["CVE-2026-4800"],
       "access": "public",
       "severity": "high",
       "module_name": "lodash",
@@ -490,18 +458,14 @@
         "score": 8.1,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc"
     },
     "1115810": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -514,9 +478,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2950"
-      ],
+      "cves": ["CVE-2026-2950"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash",
@@ -529,9 +491,7 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh"
     },
     "1119502": {
@@ -554,9 +514,7 @@
       "reported_by": null,
       "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
       "metadata": null,
-      "cves": [
-        "CVE-2026-8723"
-      ],
+      "cves": ["CVE-2026-8723"],
       "access": "public",
       "severity": "moderate",
       "module_name": "qs",
@@ -569,18 +527,14 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-476"
-      ],
+      "cwe": ["CWE-476"],
       "url": "https://github.com/advisories/GHSA-q8mj-m7cp-5q26"
     },
     "1120370": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -593,9 +547,7 @@
       "reported_by": null,
       "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
       "metadata": null,
-      "cves": [
-        "CVE-2025-13465"
-      ],
+      "cves": ["CVE-2025-13465"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash",
@@ -608,18 +560,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg"
     },
     "1123977": {
       "findings": [
         {
           "version": "1.20.3",
-          "paths": [
-            ". > express@4.21.2 > body-parser@1.20.3"
-          ]
+          "paths": [". > express@4.21.2 > body-parser@1.20.3"]
         }
       ],
       "found_by": null,
@@ -632,9 +580,7 @@
       "reported_by": null,
       "title": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
       "metadata": null,
-      "cves": [
-        "CVE-2026-12590"
-      ],
+      "cves": ["CVE-2026-12590"],
       "access": "public",
       "severity": "low",
       "module_name": "body-parser",
@@ -647,9 +593,7 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-v422-hmwv-36x6"
     }
   },

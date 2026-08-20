@@ -15,13 +15,19 @@ function normalized(value: string | null | undefined) {
 export async function requireWorkspaceOwner(uid: string) {
   const ownerEmail = normalized(ownerEmailSecret.value());
   if (!ownerEmail) {
-    throw new HttpsError("failed-precondition", "OWNER_EMAIL has not been configured server-side.");
+    throw new HttpsError(
+      "failed-precondition",
+      "OWNER_EMAIL has not been configured server-side."
+    );
   }
 
   const auth = getAuth();
   const user = await auth.getUser(uid);
   if (normalized(user.email) !== ownerEmail) {
-    throw new HttpsError("permission-denied", "This private workspace is available only to its owner.");
+    throw new HttpsError(
+      "permission-denied",
+      "This private workspace is available only to its owner."
+    );
   }
 
   if (user.customClaims?.privateWorkspaceOwner !== true) {

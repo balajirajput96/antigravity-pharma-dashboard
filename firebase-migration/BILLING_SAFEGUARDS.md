@@ -8,15 +8,15 @@ This safeguard plan applies only to the Firebase project backed by Google Cloud 
 
 The following is a **draft for explicit owner approval**, not a cost estimate or a guarantee. It is designed to make early testing visible quickly before any data migration or public traffic is enabled.
 
-| Control | Proposed setting | Purpose |
-|---|---:|---|
-| Billing budget scope | Only `project-23447353-9f40-4f75-a8b`; all services | Keeps monitoring isolated from Gemini work. |
-| Monthly alerts-only budget | ₹1,000 | Establishes a small testing threshold that the owner must explicitly approve before creation. |
-| Actual-spend alerts | 1%, 2%, 5%, 50%, 80%, 100% | Gives early warning during initial testing and stronger warnings near the selected threshold. |
-| Forecast alert | 100% forecasted spend | Flags an expected threshold breach before the end of the month. |
-| Cloud Functions spend cap | 90% of the owner-approved Functions allocation, if the feature is available | Seeks to pause eligible Functions/Cloud Run usage before the selected threshold is reached. |
-| Owner review cadence | Review Firebase **Usage and billing** after each deployment and weekly while the app is active | Detects unexpected reads, storage use, or function invocations. |
-| Data import | Disabled until rules, owner bootstrap, and the initial budget review are complete | Avoids accidental storage or function usage before the safety gate is verified. |
+| Control                    |                                                                               Proposed setting | Purpose                                                                                       |
+| -------------------------- | ---------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------- |
+| Billing budget scope       |                                            Only `project-23447353-9f40-4f75-a8b`; all services | Keeps monitoring isolated from Gemini work.                                                   |
+| Monthly alerts-only budget |                                                                                         ₹1,000 | Establishes a small testing threshold that the owner must explicitly approve before creation. |
+| Actual-spend alerts        |                                                                     1%, 2%, 5%, 50%, 80%, 100% | Gives early warning during initial testing and stronger warnings near the selected threshold. |
+| Forecast alert             |                                                                          100% forecasted spend | Flags an expected threshold breach before the end of the month.                               |
+| Cloud Functions spend cap  |                    90% of the owner-approved Functions allocation, if the feature is available | Seeks to pause eligible Functions/Cloud Run usage before the selected threshold is reached.   |
+| Owner review cadence       | Review Firebase **Usage and billing** after each deployment and weekly while the app is active | Detects unexpected reads, storage use, or function invocations.                               |
+| Data import                |              Disabled until rules, owner bootstrap, and the initial budget review are complete | Avoids accidental storage or function usage before the safety gate is verified.               |
 
 ## Important limitations
 

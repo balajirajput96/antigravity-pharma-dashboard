@@ -1200,9 +1200,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-346"
-      ],
+      "cwe": ["CWE-346"],
       "url": "https://github.com/advisories/GHSA-67mh-4wv8-2f99"
     },
     "1109131": {
@@ -1226,9 +1224,7 @@
       "reported_by": null,
       "title": "vite allows server.fs.deny bypass via backslash on Windows",
       "metadata": null,
-      "cves": [
-        "CVE-2025-62522"
-      ],
+      "cves": ["CVE-2025-62522"],
       "access": "public",
       "severity": "moderate",
       "module_name": "vite",
@@ -1241,9 +1237,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-93m4-6634-74q7"
     },
     "1109137": {
@@ -1267,9 +1261,7 @@
       "reported_by": null,
       "title": "vite allows server.fs.deny bypass via backslash on Windows",
       "metadata": null,
-      "cves": [
-        "CVE-2025-62522"
-      ],
+      "cves": ["CVE-2025-62522"],
       "access": "public",
       "severity": "moderate",
       "module_name": "vite",
@@ -1282,9 +1274,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-93m4-6634-74q7"
     },
     "1109463": {
@@ -1306,9 +1296,7 @@
       "reported_by": null,
       "title": "node-tar has a race condition leading to uninitialized memory exposure",
       "metadata": null,
-      "cves": [
-        "CVE-2025-64118"
-      ],
+      "cves": ["CVE-2025-64118"],
       "access": "public",
       "severity": "moderate",
       "module_name": "tar",
@@ -1321,9 +1309,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-362"
-      ],
+      "cwe": ["CWE-362"],
       "url": "https://github.com/advisories/GHSA-29xp-372q-xqph"
     },
     "1111524": {
@@ -1348,9 +1334,7 @@
       "reported_by": null,
       "title": "tRPC has possible prototype pollution in `experimental_nextAppDirCaller`",
       "metadata": null,
-      "cves": [
-        "CVE-2025-68130"
-      ],
+      "cves": ["CVE-2025-68130"],
       "access": "public",
       "severity": "high",
       "module_name": "@trpc/server",
@@ -1363,18 +1347,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-43p4-m455-4f4j"
     },
     "1111960": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -1387,9 +1367,7 @@
       "reported_by": null,
       "title": "pnpm v10+ Bypass \"Dependency lifecycle scripts execution disabled by default\"",
       "metadata": null,
-      "cves": [
-        "CVE-2025-69264"
-      ],
+      "cves": ["CVE-2025-69264"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -1402,18 +1380,14 @@
         "score": 8.8,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-693"
-      ],
+      "cwe": ["CWE-693"],
       "url": "https://github.com/advisories/GHSA-379q-355j-w6rj"
     },
     "1111961": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -1426,9 +1400,7 @@
       "reported_by": null,
       "title": "pnpm Has Lockfile Integrity Bypass that Allows Remote Dynamic Dependencies",
       "metadata": null,
-      "cves": [
-        "CVE-2025-69263"
-      ],
+      "cves": ["CVE-2025-69263"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -1441,9 +1413,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-494"
-      ],
+      "cwe": ["CWE-494"],
       "url": "https://github.com/advisories/GHSA-7vhp-vf5g-r2fw"
     },
     "1111987": {
@@ -1493,18 +1463,14 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
       },
-      "cwe": [
-        "CWE-20"
-      ],
+      "cwe": ["CWE-20"],
       "url": "https://github.com/advisories/GHSA-6475-r3vj-m8vf"
     },
     "1112536": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -1517,9 +1483,7 @@
       "reported_by": null,
       "title": "pnpm has Path Traversal via arbitrary file permission modification ",
       "metadata": null,
-      "cves": [
-        "CVE-2026-24131"
-      ],
+      "cves": ["CVE-2026-24131"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -1532,19 +1496,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-732"
-      ],
+      "cwe": ["CWE-22", "CWE-732"],
       "url": "https://github.com/advisories/GHSA-v253-rj99-jwpq"
     },
     "1112639": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -1557,9 +1516,7 @@
       "reported_by": null,
       "title": "pnpm: Binary ZIP extraction allows arbitrary file write via path traversal (Zip Slip)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-23888"
-      ],
+      "cves": ["CVE-2026-23888"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -1572,11 +1529,7 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-23",
-        "CWE-426"
-      ],
+      "cwe": ["CWE-22", "CWE-23", "CWE-426"],
       "url": "https://github.com/advisories/GHSA-6pfh-p556-v868"
     },
     "1112659": {
@@ -1598,9 +1551,7 @@
       "reported_by": null,
       "title": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
       "metadata": null,
-      "cves": [
-        "CVE-2026-24842"
-      ],
+      "cves": ["CVE-2026-24842"],
       "access": "public",
       "severity": "high",
       "module_name": "tar",
@@ -1613,19 +1564,14 @@
         "score": 8.2,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-59"
-      ],
+      "cwe": ["CWE-22", "CWE-59"],
       "url": "https://github.com/advisories/GHSA-34x7-hfp2-rc4v"
     },
     "1112679": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -1638,9 +1584,7 @@
       "reported_by": null,
       "title": "pnpm has Windows-specific tarball Path Traversal",
       "metadata": null,
-      "cves": [
-        "CVE-2026-23889"
-      ],
+      "cves": ["CVE-2026-23889"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -1653,18 +1597,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-6x96-7vc8-cm3p"
     },
     "1112680": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -1677,9 +1617,7 @@
       "reported_by": null,
       "title": "pnpm scoped bin name Path Traversal allows arbitrary file creation outside node_modules/.bin",
       "metadata": null,
-      "cves": [
-        "CVE-2026-23890"
-      ],
+      "cves": ["CVE-2026-23890"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -1692,18 +1630,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
       },
-      "cwe": [
-        "CWE-23"
-      ],
+      "cwe": ["CWE-23"],
       "url": "https://github.com/advisories/GHSA-xpqm-wm3m-f34h"
     },
     "1112681": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -1716,9 +1650,7 @@
       "reported_by": null,
       "title": "pnpm has symlink traversal in file:/git dependencies",
       "metadata": null,
-      "cves": [
-        "CVE-2026-24056"
-      ],
+      "cves": ["CVE-2026-24056"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -1731,10 +1663,7 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-59"
-      ],
+      "cwe": ["CWE-22", "CWE-59"],
       "url": "https://github.com/advisories/GHSA-m733-5w8f-5ggw"
     },
     "1113048": {
@@ -1759,9 +1688,7 @@
       "reported_by": null,
       "title": "mdast-util-to-hast has unsanitized class attribute",
       "metadata": null,
-      "cves": [
-        "CVE-2025-66400"
-      ],
+      "cves": ["CVE-2025-66400"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mdast-util-to-hast",
@@ -1774,10 +1701,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-20",
-        "CWE-915"
-      ],
+      "cwe": ["CWE-20", "CWE-915"],
       "url": "https://github.com/advisories/GHSA-4fh9-h7wg-q85m"
     },
     "1113153": {
@@ -1840,9 +1764,7 @@
       "reported_by": null,
       "title": "fast-xml-parser has RangeError DoS Numeric Entities Bug",
       "metadata": null,
-      "cves": [
-        "CVE-2026-25128"
-      ],
+      "cves": ["CVE-2026-25128"],
       "access": "public",
       "severity": "high",
       "module_name": "fast-xml-parser",
@@ -1855,10 +1777,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-20",
-        "CWE-248"
-      ],
+      "cwe": ["CWE-20", "CWE-248"],
       "url": "https://github.com/advisories/GHSA-37qj-frw5-hhjh"
     },
     "1113161": {
@@ -1881,9 +1800,7 @@
       "reported_by": null,
       "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2391"
-      ],
+      "cves": ["CVE-2026-2391"],
       "access": "public",
       "severity": "low",
       "module_name": "qs",
@@ -1896,9 +1813,7 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-20"
-      ],
+      "cwe": ["CWE-20"],
       "url": "https://github.com/advisories/GHSA-w7fw-mjwx-w883"
     },
     "1113300": {
@@ -1920,9 +1835,7 @@
       "reported_by": null,
       "title": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
       "metadata": null,
-      "cves": [
-        "CVE-2026-23745"
-      ],
+      "cves": ["CVE-2026-23745"],
       "access": "public",
       "severity": "high",
       "module_name": "tar",
@@ -1935,9 +1848,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-8qq5-rm4j-mr97"
     },
     "1113375": {
@@ -1959,9 +1870,7 @@
       "reported_by": null,
       "title": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
       "metadata": null,
-      "cves": [
-        "CVE-2026-26960"
-      ],
+      "cves": ["CVE-2026-26960"],
       "access": "public",
       "severity": "high",
       "module_name": "tar",
@@ -1974,9 +1883,7 @@
         "score": 7.1,
         "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-83g3-92jg-28cx"
     },
     "1113515": {
@@ -2003,9 +1910,7 @@
       "reported_by": null,
       "title": "Rollup 4 has Arbitrary File Write via Path Traversal",
       "metadata": null,
-      "cves": [
-        "CVE-2026-27606"
-      ],
+      "cves": ["CVE-2026-27606"],
       "access": "public",
       "severity": "high",
       "module_name": "rollup",
@@ -2018,9 +1923,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-mw96-cpmx-2vgc"
     },
     "1113568": {
@@ -2083,9 +1986,7 @@
       "reported_by": null,
       "title": "fast-xml-parser has an entity encoding bypass via regex injection in DOCTYPE entity names",
       "metadata": null,
-      "cves": [
-        "CVE-2026-25896"
-      ],
+      "cves": ["CVE-2026-25896"],
       "access": "public",
       "severity": "critical",
       "module_name": "fast-xml-parser",
@@ -2098,9 +1999,7 @@
         "score": 9.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N"
       },
-      "cwe": [
-        "CWE-185"
-      ],
+      "cwe": ["CWE-185"],
       "url": "https://github.com/advisories/GHSA-m7jm-9gc2-mpf2"
     },
     "1113569": {
@@ -2163,9 +2062,7 @@
       "reported_by": null,
       "title": "fast-xml-parser affected by DoS through entity expansion in DOCTYPE (no expansion limit)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-26278"
-      ],
+      "cves": ["CVE-2026-26278"],
       "access": "public",
       "severity": "high",
       "module_name": "fast-xml-parser",
@@ -2178,9 +2075,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-776"
-      ],
+      "cwe": ["CWE-776"],
       "url": "https://github.com/advisories/GHSA-jmr7-xgp7-cmfj"
     },
     "1113719": {
@@ -2203,9 +2098,7 @@
       "reported_by": null,
       "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
       "metadata": null,
-      "cves": [
-        "CVE-2025-15284"
-      ],
+      "cves": ["CVE-2025-15284"],
       "access": "public",
       "severity": "moderate",
       "module_name": "qs",
@@ -2218,9 +2111,7 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-20"
-      ],
+      "cwe": ["CWE-20"],
       "url": "https://github.com/advisories/GHSA-6rw7-vpxm-498p"
     },
     "1114153": {
@@ -2283,9 +2174,7 @@
       "reported_by": null,
       "title": "fast-xml-parser has stack overflow in XMLBuilder with preserveOrder",
       "metadata": null,
-      "cves": [
-        "CVE-2026-27942"
-      ],
+      "cves": ["CVE-2026-27942"],
       "access": "public",
       "severity": "low",
       "module_name": "fast-xml-parser",
@@ -2298,9 +2187,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-120"
-      ],
+      "cwe": ["CWE-120"],
       "url": "https://github.com/advisories/GHSA-fj3w-jwp8-x2g3"
     },
     "1114200": {
@@ -2322,9 +2209,7 @@
       "reported_by": null,
       "title": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
       "metadata": null,
-      "cves": [
-        "CVE-2026-29786"
-      ],
+      "cves": ["CVE-2026-29786"],
       "access": "public",
       "severity": "high",
       "module_name": "tar",
@@ -2337,10 +2222,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-59"
-      ],
+      "cwe": ["CWE-22", "CWE-59"],
       "url": "https://github.com/advisories/GHSA-qffp-2rhf-9h96"
     },
     "1114302": {
@@ -2362,9 +2244,7 @@
       "reported_by": null,
       "title": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
       "metadata": null,
-      "cves": [
-        "CVE-2026-31802"
-      ],
+      "cves": ["CVE-2026-31802"],
       "access": "public",
       "severity": "high",
       "module_name": "tar",
@@ -2377,9 +2257,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-9ppj-qmqm-q256"
     },
     "1114680": {
@@ -2401,9 +2279,7 @@
       "reported_by": null,
       "title": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
       "metadata": null,
-      "cves": [
-        "CVE-2026-23950"
-      ],
+      "cves": ["CVE-2026-23950"],
       "access": "public",
       "severity": "high",
       "module_name": "tar",
@@ -2416,10 +2292,7 @@
         "score": 8.8,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L"
       },
-      "cwe": [
-        "CWE-176",
-        "CWE-367"
-      ],
+      "cwe": ["CWE-176", "CWE-367"],
       "url": "https://github.com/advisories/GHSA-r6q2-hw4h-h46w"
     },
     "1115339": {
@@ -2482,9 +2355,7 @@
       "reported_by": null,
       "title": "fast-xml-parser affected by numeric entity expansion bypassing all entity expansion limits (incomplete fix for CVE-2026-26278)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33036"
-      ],
+      "cves": ["CVE-2026-33036"],
       "access": "public",
       "severity": "high",
       "module_name": "fast-xml-parser",
@@ -2497,18 +2368,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-776"
-      ],
+      "cwe": ["CWE-776"],
       "url": "https://github.com/advisories/GHSA-8gc5-j5rx-235r"
     },
     "1115527": {
       "findings": [
         {
           "version": "0.1.12",
-          "paths": [
-            ". > express@4.21.2 > path-to-regexp@0.1.12"
-          ]
+          "paths": [". > express@4.21.2 > path-to-regexp@0.1.12"]
         }
       ],
       "found_by": null,
@@ -2521,9 +2388,7 @@
       "reported_by": null,
       "title": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4867"
-      ],
+      "cves": ["CVE-2026-4867"],
       "access": "public",
       "severity": "high",
       "module_name": "path-to-regexp",
@@ -2536,9 +2401,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-1333"],
       "url": "https://github.com/advisories/GHSA-37ch-88jc-xwx2"
     },
     "1115551": {
@@ -2571,9 +2434,7 @@
       "reported_by": null,
       "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33672"
-      ],
+      "cves": ["CVE-2026-33672"],
       "access": "public",
       "severity": "moderate",
       "module_name": "picomatch",
@@ -2586,9 +2447,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p"
     },
     "1115554": {
@@ -2621,9 +2480,7 @@
       "reported_by": null,
       "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33671"
-      ],
+      "cves": ["CVE-2026-33671"],
       "access": "public",
       "severity": "high",
       "module_name": "picomatch",
@@ -2636,18 +2493,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-1333"],
       "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj"
     },
     "1115668": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -2660,9 +2513,7 @@
       "reported_by": null,
       "title": "DOMPurify contains a Cross-site Scripting vulnerability",
       "metadata": null,
-      "cves": [
-        "CVE-2026-0540"
-      ],
+      "cves": ["CVE-2026-0540"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -2675,9 +2526,7 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-v2wj-7wpq-c8vv"
     },
     "1115805": {
@@ -2709,9 +2558,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4800"
-      ],
+      "cves": ["CVE-2026-4800"],
       "access": "public",
       "severity": "high",
       "module_name": "lodash-es",
@@ -2724,18 +2571,14 @@
         "score": 8.1,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc"
     },
     "1115806": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -2748,9 +2591,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
       "metadata": null,
-      "cves": [
-        "CVE-2026-4800"
-      ],
+      "cves": ["CVE-2026-4800"],
       "access": "public",
       "severity": "high",
       "module_name": "lodash",
@@ -2763,9 +2604,7 @@
         "score": 8.1,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc"
     },
     "1115809": {
@@ -2797,9 +2636,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2950"
-      ],
+      "cves": ["CVE-2026-2950"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash-es",
@@ -2812,18 +2649,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh"
     },
     "1115810": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -2836,9 +2669,7 @@
       "reported_by": null,
       "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-2950"
-      ],
+      "cves": ["CVE-2026-2950"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash",
@@ -2851,9 +2682,7 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh"
     },
     "1116229": {
@@ -2877,9 +2706,7 @@
       "reported_by": null,
       "title": "Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling",
       "metadata": null,
-      "cves": [
-        "CVE-2026-39365"
-      ],
+      "cves": ["CVE-2026-39365"],
       "access": "public",
       "severity": "moderate",
       "module_name": "vite",
@@ -2892,10 +2719,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-200"
-      ],
+      "cwe": ["CWE-22", "CWE-200"],
       "url": "https://github.com/advisories/GHSA-4w7w-66w2-5vf9"
     },
     "1116230": {
@@ -2919,9 +2743,7 @@
       "reported_by": null,
       "title": "Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling",
       "metadata": null,
-      "cves": [
-        "CVE-2026-39365"
-      ],
+      "cves": ["CVE-2026-39365"],
       "access": "public",
       "severity": "moderate",
       "module_name": "vite",
@@ -2934,10 +2756,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-200"
-      ],
+      "cwe": ["CWE-22", "CWE-200"],
       "url": "https://github.com/advisories/GHSA-4w7w-66w2-5vf9"
     },
     "1116232": {
@@ -2961,9 +2780,7 @@
       "reported_by": null,
       "title": "Vite: `server.fs.deny` bypassed with queries",
       "metadata": null,
-      "cves": [
-        "CVE-2026-39364"
-      ],
+      "cves": ["CVE-2026-39364"],
       "access": "public",
       "severity": "high",
       "module_name": "vite",
@@ -2976,10 +2793,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-180",
-        "CWE-284"
-      ],
+      "cwe": ["CWE-180", "CWE-284"],
       "url": "https://github.com/advisories/GHSA-v2wj-q39q-566r"
     },
     "1116235": {
@@ -3003,9 +2817,7 @@
       "reported_by": null,
       "title": "Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket",
       "metadata": null,
-      "cves": [
-        "CVE-2026-39363"
-      ],
+      "cves": ["CVE-2026-39363"],
       "access": "public",
       "severity": "high",
       "module_name": "vite",
@@ -3018,19 +2830,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-200",
-        "CWE-306"
-      ],
+      "cwe": ["CWE-200", "CWE-306"],
       "url": "https://github.com/advisories/GHSA-p9ff-h696-f583"
     },
     "1116251": {
       "findings": [
         {
           "version": "0.44.6",
-          "paths": [
-            ". > drizzle-orm@0.44.6"
-          ]
+          "paths": [". > drizzle-orm@0.44.6"]
         }
       ],
       "found_by": null,
@@ -3043,9 +2850,7 @@
       "reported_by": null,
       "title": "Drizzle ORM has SQL injection via improperly escaped SQL identifiers",
       "metadata": null,
-      "cves": [
-        "CVE-2026-39356"
-      ],
+      "cves": ["CVE-2026-39356"],
       "access": "public",
       "severity": "high",
       "module_name": "drizzle-orm",
@@ -3058,9 +2863,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-89"
-      ],
+      "cwe": ["CWE-89"],
       "url": "https://github.com/advisories/GHSA-gpj5-g38j-94v9"
     },
     "1116307": {
@@ -3123,9 +2926,7 @@
       "reported_by": null,
       "title": "Entity Expansion Limits Bypassed When Set to Zero Due to JavaScript Falsy Evaluation in fast-xml-parser",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33349"
-      ],
+      "cves": ["CVE-2026-33349"],
       "access": "public",
       "severity": "moderate",
       "module_name": "fast-xml-parser",
@@ -3138,18 +2939,14 @@
         "score": 5.9,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1284"
-      ],
+      "cwe": ["CWE-1284"],
       "url": "https://github.com/advisories/GHSA-jp2q-39xq-3w4g"
     },
     "1116560": {
       "findings": [
         {
           "version": "1.15.11",
-          "paths": [
-            ". > axios@1.12.2 > follow-redirects@1.15.11"
-          ]
+          "paths": [". > axios@1.12.2 > follow-redirects@1.15.11"]
         }
       ],
       "found_by": null,
@@ -3175,18 +2972,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-200"
-      ],
+      "cwe": ["CWE-200"],
       "url": "https://github.com/advisories/GHSA-r4q5-vmmm-2653"
     },
     "1116673": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3199,9 +2992,7 @@
       "reported_by": null,
       "title": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF",
       "metadata": null,
-      "cves": [
-        "CVE-2025-62718"
-      ],
+      "cves": ["CVE-2025-62718"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3214,10 +3005,7 @@
         "score": 4.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-441",
-        "CWE-918"
-      ],
+      "cwe": ["CWE-441", "CWE-918"],
       "url": "https://github.com/advisories/GHSA-3p68-rc4w-qgx5"
     },
     "1117015": {
@@ -3246,9 +3034,7 @@
       "reported_by": null,
       "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41305"
-      ],
+      "cves": ["CVE-2026-41305"],
       "access": "public",
       "severity": "moderate",
       "module_name": "postcss",
@@ -3261,18 +3047,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-qx2v-qp2m-jg93"
     },
     "1117138": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -3285,9 +3067,7 @@
       "reported_by": null,
       "title": "DOMPurify: FORBID_TAGS bypassed by function-based ADD_TAGS predicate (asymmetry with FORBID_ATTR fix)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41240"
-      ],
+      "cves": ["CVE-2026-41240"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -3300,19 +3080,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-183"
-      ],
+      "cwe": ["CWE-79", "CWE-183"],
       "url": "https://github.com/advisories/GHSA-h7mw-gpvr-xq4m"
     },
     "1117139": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -3325,9 +3100,7 @@
       "reported_by": null,
       "title": "DOMPurify has a SAFE_FOR_TEMPLATES bypass in RETURN_DOM mode",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41239"
-      ],
+      "cves": ["CVE-2026-41239"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -3340,19 +3113,14 @@
         "score": 6.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-1289"
-      ],
+      "cwe": ["CWE-79", "CWE-1289"],
       "url": "https://github.com/advisories/GHSA-crv5-9vww-q3g8"
     },
     "1117140": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -3365,9 +3133,7 @@
       "reported_by": null,
       "title": "DOMPurify: Prototype Pollution to XSS Bypass via CUSTOM_ELEMENT_HANDLING Fallback",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41238"
-      ],
+      "cves": ["CVE-2026-41238"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -3380,19 +3146,14 @@
         "score": 6.9,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-79", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-v9jr-rg53-9pgp"
     },
     "1117386": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -3405,9 +3166,7 @@
       "reported_by": null,
       "title": "pnpm vulnerable to Command Injection via environment variable substitution",
       "metadata": null,
-      "cves": [
-        "CVE-2025-69262"
-      ],
+      "cves": ["CVE-2025-69262"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -3420,19 +3179,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-78",
-        "CWE-94"
-      ],
+      "cwe": ["CWE-78", "CWE-94"],
       "url": "https://github.com/advisories/GHSA-2phv-j68v-wwqx"
     },
     "1117574": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3445,9 +3199,7 @@
       "reported_by": null,
       "title": "Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42041"
-      ],
+      "cves": ["CVE-2026-42041"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3460,19 +3212,14 @@
         "score": 4.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-287",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-287", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-w9j2-pvgh-6h63"
     },
     "1117576": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3485,9 +3232,7 @@
       "reported_by": null,
       "title": "Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42043"
-      ],
+      "cves": ["CVE-2026-42043"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -3500,20 +3245,14 @@
         "score": 7.2,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-183",
-        "CWE-441",
-        "CWE-918"
-      ],
+      "cwe": ["CWE-183", "CWE-441", "CWE-918"],
       "url": "https://github.com/advisories/GHSA-pmwg-cvhr-8vh7"
     },
     "1117577": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3526,9 +3265,7 @@
       "reported_by": null,
       "title": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42044"
-      ],
+      "cves": ["CVE-2026-42044"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3541,19 +3278,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N"
       },
-      "cwe": [
-        "CWE-915",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-915", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3w6x-2g7m-8v23"
     },
     "1117580": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3566,9 +3298,7 @@
       "reported_by": null,
       "title": "Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42040"
-      ],
+      "cves": ["CVE-2026-42040"],
       "access": "public",
       "severity": "low",
       "module_name": "axios",
@@ -3581,19 +3311,14 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-116",
-        "CWE-626"
-      ],
+      "cwe": ["CWE-116", "CWE-626"],
       "url": "https://github.com/advisories/GHSA-xhjh-pmcv-23jw"
     },
     "1117581": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3606,9 +3331,7 @@
       "reported_by": null,
       "title": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42037"
-      ],
+      "cves": ["CVE-2026-42037"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3621,18 +3344,14 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-93"
-      ],
+      "cwe": ["CWE-93"],
       "url": "https://github.com/advisories/GHSA-445q-vr5w-6q77"
     },
     "1117583": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3645,9 +3364,7 @@
       "reported_by": null,
       "title": "Axios: no_proxy bypass via IP alias allows SSRF",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42038"
-      ],
+      "cves": ["CVE-2026-42038"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3660,18 +3377,14 @@
         "score": 6.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-918"
-      ],
+      "cwe": ["CWE-918"],
       "url": "https://github.com/advisories/GHSA-m7pr-hjqh-92cm"
     },
     "1117587": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3684,9 +3397,7 @@
       "reported_by": null,
       "title": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42034"
-      ],
+      "cves": ["CVE-2026-42034"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3699,18 +3410,14 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-5c9x-8gcm-mpgx"
     },
     "1117589": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3723,9 +3430,7 @@
       "reported_by": null,
       "title": "Axios: HTTP adapter streamed responses bypass maxContentLength",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42036"
-      ],
+      "cves": ["CVE-2026-42036"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3738,18 +3443,14 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-vf2m-468p-8v99"
     },
     "1117591": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3762,9 +3463,7 @@
       "reported_by": null,
       "title": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42033"
-      ],
+      "cves": ["CVE-2026-42033"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -3777,18 +3476,14 @@
         "score": 7.4,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-pf86-5x62-jrwf"
     },
     "1117593": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3801,9 +3496,7 @@
       "reported_by": null,
       "title": "Axios: Header Injection via Prototype Pollution",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42035"
-      ],
+      "cves": ["CVE-2026-42035"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -3816,19 +3509,14 @@
         "score": 7.4,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-113",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-113", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-6chq-wfr3-2hj9"
     },
     "1117595": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3841,9 +3529,7 @@
       "reported_by": null,
       "title": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42042"
-      ],
+      "cves": ["CVE-2026-42042"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -3856,19 +3542,14 @@
         "score": 5.4,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-183",
-        "CWE-201"
-      ],
+      "cwe": ["CWE-183", "CWE-201"],
       "url": "https://github.com/advisories/GHSA-xx6v-rp6x-q39c"
     },
     "1117858": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -3881,9 +3562,7 @@
       "reported_by": null,
       "title": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
       "metadata": null,
-      "cves": [
-        "CVE-2026-25639"
-      ],
+      "cves": ["CVE-2026-25639"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -3896,10 +3575,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-754",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-754", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-43fc-jf86-j433"
     },
     "1117911": {
@@ -3962,9 +3638,7 @@
       "reported_by": null,
       "title": "fast-xml-parser XMLBuilder: XML Comment and CDATA Injection via Unescaped Delimiters",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41650"
-      ],
+      "cves": ["CVE-2026-41650"],
       "access": "public",
       "severity": "moderate",
       "module_name": "fast-xml-parser",
@@ -3977,18 +3651,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-91"
-      ],
+      "cwe": ["CWE-91"],
       "url": "https://github.com/advisories/GHSA-gh4j-gqv2-49f6"
     },
     "1118607": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4001,9 +3671,7 @@
       "reported_by": null,
       "title": "Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42264"
-      ],
+      "cves": ["CVE-2026-42264"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -4016,18 +3684,14 @@
         "score": 7.4,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-q8qp-cvcw-x6jj"
     },
     "1119404": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4040,9 +3704,7 @@
       "reported_by": null,
       "title": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
       "metadata": null,
-      "cves": [
-        "CVE-2026-40175"
-      ],
+      "cves": ["CVE-2026-40175"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -4055,20 +3717,14 @@
         "score": 4.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-113",
-        "CWE-444",
-        "CWE-918"
-      ],
+      "cwe": ["CWE-113", "CWE-444", "CWE-918"],
       "url": "https://github.com/advisories/GHSA-fvcv-3m26-pcqx"
     },
     "1119441": {
       "findings": [
         {
           "version": "11.1.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > uuid@11.1.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > uuid@11.1.0"]
         }
       ],
       "found_by": null,
@@ -4081,9 +3737,7 @@
       "reported_by": null,
       "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41907"
-      ],
+      "cves": ["CVE-2026-41907"],
       "access": "public",
       "severity": "moderate",
       "module_name": "uuid",
@@ -4096,10 +3750,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
       },
-      "cwe": [
-        "CWE-787",
-        "CWE-1285"
-      ],
+      "cwe": ["CWE-787", "CWE-1285"],
       "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq"
     },
     "1119502": {
@@ -4122,9 +3773,7 @@
       "reported_by": null,
       "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
       "metadata": null,
-      "cves": [
-        "CVE-2026-8723"
-      ],
+      "cves": ["CVE-2026-8723"],
       "access": "public",
       "severity": "moderate",
       "module_name": "qs",
@@ -4137,18 +3786,14 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-476"
-      ],
+      "cwe": ["CWE-476"],
       "url": "https://github.com/advisories/GHSA-q8mj-m7cp-5q26"
     },
     "1120125": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4161,9 +3806,7 @@
       "reported_by": null,
       "title": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
       "metadata": null,
-      "cves": [
-        "CVE-2026-42039"
-      ],
+      "cves": ["CVE-2026-42039"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -4176,18 +3819,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-674"
-      ],
+      "cwe": ["CWE-674"],
       "url": "https://github.com/advisories/GHSA-62hf-57xw-28j9"
     },
     "1120138": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -4200,9 +3839,7 @@
       "reported_by": null,
       "title": "Mermaid: Improper sanitization of `classDef` in state diagrams leads to HTML injection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41149"
-      ],
+      "cves": ["CVE-2026-41149"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -4215,18 +3852,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-ghcm-xqfw-q4vr"
     },
     "1120140": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -4239,9 +3872,7 @@
       "reported_by": null,
       "title": "Mermaid: Improper sanitization of `classDefs` in diagrams leads to CSS injection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41148"
-      ],
+      "cves": ["CVE-2026-41148"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -4254,18 +3885,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-xcj9-5m2h-648r"
     },
     "1120326": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -4278,9 +3905,7 @@
       "reported_by": null,
       "title": "Mermaid Gantt Charts are vulnerable to an Infinite Loop DoS",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41150"
-      ],
+      "cves": ["CVE-2026-41150"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -4293,9 +3918,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-835"
-      ],
+      "cwe": ["CWE-835"],
       "url": "https://github.com/advisories/GHSA-6m6c-36f7-fhxh"
     },
     "1120368": {
@@ -4327,9 +3950,7 @@
       "reported_by": null,
       "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
       "metadata": null,
-      "cves": [
-        "CVE-2025-13465"
-      ],
+      "cves": ["CVE-2025-13465"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash-es",
@@ -4342,18 +3963,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg"
     },
     "1120370": {
       "findings": [
         {
           "version": "4.17.21",
-          "paths": [
-            ". > recharts@2.15.4 > lodash@4.17.21"
-          ]
+          "paths": [". > recharts@2.15.4 > lodash@4.17.21"]
         }
       ],
       "found_by": null,
@@ -4366,9 +3983,7 @@
       "reported_by": null,
       "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
       "metadata": null,
-      "cves": [
-        "CVE-2025-13465"
-      ],
+      "cves": ["CVE-2025-13465"],
       "access": "public",
       "severity": "moderate",
       "module_name": "lodash",
@@ -4381,18 +3996,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg"
     },
     "1120547": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4405,9 +4016,7 @@
       "reported_by": null,
       "title": "Axios: Regular Expression Denial of Service (ReDoS) via Cookie Name Injection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-44496"
-      ],
+      "cves": ["CVE-2026-44496"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -4420,19 +4029,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-400",
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-400", "CWE-1333"],
       "url": "https://github.com/advisories/GHSA-hfxv-24rg-xrqf"
     },
     "1120643": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4445,9 +4049,7 @@
       "reported_by": null,
       "title": "Allocation of Resources Without Limits or Throttling in Axios",
       "metadata": null,
-      "cves": [
-        "CVE-2026-44488"
-      ],
+      "cves": ["CVE-2026-44488"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -4460,18 +4062,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-777c-7fjr-54vf"
     },
     "1120645": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4484,9 +4082,7 @@
       "reported_by": null,
       "title": "Axios: Proxy-Authorization Credential Leak to Origin Server Across HTTP-to-HTTPS Redirect in Axios Node.js HTTP Adapter",
       "metadata": null,
-      "cves": [
-        "CVE-2026-44487"
-      ],
+      "cves": ["CVE-2026-44487"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -4499,18 +4095,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-201"
-      ],
+      "cwe": ["CWE-201"],
       "url": "https://github.com/advisories/GHSA-p92q-9vqr-4j8v"
     },
     "1120647": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4523,9 +4115,7 @@
       "reported_by": null,
       "title": "Axios: Proxy-Authorization header leaks to redirect target when proxy is re-evaluated to direct connection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-44486"
-      ],
+      "cves": ["CVE-2026-44486"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -4538,18 +4128,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-200"
-      ],
+      "cwe": ["CWE-200"],
       "url": "https://github.com/advisories/GHSA-j5f8-grm9-p9fc"
     },
     "1120649": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4562,9 +4148,7 @@
       "reported_by": null,
       "title": "axios Vulnerable to Credential Theft and Response Hijacking via Prototype Pollution Gadget in Config Merge",
       "metadata": null,
-      "cves": [
-        "CVE-2026-44495"
-      ],
+      "cves": ["CVE-2026-44495"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -4577,19 +4161,14 @@
         "score": 7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L"
       },
-      "cwe": [
-        "CWE-94",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-94", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3g43-6gmg-66jw"
     },
     "1120650": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4602,9 +4181,7 @@
       "reported_by": null,
       "title": "axios Vulnerable to Full Man-in-the-Middle via Prototype Pollution Gadget in `config.proxy`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-44494"
-      ],
+      "cves": ["CVE-2026-44494"],
       "access": "public",
       "severity": "high",
       "module_name": "axios",
@@ -4617,19 +4194,14 @@
         "score": 8.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-441",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-441", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-35jp-ww65-95wh"
     },
     "1120652": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -4642,9 +4214,7 @@
       "reported_by": null,
       "title": "axios has DoS & Header Injection via Prototype Pollution Read-Side Gadgets in axios merge functions",
       "metadata": null,
-      "cves": [
-        "CVE-2026-44490"
-      ],
+      "cves": ["CVE-2026-44490"],
       "access": "public",
       "severity": "moderate",
       "module_name": "axios",
@@ -4657,18 +4227,14 @@
         "score": 4.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-898c-q2cr-xwhg"
     },
     "1120743": {
       "findings": [
         {
           "version": "4.0.4",
-          "paths": [
-            ". > axios@1.12.2 > form-data@4.0.4"
-          ]
+          "paths": [". > axios@1.12.2 > form-data@4.0.4"]
         }
       ],
       "found_by": null,
@@ -4681,9 +4247,7 @@
       "reported_by": null,
       "title": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames",
       "metadata": null,
-      "cves": [
-        "CVE-2026-12143"
-      ],
+      "cves": ["CVE-2026-12143"],
       "access": "public",
       "severity": "high",
       "module_name": "form-data",
@@ -4696,9 +4260,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
       },
-      "cwe": [
-        "CWE-93"
-      ],
+      "cwe": ["CWE-93"],
       "url": "https://github.com/advisories/GHSA-hmw2-7cc7-3qxx"
     },
     "1120782": {
@@ -4720,9 +4282,7 @@
       "reported_by": null,
       "title": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-53655"
-      ],
+      "cves": ["CVE-2026-53655"],
       "access": "public",
       "severity": "moderate",
       "module_name": "tar",
@@ -4735,9 +4295,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-436"
-      ],
+      "cwe": ["CWE-436"],
       "url": "https://github.com/advisories/GHSA-vmf3-w455-68vh"
     },
     "1120784": {
@@ -4761,9 +4319,7 @@
       "reported_by": null,
       "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
       "metadata": null,
-      "cves": [
-        "CVE-2026-53632"
-      ],
+      "cves": ["CVE-2026-53632"],
       "access": "public",
       "severity": "moderate",
       "module_name": "vite",
@@ -4776,10 +4332,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-73",
-        "CWE-522"
-      ],
+      "cwe": ["CWE-73", "CWE-522"],
       "url": "https://github.com/advisories/GHSA-v6wh-96g9-6wx3"
     },
     "1120785": {
@@ -4803,9 +4356,7 @@
       "reported_by": null,
       "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
       "metadata": null,
-      "cves": [
-        "CVE-2026-53632"
-      ],
+      "cves": ["CVE-2026-53632"],
       "access": "public",
       "severity": "moderate",
       "module_name": "vite",
@@ -4818,19 +4369,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-73",
-        "CWE-522"
-      ],
+      "cwe": ["CWE-73", "CWE-522"],
       "url": "https://github.com/advisories/GHSA-v6wh-96g9-6wx3"
     },
     "1120802": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -4843,9 +4389,7 @@
       "reported_by": null,
       "title": "DOMPurify: Cross-realm IN_PLACE sanitization leaves executable markup intact via realm-bound `instanceof` checks",
       "metadata": null,
-      "cves": [
-        "CVE-2026-49458"
-      ],
+      "cves": ["CVE-2026-49458"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -4858,20 +4402,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-501",
-        "CWE-693"
-      ],
+      "cwe": ["CWE-79", "CWE-501", "CWE-693"],
       "url": "https://github.com/advisories/GHSA-hpcv-96wg-7vj8"
     },
     "1120803": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -4884,9 +4422,7 @@
       "reported_by": null,
       "title": "DOMPurify: IN_PLACE mode preserves attributes of a clobbered root element, allowing XSS via attacker-controlled root DOM",
       "metadata": null,
-      "cves": [
-        "CVE-2026-49459"
-      ],
+      "cves": ["CVE-2026-49459"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -4899,20 +4435,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-693",
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-79", "CWE-693", "CWE-1321"],
       "url": "https://github.com/advisories/GHSA-r47g-fvhr-h676"
     },
     "1120813": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -4925,9 +4455,7 @@
       "reported_by": null,
       "title": "DOMPurify IN_PLACE Sanitization Bypass via Attached Shadow Root Inside <template>.content",
       "metadata": null,
-      "cves": [
-        "CVE-2026-49978"
-      ],
+      "cves": ["CVE-2026-49978"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -4940,18 +4468,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-rp9w-3fw7-7cwq"
     },
     "1121805": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -4964,9 +4488,7 @@
       "reported_by": null,
       "title": "pnpm: Tarball hash of GitHub git dependencies is not stored in lockfile",
       "metadata": null,
-      "cves": [
-        "CVE-2026-48995"
-      ],
+      "cves": ["CVE-2026-48995"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -4979,18 +4501,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-353"
-      ],
+      "cwe": ["CWE-353"],
       "url": "https://github.com/advisories/GHSA-hg3w-7f8c-63hp"
     },
     "1121809": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5003,9 +4521,7 @@
       "reported_by": null,
       "title": "pnpm Vulnerable to Arbitrary File Write/Delete via Malicious Patch File (Path Traversal)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50015"
-      ],
+      "cves": ["CVE-2026-50015"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -5018,18 +4534,14 @@
         "score": 7.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:H"
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-rxhj-4m44-96r4"
     },
     "1121811": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5042,9 +4554,7 @@
       "reported_by": null,
       "title": "pnpm binds unscoped user-level npm auth credentials to a repository-selected registry",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50017"
-      ],
+      "cves": ["CVE-2026-50017"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -5057,19 +4567,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-200",
-        "CWE-522"
-      ],
+      "cwe": ["CWE-200", "CWE-522"],
       "url": "https://github.com/advisories/GHSA-cjhr-43r9-cfmw"
     },
     "1121813": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5082,9 +4587,7 @@
       "reported_by": null,
       "title": "pnpm: Transitive dependency alias path traversal allows project path override via symlink replacement",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50016"
-      ],
+      "cves": ["CVE-2026-50016"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -5097,18 +4600,14 @@
         "score": 8.8,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-23"
-      ],
+      "cwe": ["CWE-23"],
       "url": "https://github.com/advisories/GHSA-hwx4-2j3j-g496"
     },
     "1121815": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5121,9 +4620,7 @@
       "reported_by": null,
       "title": "pnpm: Git Fetch Argument Injection via Lockfile resolution.commit",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50014"
-      ],
+      "cves": ["CVE-2026-50014"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -5136,18 +4633,14 @@
         "score": 6.4,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-88"
-      ],
+      "cwe": ["CWE-88"],
       "url": "https://github.com/advisories/GHSA-p4xf-rf54-rj3x"
     },
     "1121816": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5160,9 +4653,7 @@
       "reported_by": null,
       "title": "pnpm Has an Integrity Check Bypass via Missing Lockfile Integrity Field",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50021"
-      ],
+      "cves": ["CVE-2026-50021"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -5175,18 +4666,14 @@
         "score": 6.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-354"
-      ],
+      "cwe": ["CWE-354"],
       "url": "https://github.com/advisories/GHSA-q6j5-fjx5-2mc3"
     },
     "1121819": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5199,9 +4686,7 @@
       "reported_by": null,
       "title": "pnpm: Unsafe default behavior breaks integrity check",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50573"
-      ],
+      "cves": ["CVE-2026-50573"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -5214,18 +4699,14 @@
         "score": 6.8,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
       },
-      "cwe": [
-        "CWE-345"
-      ],
+      "cwe": ["CWE-345"],
       "url": "https://github.com/advisories/GHSA-54hh-g5mx-jqcp"
     },
     "1121824": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5238,9 +4719,7 @@
       "reported_by": null,
       "title": "pnpm: Manifest identity spoof satisfies allowBuilds and runs attacker lifecycle",
       "metadata": null,
-      "cves": [
-        "CVE-2026-55487"
-      ],
+      "cves": ["CVE-2026-55487"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -5253,20 +4732,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-346",
-        "CWE-693",
-        "CWE-829"
-      ],
+      "cwe": ["CWE-346", "CWE-693", "CWE-829"],
       "url": "https://github.com/advisories/GHSA-5wx6-mg75-v57r"
     },
     "1121826": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5279,9 +4752,7 @@
       "reported_by": null,
       "title": "pnpm: Repository config can expand victim environment secrets into registry requests before scripts run",
       "metadata": null,
-      "cves": [
-        "CVE-2026-55180"
-      ],
+      "cves": ["CVE-2026-55180"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -5294,20 +4765,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-200",
-        "CWE-201",
-        "CWE-522"
-      ],
+      "cwe": ["CWE-200", "CWE-201", "CWE-522"],
       "url": "https://github.com/advisories/GHSA-3qhv-2rgh-x77r"
     },
     "1121829": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5320,9 +4785,7 @@
       "reported_by": null,
       "title": "pnpm: Reserved bin name deletes PNPM_HOME during global remove",
       "metadata": null,
-      "cves": [
-        "CVE-2026-55699"
-      ],
+      "cves": ["CVE-2026-55699"],
       "access": "public",
       "severity": "moderate",
       "module_name": "pnpm",
@@ -5335,19 +4798,14 @@
         "score": 6.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-73"
-      ],
+      "cwe": ["CWE-22", "CWE-73"],
       "url": "https://github.com/advisories/GHSA-4gxm-v5v7-fqc4"
     },
     "1121831": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5360,9 +4818,7 @@
       "reported_by": null,
       "title": "pnpm: Project env lockfile can short-circuit package-manager resolution and execute lockfile-selected pnpm bytes",
       "metadata": null,
-      "cves": [
-        "CVE-2026-55698"
-      ],
+      "cves": ["CVE-2026-55698"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -5375,20 +4831,14 @@
         "score": 8.8,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-345",
-        "CWE-494",
-        "CWE-829"
-      ],
+      "cwe": ["CWE-345", "CWE-494", "CWE-829"],
       "url": "https://github.com/advisories/GHSA-w466-c33r-3gjp"
     },
     "1121833": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5414,19 +4864,14 @@
         "score": 7.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-73"
-      ],
+      "cwe": ["CWE-22", "CWE-73"],
       "url": "https://github.com/advisories/GHSA-72r4-9c5j-mj57"
     },
     "1121835": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5452,19 +4897,14 @@
         "score": 7.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-73"
-      ],
+      "cwe": ["CWE-22", "CWE-73"],
       "url": "https://github.com/advisories/GHSA-fr4h-3cph-29xv"
     },
     "1121837": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -5490,18 +4930,14 @@
         "score": 8.2,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:L"
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-qrv3-253h-g69c"
     },
     "1122162": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -5514,9 +4950,7 @@
       "reported_by": null,
       "title": "Mermaid: Improper sanitization of configuration leads to CSS injection",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41159"
-      ],
+      "cves": ["CVE-2026-41159"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -5529,9 +4963,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-87f9-hvmw-gh4p"
     },
     "1123525": {
@@ -5555,9 +4987,7 @@
       "reported_by": null,
       "title": "vite: `server.fs.deny` bypass on Windows alternate paths",
       "metadata": null,
-      "cves": [
-        "CVE-2026-53571"
-      ],
+      "cves": ["CVE-2026-53571"],
       "access": "public",
       "severity": "high",
       "module_name": "vite",
@@ -5570,10 +5000,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-200"
-      ],
+      "cwe": ["CWE-22", "CWE-200"],
       "url": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
     },
     "1123526": {
@@ -5597,9 +5024,7 @@
       "reported_by": null,
       "title": "vite: `server.fs.deny` bypass on Windows alternate paths",
       "metadata": null,
-      "cves": [
-        "CVE-2026-53571"
-      ],
+      "cves": ["CVE-2026-53571"],
       "access": "public",
       "severity": "high",
       "module_name": "vite",
@@ -5612,10 +5037,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-200"
-      ],
+      "cwe": ["CWE-22", "CWE-200"],
       "url": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
     },
     "1123528": {
@@ -5639,9 +5061,7 @@
       "reported_by": null,
       "title": "@babel/core: Arbitrary File Read via sourceMappingURL Comment",
       "metadata": null,
-      "cves": [
-        "CVE-2026-49356"
-      ],
+      "cves": ["CVE-2026-49356"],
       "access": "public",
       "severity": "low",
       "module_name": "@babel/core",
@@ -5654,19 +5074,14 @@
         "score": 3.2,
         "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-200"
-      ],
+      "cwe": ["CWE-22", "CWE-200"],
       "url": "https://github.com/advisories/GHSA-4x5r-pxfx-6jf8"
     },
     "1123882": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -5692,19 +5107,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-400",
-        "CWE-674"
-      ],
+      "cwe": ["CWE-400", "CWE-674"],
       "url": "https://github.com/advisories/GHSA-42h9-826w-cgv3"
     },
     "1123885": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -5730,10 +5140,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-400",
-        "CWE-770"
-      ],
+      "cwe": ["CWE-400", "CWE-770"],
       "url": "https://github.com/advisories/GHSA-pmv8-rq9r-6j72"
     },
     "1123939": {
@@ -5755,9 +5162,7 @@
       "reported_by": null,
       "title": "node-tar: Process crash via PAX numeric path type confusion",
       "metadata": null,
-      "cves": [
-        "CVE-2026-59871"
-      ],
+      "cves": ["CVE-2026-59871"],
       "access": "public",
       "severity": "moderate",
       "module_name": "tar",
@@ -5770,9 +5175,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-704"
-      ],
+      "cwe": ["CWE-704"],
       "url": "https://github.com/advisories/GHSA-w8wr-v893-vjvp"
     },
     "1123940": {
@@ -5794,9 +5197,7 @@
       "reported_by": null,
       "title": "node-tar: Decompression/parse DoS via unlimited input",
       "metadata": null,
-      "cves": [
-        "CVE-2026-59873"
-      ],
+      "cves": ["CVE-2026-59873"],
       "access": "public",
       "severity": "critical",
       "module_name": "tar",
@@ -5809,9 +5210,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-23hp-3jrh-7fpw"
     },
     "1123941": {
@@ -5833,9 +5232,7 @@
       "reported_by": null,
       "title": "node-tar: Negative tar entry size causes infinite loop in archive replace",
       "metadata": null,
-      "cves": [
-        "CVE-2026-59874"
-      ],
+      "cves": ["CVE-2026-59874"],
       "access": "public",
       "severity": "high",
       "module_name": "tar",
@@ -5848,9 +5245,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-835"
-      ],
+      "cwe": ["CWE-835"],
       "url": "https://github.com/advisories/GHSA-8x88-c5mf-7j5w"
     },
     "1123942": {
@@ -5872,9 +5267,7 @@
       "reported_by": null,
       "title": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
       "metadata": null,
-      "cves": [
-        "CVE-2026-59875"
-      ],
+      "cves": ["CVE-2026-59875"],
       "access": "public",
       "severity": "moderate",
       "module_name": "tar",
@@ -5887,18 +5280,14 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-248"
-      ],
+      "cwe": ["CWE-248"],
       "url": "https://github.com/advisories/GHSA-gvwx-54wh-qm9j"
     },
     "1123957": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -5924,18 +5313,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-jqh4-m9w3-8hp9"
     },
     "1123959": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -5961,18 +5346,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-mmx7-hfxf-jppx"
     },
     "1123971": {
       "findings": [
         {
           "version": "1.12.2",
-          "paths": [
-            ". > axios@1.12.2"
-          ]
+          "paths": [". > axios@1.12.2"]
         }
       ],
       "found_by": null,
@@ -5998,18 +5379,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-7q8q-rj6j-mhjq"
     },
     "1123977": {
       "findings": [
         {
           "version": "1.20.3",
-          "paths": [
-            ". > express@4.21.2 > body-parser@1.20.3"
-          ]
+          "paths": [". > express@4.21.2 > body-parser@1.20.3"]
         }
       ],
       "found_by": null,
@@ -6022,9 +5399,7 @@
       "reported_by": null,
       "title": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
       "metadata": null,
-      "cves": [
-        "CVE-2026-12590"
-      ],
+      "cves": ["CVE-2026-12590"],
       "access": "public",
       "severity": "low",
       "module_name": "body-parser",
@@ -6037,18 +5412,14 @@
         "score": 3.7,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-770"
-      ],
+      "cwe": ["CWE-770"],
       "url": "https://github.com/advisories/GHSA-v422-hmwv-36x6"
     },
     "1124022": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6074,20 +5445,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-184",
-        "CWE-693"
-      ],
+      "cwe": ["CWE-79", "CWE-184", "CWE-693"],
       "url": "https://github.com/advisories/GHSA-c2j3-45gr-mqc4"
     },
     "1124233": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6100,9 +5465,7 @@
       "reported_by": null,
       "title": "DOMPurify: Permanent `ALLOWED_ATTR` pollution via `setConfig()` bypassing the hook clone-guard (incomplete fix of the 3.4.7 hook-pollution patch)",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65898"
-      ],
+      "cves": ["CVE-2026-65898"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -6115,20 +5478,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79",
-        "CWE-471",
-        "CWE-665"
-      ],
+      "cwe": ["CWE-79", "CWE-471", "CWE-665"],
       "url": "https://github.com/advisories/GHSA-cmwh-pvxp-8882"
     },
     "1124234": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6141,9 +5498,7 @@
       "reported_by": null,
       "title": "DOMPurify: Trusted Types policy survives `clearConfig()` and can poison later `RETURN_TRUSTED_TYPE` output",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65899"
-      ],
+      "cves": ["CVE-2026-65899"],
       "access": "public",
       "severity": "low",
       "module_name": "dompurify",
@@ -6156,18 +5511,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-693"
-      ],
+      "cwe": ["CWE-693"],
       "url": "https://github.com/advisories/GHSA-vxr8-fq34-vvx9"
     },
     "1124235": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6180,9 +5531,7 @@
       "reported_by": null,
       "title": "DOMPurify: SAFE_FOR_TEMPLATES bypass - template expressions survive sanitization inside <template> content when using DOM output modes",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65900"
-      ],
+      "cves": ["CVE-2026-65900"],
       "access": "public",
       "severity": "low",
       "module_name": "dompurify",
@@ -6195,18 +5544,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-gvmj-g25r-r7wr"
     },
     "1124236": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6219,9 +5564,7 @@
       "reported_by": null,
       "title": "DOMPurify: `IN_PLACE` mode trusts attacker-controlled `nodeName` on live non-form nodes, allowing script retention and XSS via attacker-supplied DOM objects",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65901"
-      ],
+      "cves": ["CVE-2026-65901"],
       "access": "public",
       "severity": "low",
       "module_name": "dompurify",
@@ -6234,18 +5577,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-x4vx-rjvf-j5p4"
     },
     "1124237": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6258,9 +5597,7 @@
       "reported_by": null,
       "title": "DOMPurify: Hook mutation of `data.allowedTags` / `data.allowedAttributes` permanently pollutes `DEFAULT_ALLOWED_TAGS` / `DEFAULT_ALLOWED_ATTR`",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65902"
-      ],
+      "cves": ["CVE-2026-65902"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -6273,19 +5610,14 @@
         "score": 6.1,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
       },
-      "cwe": [
-        "CWE-501",
-        "CWE-693"
-      ],
+      "cwe": ["CWE-501", "CWE-693"],
       "url": "https://github.com/advisories/GHSA-76mc-f452-cxcm"
     },
     "1124238": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6298,9 +5630,7 @@
       "reported_by": null,
       "title": "DOMPurify's ADD_TAGS function form bypasses FORBID_TAGS due to short-circuit evaluation",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65903"
-      ],
+      "cves": ["CVE-2026-65903"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -6313,18 +5643,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-783"
-      ],
+      "cwe": ["CWE-783"],
       "url": "https://github.com/advisories/GHSA-39q2-94rc-95cp"
     },
     "1124239": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6337,9 +5663,7 @@
       "reported_by": null,
       "title": "DOMPurify ADD_ATTR predicate skips URI validation",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65912"
-      ],
+      "cves": ["CVE-2026-65912"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -6352,18 +5676,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-183"
-      ],
+      "cwe": ["CWE-183"],
       "url": "https://github.com/advisories/GHSA-cjmm-f4jc-qw8r"
     },
     "1124240": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6376,9 +5696,7 @@
       "reported_by": null,
       "title": "DOMPurify USE_PROFILES prototype pollution allows event handlers",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65913"
-      ],
+      "cves": ["CVE-2026-65913"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -6391,18 +5709,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-cj63-jhhr-wcxv"
     },
     "1124241": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6415,9 +5729,7 @@
       "reported_by": null,
       "title": "DOMPurify is vulnerable to mutation-XSS via Re-Contextualization ",
       "metadata": null,
-      "cves": [
-        "CVE-2026-65914"
-      ],
+      "cves": ["CVE-2026-65914"],
       "access": "public",
       "severity": "moderate",
       "module_name": "dompurify",
@@ -6430,9 +5742,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-h8r8-wccr-v5f2"
     },
     "1124252": {
@@ -6461,9 +5771,7 @@
       "reported_by": null,
       "title": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
       "metadata": null,
-      "cves": [
-        "CVE-2026-45623"
-      ],
+      "cves": ["CVE-2026-45623"],
       "access": "public",
       "severity": "high",
       "module_name": "postcss",
@@ -6476,10 +5784,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-200"
-      ],
+      "cwe": ["CWE-22", "CWE-200"],
       "url": "https://github.com/advisories/GHSA-6g55-p6wh-862q"
     },
     "1124287": {
@@ -6514,10 +5819,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
       },
-      "cwe": [
-        "CWE-400",
-        "CWE-674"
-      ],
+      "cwe": ["CWE-400", "CWE-674"],
       "url": "https://github.com/advisories/GHSA-r292-9mhp-454m"
     },
     "1130709": {
@@ -6546,9 +5848,7 @@
       "reported_by": null,
       "title": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset",
       "metadata": null,
-      "cves": [
-        "CVE-2026-69153"
-      ],
+      "cves": ["CVE-2026-69153"],
       "access": "public",
       "severity": "moderate",
       "module_name": "postcss",
@@ -6561,19 +5861,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-200"
-      ],
+      "cwe": ["CWE-22", "CWE-200"],
       "url": "https://github.com/advisories/GHSA-fxqj-rqcc-2cmp"
     },
     "1138097": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -6586,9 +5881,7 @@
       "reported_by": null,
       "title": "Mermaid configuration APIs allow prototype pollution",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71438"
-      ],
+      "cves": ["CVE-2026-71438"],
       "access": "public",
       "severity": "low",
       "module_name": "mermaid",
@@ -6601,18 +5894,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-c4c3-pg64-4m4v"
     },
     "1138099": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -6625,9 +5914,7 @@
       "reported_by": null,
       "title": "Mermaid allows CSS injection applying to sibling elements of the diagram",
       "metadata": null,
-      "cves": [
-        "CVE-2026-50159"
-      ],
+      "cves": ["CVE-2026-50159"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -6640,18 +5927,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-94"
-      ],
+      "cwe": ["CWE-94"],
       "url": "https://github.com/advisories/GHSA-6x64-9x62-f2gx"
     },
     "1138100": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -6664,9 +5947,7 @@
       "reported_by": null,
       "title": "Mermaid Architecture diagrams are vulnerable to prototype pollution",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71437"
-      ],
+      "cves": ["CVE-2026-71437"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -6679,18 +5960,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3rrr-jr9j-h3q3"
     },
     "1138101": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -6703,9 +5980,7 @@
       "reported_by": null,
       "title": "Mermaid XY Charts are vulnerable to an infinite loop DoS",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71436"
-      ],
+      "cves": ["CVE-2026-71436"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -6718,19 +5993,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-835",
-        "CWE-1325"
-      ],
+      "cwe": ["CWE-835", "CWE-1325"],
       "url": "https://github.com/advisories/GHSA-2v8p-3f2j-5mp7"
     },
     "1138113": {
       "findings": [
         {
           "version": "11.12.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0"]
         }
       ],
       "found_by": null,
@@ -6743,9 +6013,7 @@
       "reported_by": null,
       "title": "Mermaid radar diagrams are vulnerable to DoS",
       "metadata": null,
-      "cves": [
-        "CVE-2026-71439"
-      ],
+      "cves": ["CVE-2026-71439"],
       "access": "public",
       "severity": "moderate",
       "module_name": "mermaid",
@@ -6758,19 +6026,14 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-606",
-        "CWE-1322"
-      ],
+      "cwe": ["CWE-606", "CWE-1322"],
       "url": "https://github.com/advisories/GHSA-rhh3-jpg6-66xh"
     },
     "1138538": {
       "findings": [
         {
           "version": "3.3.0",
-          "paths": [
-            ". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"
-          ]
+          "paths": [". > streamdown@1.4.0 > mermaid@11.12.0 > dompurify@3.3.0"]
         }
       ],
       "found_by": null,
@@ -6796,9 +6059,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-79"
-      ],
+      "cwe": ["CWE-79"],
       "url": "https://github.com/advisories/GHSA-55q2-fjhq-7xh7"
     },
     "1138810": {
@@ -6821,9 +6082,7 @@
       "reported_by": null,
       "title": "nanoid: non-secure generators can loop indefinitely with negative size",
       "metadata": null,
-      "cves": [
-        "CVE-2026-67214"
-      ],
+      "cves": ["CVE-2026-67214"],
       "access": "public",
       "severity": "high",
       "module_name": "nanoid",
@@ -6836,9 +6095,7 @@
         "score": 5.9,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-835"
-      ],
+      "cwe": ["CWE-835"],
       "url": "https://github.com/advisories/GHSA-28wg-ghj8-5hjv"
     },
     "1138811": {
@@ -6867,9 +6124,7 @@
       "reported_by": null,
       "title": "nanoid: non-secure generators can loop indefinitely with negative size",
       "metadata": null,
-      "cves": [
-        "CVE-2026-67214"
-      ],
+      "cves": ["CVE-2026-67214"],
       "access": "public",
       "severity": "high",
       "module_name": "nanoid",
@@ -6882,9 +6137,7 @@
         "score": 5.9,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-835"
-      ],
+      "cwe": ["CWE-835"],
       "url": "https://github.com/advisories/GHSA-28wg-ghj8-5hjv"
     },
     "1139427": {
@@ -6913,9 +6166,7 @@
       "reported_by": null,
       "title": "nanoid: custom generators can loop indefinitely when size is zero",
       "metadata": null,
-      "cves": [
-        "CVE-2026-67213"
-      ],
+      "cves": ["CVE-2026-67213"],
       "access": "public",
       "severity": "high",
       "module_name": "nanoid",
@@ -6928,18 +6179,14 @@
         "score": 5.9,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-835"
-      ],
+      "cwe": ["CWE-835"],
       "url": "https://github.com/advisories/GHSA-2v37-7h3g-55p8"
     },
     "1139460": {
       "findings": [
         {
           "version": "10.18.0",
-          "paths": [
-            ". > pnpm@10.18.0"
-          ]
+          "paths": [". > pnpm@10.18.0"]
         }
       ],
       "found_by": null,
@@ -6952,9 +6199,7 @@
       "reported_by": null,
       "title": "pnpm: Repository-controlled configDependencies can select a pacquet native install engine",
       "metadata": null,
-      "cves": [
-        "CVE-2026-55697"
-      ],
+      "cves": ["CVE-2026-55697"],
       "access": "public",
       "severity": "high",
       "module_name": "pnpm",
@@ -6967,11 +6212,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-78",
-        "CWE-494",
-        "CWE-829"
-      ],
+      "cwe": ["CWE-78", "CWE-494", "CWE-829"],
       "url": "https://github.com/advisories/GHSA-gj8w-mvpf-x27x"
     },
     "1139510": {
@@ -7000,9 +6241,7 @@
       "reported_by": null,
       "title": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
       "metadata": null,
-      "cves": [
-        "CVE-2026-73646"
-      ],
+      "cves": ["CVE-2026-73646"],
       "access": "public",
       "severity": "high",
       "module_name": "postcss",
@@ -7015,18 +6254,14 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-r28c-9q8g-f849"
     },
     "1139528": {
       "findings": [
         {
           "version": "2.1.9",
-          "paths": [
-            ". > vitest@2.1.9"
-          ]
+          "paths": [". > vitest@2.1.9"]
         }
       ],
       "found_by": null,
@@ -7039,9 +6274,7 @@
       "reported_by": null,
       "title": "When Vitest UI server is listening, arbitrary file can be read and executed",
       "metadata": null,
-      "cves": [
-        "CVE-2026-47429"
-      ],
+      "cves": ["CVE-2026-47429"],
       "access": "public",
       "severity": "critical",
       "module_name": "vitest",
@@ -7054,10 +6287,7 @@
         "score": 9.8,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
       },
-      "cwe": [
-        "CWE-22",
-        "CWE-862"
-      ],
+      "cwe": ["CWE-22", "CWE-862"],
       "url": "https://github.com/advisories/GHSA-5xrq-8626-4rwp"
     }
   },

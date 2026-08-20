@@ -84,9 +84,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
       },
-      "cwe": [
-        "CWE-346"
-      ],
+      "cwe": ["CWE-346"],
       "url": "https://github.com/advisories/GHSA-67mh-4wv8-2f99"
     },
     "1113515": {
@@ -113,9 +111,7 @@
       "reported_by": null,
       "title": "Rollup 4 has Arbitrary File Write via Path Traversal",
       "metadata": null,
-      "cves": [
-        "CVE-2026-27606"
-      ],
+      "cves": ["CVE-2026-27606"],
       "access": "public",
       "severity": "high",
       "module_name": "rollup",
@@ -128,9 +124,7 @@
         "score": 0,
         "vectorString": null
       },
-      "cwe": [
-        "CWE-22"
-      ],
+      "cwe": ["CWE-22"],
       "url": "https://github.com/advisories/GHSA-mw96-cpmx-2vgc"
     },
     "1115551": {
@@ -175,9 +169,7 @@
       "reported_by": null,
       "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33672"
-      ],
+      "cves": ["CVE-2026-33672"],
       "access": "public",
       "severity": "moderate",
       "module_name": "picomatch",
@@ -190,9 +182,7 @@
         "score": 5.3,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
       },
-      "cwe": [
-        "CWE-1321"
-      ],
+      "cwe": ["CWE-1321"],
       "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p"
     },
     "1115554": {
@@ -237,9 +227,7 @@
       "reported_by": null,
       "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
       "metadata": null,
-      "cves": [
-        "CVE-2026-33671"
-      ],
+      "cves": ["CVE-2026-33671"],
       "access": "public",
       "severity": "high",
       "module_name": "picomatch",
@@ -252,9 +240,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
       },
-      "cwe": [
-        "CWE-1333"
-      ],
+      "cwe": ["CWE-1333"],
       "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj"
     }
   },

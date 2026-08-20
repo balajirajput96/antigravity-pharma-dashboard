@@ -7,7 +7,11 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
-import { ingestDailyJobSearch, registerJobSearchCron, runDailySearch } from "../scheduled";
+import {
+  ingestDailyJobSearch,
+  registerJobSearchCron,
+  runDailySearch,
+} from "../scheduled";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -31,7 +35,10 @@ async function startServer() {
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   registerStorageProxy(app);
   registerOAuthRoutes(app);
-  app.use("/api/trpc", createExpressMiddleware({ router: appRouter, createContext }));
+  app.use(
+    "/api/trpc",
+    createExpressMiddleware({ router: appRouter, createContext })
+  );
   app.post("/api/scheduled/register-job-search", registerJobSearchCron);
   app.post("/api/scheduled/run-daily-search", runDailySearch);
   app.post("/api/scheduled/ingest-job-search", ingestDailyJobSearch);
@@ -44,8 +51,11 @@ async function startServer() {
 
   const preferredPort = parseInt(process.env.PORT || "3000");
   const port = await findAvailablePort(preferredPort);
-  if (port !== preferredPort) console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
-  server.listen(port, () => console.log(`Server running on http://localhost:${port}/`));
+  if (port !== preferredPort)
+    console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
+  server.listen(port, () =>
+    console.log(`Server running on http://localhost:${port}/`)
+  );
 }
 
 startServer().catch(console.error);

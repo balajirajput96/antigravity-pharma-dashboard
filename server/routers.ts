@@ -5,7 +5,13 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
-import { createInstructionFile, DAILY_AGENT_INSTRUCTIONS, ensureWorkflowSettings, listDashboard, recordConfirmedSend } from "./jobWorkflow";
+import {
+  createInstructionFile,
+  DAILY_AGENT_INSTRUCTIONS,
+  ensureWorkflowSettings,
+  listDashboard,
+  recordConfirmedSend,
+} from "./jobWorkflow";
 import { requireOwner } from "./owner";
 import { createHeartbeatJob, updateHeartbeatJob } from "./_core/heartbeat";
 import { getDb } from "./db";
@@ -34,18 +40,30 @@ export const appRouter = router({
     activateDailySchedule: protectedProcedure.mutation(async ({ ctx }) => {
       const owner = requireOwner(ctx.user);
       const settings = await ensureWorkflowSettings(owner.openId);
-      const sessionToken = parseCookie(ctx.req.headers.cookie ?? "")[COOKIE_NAME] ?? "";
+      const sessionToken =
+        parseCookie(ctx.req.headers.cookie ?? "")[COOKIE_NAME] ?? "";
       const job = {
         name: "balaji-pharma-daily-research",
         cron: "0 30 4 * * *",
         path: "/api/scheduled/run-daily-search",
         payload: { owner: "Balaji Rajput", run: "daily-pharma-research" },
-        description: "Daily 10:00 IST pharma QA/IPQA/QMS/OSD research handoff for Balaji Rajput.",
+        description:
+          "Daily 10:00 IST pharma QA/IPQA/QMS/OSD research handoff for Balaji Rajput.",
       } as const;
       let taskUid = settings.scheduleCronTaskUid;
       let nextExecutionAt: string | null | undefined;
       if (taskUid) {
-        const result = await updateHeartbeatJob(taskUid, { cron: job.cron, path: job.path, payload: job.payload, description: job.description, enable: true }, sessionToken);
+        const result = await updateHeartbeatJob(
+          taskUid,
+          {
+            cron: job.cron,
+            path: job.path,
+            payload: job.payload,
+            description: job.description,
+            enable: true,
+          },
+          sessionToken
+        );
         nextExecutionAt = result.nextExecutionAt;
       } else {
         const result = await createHeartbeatJob(job, sessionToken);
@@ -54,13 +72,22 @@ export const appRouter = router({
       }
       const db = await getDb();
       if (!db) throw new Error("Database is unavailable");
-      await db.update(workflowSettings).set({ scheduleCronTaskUid: taskUid, scheduleEnabled: 1 }).where(eq(workflowSettings.ownerOpenId, owner.openId));
-      return { scheduleEnabled: true, taskUid, nextExecutionAt: nextExecutionAt ?? null };
+      await db
+        .update(workflowSettings)
+        .set({ scheduleCronTaskUid: taskUid, scheduleEnabled: 1 })
+        .where(eq(workflowSettings.ownerOpenId, owner.openId));
+      return {
+        scheduleEnabled: true,
+        taskUid,
+        nextExecutionAt: nextExecutionAt ?? null,
+      };
     }),
-    confirmAndSend: protectedProcedure.input(z.object({ draftId: z.number().int().positive() })).mutation(async ({ ctx, input }) => {
-      const owner = requireOwner(ctx.user);
-      return recordConfirmedSend(owner.openId, input.draftId);
-    }),
+    confirmAndSend: protectedProcedure
+      .input(z.object({ draftId: z.number().int().positive() }))
+      .mutation(async ({ ctx, input }) => {
+        const owner = requireOwner(ctx.user);
+        return recordConfirmedSend(owner.openId, input.draftId);
+      }),
   }),
 });
 

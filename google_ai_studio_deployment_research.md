@@ -2,9 +2,9 @@
 
 ## Initial official sources reviewed
 
-| Source | Key point to verify in the deployment assessment |
-|---|---|
-| [Build apps in Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-build-mode) | Google AI Studio Build Mode supports building and deploying applications, subject to its supported architecture and deployment requirements. |
+| Source                                                                                      | Key point to verify in the deployment assessment                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Build apps in Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-build-mode) | Google AI Studio Build Mode supports building and deploying applications, subject to its supported architecture and deployment requirements.                                                                                            |
 | [Deploying from Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-deploying) | Google AI Studio provides a direct deployment path for full-stack applications; its documented runtime, identity, database, and deployment constraints must be compared with the existing React/Express/tRPC/MySQL/Heartbeat dashboard. |
 
 ## Project compatibility questions
@@ -17,13 +17,13 @@ The intended Google account is already signed in to Google AI Studio Build Mode.
 
 ## Compatibility assessment
 
-| Existing dependency | Directly portable to AI Studio | Required action |
-|---|---|---|
-| React client and Express/Node server | Potentially, after dependency and runtime validation | Import source and adapt build/runtime configuration if necessary. |
-| Manus OAuth single-owner guard | No | Replace with Firebase Authentication and explicitly restrict the owner email. |
-| MySQL/TiDB workspace data | No managed direct replacement in the current app | Migrate schema and records to Firestore, or configure another secure production database. |
-| Manus S3 file helper | No | Use Firebase Storage or another approved storage provider. |
-| Manus LLM, notification, and scheduler services | No | Replace with Gemini server-side calls, an appropriate notification provider, and a Google-compatible scheduled execution mechanism. |
+| Existing dependency                             | Directly portable to AI Studio                       | Required action                                                                                                                     |
+| ----------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| React client and Express/Node server            | Potentially, after dependency and runtime validation | Import source and adapt build/runtime configuration if necessary.                                                                   |
+| Manus OAuth single-owner guard                  | No                                                   | Replace with Firebase Authentication and explicitly restrict the owner email.                                                       |
+| MySQL/TiDB workspace data                       | No managed direct replacement in the current app     | Migrate schema and records to Firestore, or configure another secure production database.                                           |
+| Manus S3 file helper                            | No                                                   | Use Firebase Storage or another approved storage provider.                                                                          |
+| Manus LLM, notification, and scheduler services | No                                                   | Replace with Gemini server-side calls, an appropriate notification provider, and a Google-compatible scheduled execution mechanism. |
 
 The existing project should therefore be treated as a controlled migration, not a one-click direct deployment. A direct Cloud Run publish of the current source would retain references to Manus-only environment variables and services, so it would not meet the private-workspace requirements without refactoring.
 

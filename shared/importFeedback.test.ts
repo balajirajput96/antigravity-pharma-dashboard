@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { isFirstImportPending, shouldAnnounceFirstImport } from "./importFeedback";
+import {
+  isFirstImportPending,
+  shouldAnnounceFirstImport,
+} from "./importFeedback";
 
 describe("shouldAnnounceFirstImport", () => {
   it("announces only when a first run follows an empty workspace", () => {

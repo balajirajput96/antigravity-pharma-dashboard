@@ -47,9 +47,7 @@
       "reported_by": null,
       "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
       "metadata": null,
-      "cves": [
-        "CVE-2026-41907"
-      ],
+      "cves": ["CVE-2026-41907"],
       "access": "public",
       "severity": "moderate",
       "module_name": "uuid",
@@ -62,10 +60,7 @@
         "score": 7.5,
         "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
       },
-      "cwe": [
-        "CWE-787",
-        "CWE-1285"
-      ],
+      "cwe": ["CWE-787", "CWE-1285"],
       "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq"
     }
   },

@@ -28,7 +28,9 @@ export const workflowSettings = mysqlTable(
     ownerOpenId: varchar("ownerOpenId", { length: 64 }).notNull(),
     scheduleCronTaskUid: varchar("scheduleCronTaskUid", { length: 65 }),
     scheduleEnabled: int("scheduleEnabled").default(0).notNull(),
-    cronExpression: varchar("cronExpression", { length: 64 }).default("0 30 4 * * *").notNull(),
+    cronExpression: varchar("cronExpression", { length: 64 })
+      .default("0 30 4 * * *")
+      .notNull(),
     candidateProfile: text("candidateProfile").notNull(),
     agentInstructionFileId: int("agentInstructionFileId"),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
@@ -44,8 +46,12 @@ export const jobRuns = mysqlTable(
     ownerOpenId: varchar("ownerOpenId", { length: 64 }).notNull(),
     runKey: varchar("runKey", { length: 80 }).notNull(),
     runDate: varchar("runDate", { length: 10 }).notNull(),
-    runMode: mysqlEnum("runMode", ["scheduled", "manual-import"]).default("scheduled").notNull(),
-    status: mysqlEnum("runStatus", ["running", "completed", "failed"]).default("running").notNull(),
+    runMode: mysqlEnum("runMode", ["scheduled", "manual-import"])
+      .default("scheduled")
+      .notNull(),
+    status: mysqlEnum("runStatus", ["running", "completed", "failed"])
+      .default("running")
+      .notNull(),
     totalAudited: int("totalAudited").default(0).notNull(),
     preparedCount: int("preparedCount").default(0).notNull(),
     sentCount: int("sentCount").default(0).notNull(),
@@ -56,7 +62,10 @@ export const jobRuns = mysqlTable(
     completedAt: timestamp("completedAt"),
   },
   table => [
-    uniqueIndex("job_runs_owner_key_unique").on(table.ownerOpenId, table.runKey),
+    uniqueIndex("job_runs_owner_key_unique").on(
+      table.ownerOpenId,
+      table.runKey
+    ),
     index("job_runs_owner_date_idx").on(table.ownerOpenId, table.runDate),
   ]
 );
@@ -80,7 +89,10 @@ export const jobLeads = mysqlTable(
     duplicateOfLeadId: int("duplicateOfLeadId"),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
-  table => [index("job_leads_run_idx").on(table.runId), index("job_leads_employer_idx").on(table.employer)]
+  table => [
+    index("job_leads_run_idx").on(table.runId),
+    index("job_leads_employer_idx").on(table.employer),
+  ]
 );
 
 export const outreachDrafts = mysqlTable(
@@ -92,13 +104,18 @@ export const outreachDrafts = mysqlTable(
     recipientEmail: varchar("recipientEmail", { length: 320 }).notNull(),
     subject: text("subject").notNull(),
     body: text("body").notNull(),
-    status: mysqlEnum("draftStatus", ["Prepared", "Verified-Sent"]).default("Prepared").notNull(),
+    status: mysqlEnum("draftStatus", ["Prepared", "Verified-Sent"])
+      .default("Prepared")
+      .notNull(),
     confirmedAt: timestamp("confirmedAt"),
     sentAt: timestamp("sentAt"),
     deliveryReference: varchar("deliveryReference", { length: 255 }),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
-  table => [index("outreach_drafts_status_idx").on(table.status), index("outreach_drafts_run_idx").on(table.runId)]
+  table => [
+    index("outreach_drafts_status_idx").on(table.status),
+    index("outreach_drafts_run_idx").on(table.runId),
+  ]
 );
 
 export const workspaceFiles = mysqlTable(
@@ -107,14 +124,21 @@ export const workspaceFiles = mysqlTable(
     id: int("id").autoincrement().primaryKey(),
     ownerOpenId: varchar("ownerOpenId", { length: 64 }).notNull(),
     runId: int("runId"),
-    kind: mysqlEnum("workspaceFileKind", ["report", "audit", "instruction"]).notNull(),
+    kind: mysqlEnum("workspaceFileKind", [
+      "report",
+      "audit",
+      "instruction",
+    ]).notNull(),
     filename: varchar("filename", { length: 255 }).notNull(),
     storageKey: varchar("storageKey", { length: 512 }).notNull(),
     storageUrl: text("storageUrl").notNull(),
     mimeType: varchar("mimeType", { length: 160 }).notNull(),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
-  table => [index("workspace_files_owner_idx").on(table.ownerOpenId), index("workspace_files_run_idx").on(table.runId)]
+  table => [
+    index("workspace_files_owner_idx").on(table.ownerOpenId),
+    index("workspace_files_run_idx").on(table.runId),
+  ]
 );
 
 export const deliveryEvents = mysqlTable(
