@@ -9,11 +9,12 @@ import { startLogin } from "./const";
 import "./index.css";
 
 const queryClient = new QueryClient();
-
 function loadOptionalAnalytics() {
-  const endpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT?.trim().replace(/\/+$/, "");
+  const endpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT?.trim().replace(
+    /\/+$/,
+    ""
+  );
   const websiteId = import.meta.env.VITE_ANALYTICS_WEBSITE_ID?.trim();
-
   if (!endpoint || !websiteId || typeof document === "undefined") return;
 
   try {
