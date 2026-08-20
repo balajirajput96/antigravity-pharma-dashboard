@@ -10,6 +10,28 @@ import "./index.css";
 
 const queryClient = new QueryClient();
 
+function loadOptionalAnalytics() {
+  const endpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT?.trim().replace(/\/+$/, "");
+  const websiteId = import.meta.env.VITE_ANALYTICS_WEBSITE_ID?.trim();
+
+  if (!endpoint || !websiteId || typeof document === "undefined") return;
+
+  try {
+    const url = new URL(`${endpoint}/umami`);
+    if (url.protocol !== "https:" && url.protocol !== "http:") return;
+
+    const script = document.createElement("script");
+    script.defer = true;
+    script.src = url.toString();
+    script.dataset.websiteId = websiteId;
+    document.head.append(script);
+  } catch {
+    // Optional telemetry must never block the protected application.
+  }
+}
+
+loadOptionalAnalytics();
+
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;
   if (typeof window === "undefined") return;
