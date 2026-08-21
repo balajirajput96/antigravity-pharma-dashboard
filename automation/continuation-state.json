@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "purpose": "Non-secret, version-controlled continuation record for bounded maintenance and future safe reassessment.",
   "mode": "bounded-verification-only",
   "repository": {
@@ -54,8 +54,8 @@
     "noUnattendedCodeAuthoringOrPublishing": true
   },
   "latestBoundedAudit": {
-    "performedAt": "2026-08-21T12:39:06Z",
-    "scope": "repository integrity, reproducible application validation, dependency audit, workspace safety validation, CI, schedule, and tool availability",
+    "performedAt": "2026-08-21T23:24:48Z",
+    "scope": "repository integrity, reproducible frozen install, application validation, dependency audit, workspace safety validation, CI, schedule, and tool availability",
     "result": "passed",
     "repositoryIntegrity": "passed-with-retained-dangling-objects",
     "validatedWithoutExternalAction": true,
