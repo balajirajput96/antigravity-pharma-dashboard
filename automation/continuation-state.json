@@ -54,9 +54,15 @@
     "noUnattendedCodeAuthoringOrPublishing": true
   },
   "latestBoundedAudit": {
-    "performedAt": "2026-08-21T23:24:48Z",
+    "performedAt": "2026-08-21T23:29:29Z",
     "scope": "repository integrity, reproducible frozen install, application validation, dependency audit, workspace safety validation, CI, schedule, and tool availability",
     "result": "passed",
+    "validatedBaselineCommit": "d343f57e9d4a64a71c3656e394e279fa19434f75",
+    "scheduleVerification": {
+      "status": "active",
+      "taskUid": "febHBhDzaeRYck52jUo2TI",
+      "lastExecutedAt": "2026-08-21T04:35:31.007Z"
+    },
     "repositoryIntegrity": "passed-with-retained-dangling-objects",
     "validatedWithoutExternalAction": true,
     "toolAvailability": {
