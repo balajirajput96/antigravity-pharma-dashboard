@@ -34,3 +34,9 @@ The only allowed outputs are local dated Markdown reports, local JSONL audit ent
 On 18 August 2026, the approved `Daily Pharma QA IPQA Job Search` configuration and both non-secret `GEMINI.md` copies were compared with the approved 10:00 AM IST instruction. The approved prompt matched its full wording. Both `GEMINI.md` copies were then expanded to explicitly require the non-secret reset-recovery path, a workspace-only `pnpm install` fallback, mandatory `pnpm run validate-safety`, a no-login blocked-condition rule when existing authentication is unavailable, and launcher-only workflow startup through `/home/ubuntu/gemini_pharma`.
 
 After the update, `pnpm run validate-safety`, the 19-test dashboard regression suite, and `pnpm exec tsc --noEmit` completed successfully. The Gemini CLI is workspace-local rather than available on the system PATH, and no existing local authentication artifact is available in this sandbox. Any scheduled run must therefore stop and report that blocked condition without opening any login flow or attempting external action.
+
+## Latest non-interactive verification
+
+On 21 August 2026, the supported schedule-status command reported the **Daily Pharma QA IPQA Job Search** task as active at 10:00 AM Asia/Kolkata (`taskUid = febHBhDzaeRYck52jUo2TI`) with its required research-only instruction payload and a latest recorded execution at 04:35:31 UTC. The required non-secret workspace files, `/home/ubuntu/gemini_pharma` launcher, and workspace-local Gemini CLI were present; the launcher reported CLI version `0.55.1`, and `pnpm run validate-safety` passed.
+
+This verification did not start the Gemini research workflow, probe or open authentication, perform outreach, submit forms, or access private data. A schedule execution timestamp does not itself prove local Gemini authentication; the no-login stop condition remains mandatory whenever authentication is unavailable.
