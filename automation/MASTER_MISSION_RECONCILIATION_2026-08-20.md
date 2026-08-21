@@ -34,3 +34,17 @@ Before any new long-running or hourly automation can be implemented, all of the 
 ## Current Conclusion
 
 The historical environment is preserved, reusable controls are documented, and all practical non-interactive checks pass. No code repair, rebase, connector activation, billing change, external outreach, form submission, or additional scheduler was justified by this audit.
+
+## Expanded Master-Mission Reconciliation — 21 August 2026
+
+The expanded attachment was reviewed in full. It adds an explicit request for a 2,400-cycle hourly execution record, broader CLI and connector inventory, and active workflow execution rather than static planning. The safe portions are now represented by `automation/continuation-state.json`, which stores the latest validated repository state, regression outcome, reusable daily research schedule, safety constraints, and next action without secrets.
+
+| Requested outcome | Verified implementation | Boundary retained |
+| --- | --- | --- |
+| Recoverable continuation state | Version-controlled `automation/continuation-state.json` | It records verified state; it is not a scheduler or authorization substitute. |
+| Continuous validation | Frozen install, type-check, 19 unit tests, production build, production dependency audit, Gemini safety preflight, and GitHub Actions verification passed | The production build includes a non-blocking bundle code-splitting advisory. |
+| Persistent job-search automation | Task-level daily 10:00 AM Asia/Kolkata research-only schedule remains active | It stops after reports and unsent drafts; no login, outreach, form submission, or sensitive-data action is permitted. |
+| Dashboard schedule | Existing owner-protected activation path is preserved | The database-backed dashboard schedule remains unactivated until the owner signs in and chooses activation. |
+| 2,400 hourly engineering loop | Not created | Hourly Manus-task polling is unsuitable, and no authenticated durable worker is available for unattended source-control, connector, or local-CLI activity. |
+
+The requested long-running loop would need a deliberate deployment design rather than a schedule attached to the current task. A safe future implementation must first define a durable worker identity, narrowly scoped actions, a persistent execution host, bounded retries, observability, resource approval, and explicit handling of failures that require owner authentication or confirmation. Until then, the existing daily research automation plus version-controlled validation state is the supported continuation mechanism.
