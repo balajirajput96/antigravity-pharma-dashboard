@@ -26,6 +26,22 @@ type ContinuationState = {
     noSensitiveDataUse: boolean;
     noUnattendedCodeAuthoringOrPublishing: boolean;
   };
+  latestBoundedAudit: {
+    performedAt: string;
+    result: string;
+    repositoryIntegrity: string;
+    validatedWithoutExternalAction: boolean;
+    toolAvailability: {
+      githubCli: string;
+      manusHeartbeatCli: string;
+      workspaceLocalGeminiCli: string;
+      systemGeminiCli: string;
+      gcloudCli: string;
+      firebaseCli: string;
+      datadogCli: string;
+      antigravityCli: string;
+    };
+  };
 };
 
 describe("continuation state record", () => {
@@ -42,7 +58,7 @@ describe("continuation state record", () => {
     expect(state.repository.remoteSynchronized).toBe(true);
     expect(state.validation.unitTests).toEqual({
       status: "passed",
-      files: 9,
+      files: 11,
       tests: 21,
     });
     expect(state.validation.githubActionsVerification).toBe("passed");
@@ -61,5 +77,23 @@ describe("continuation state record", () => {
       noCredentialValuesRecorded: true,
       noUnattendedCodeAuthoringOrPublishing: true,
     });
+    expect(state.latestBoundedAudit).toMatchObject({
+      result: "passed",
+      repositoryIntegrity: "passed-with-retained-dangling-objects",
+      validatedWithoutExternalAction: true,
+      toolAvailability: {
+        githubCli: "available",
+        manusHeartbeatCli: "available",
+        workspaceLocalGeminiCli: "available-via-launcher",
+        systemGeminiCli: "absent",
+        gcloudCli: "absent",
+        firebaseCli: "absent",
+        datadogCli: "absent",
+        antigravityCli: "absent",
+      },
+    });
+    expect(Number.isNaN(Date.parse(state.latestBoundedAudit.performedAt))).toBe(
+      false
+    );
   });
 });

@@ -1,16 +1,17 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "purpose": "Non-secret, version-controlled continuation record for bounded maintenance and future safe reassessment.",
   "mode": "bounded-verification-only",
   "repository": {
     "name": "balajirajput96/antigravity-pharma-dashboard",
     "branch": "main",
-    "verifiedCommit": "c05b2618b269db6cef44eb7382c4c5d90ba3620f",
+    "verifiedCommit": "9a61b058bb83493214b3aee63a3f21e7a7b5e071",
     "remoteSynchronized": true,
     "historyRecovery": {
       "reflogInspected": true,
       "stashRequired": false,
-      "destructiveRecoveryUsed": false
+      "destructiveRecoveryUsed": false,
+      "gitFsck": "passed-with-retained-dangling-objects"
     }
   },
   "validation": {
@@ -18,7 +19,7 @@
     "typecheck": "passed",
     "unitTests": {
       "status": "passed",
-      "files": 9,
+      "files": 11,
       "tests": 21
     },
     "productionBuild": "passed-with-vendor-code-splitting",
@@ -51,6 +52,23 @@
     "noSensitiveDataUse": true,
     "noCredentialValuesRecorded": true,
     "noUnattendedCodeAuthoringOrPublishing": true
+  },
+  "latestBoundedAudit": {
+    "performedAt": "2026-08-21T12:39:06Z",
+    "scope": "repository integrity, reproducible application validation, dependency audit, workspace safety validation, CI, schedule, and tool availability",
+    "result": "passed",
+    "repositoryIntegrity": "passed-with-retained-dangling-objects",
+    "validatedWithoutExternalAction": true,
+    "toolAvailability": {
+      "githubCli": "available",
+      "manusHeartbeatCli": "available",
+      "workspaceLocalGeminiCli": "available-via-launcher",
+      "systemGeminiCli": "absent",
+      "gcloudCli": "absent",
+      "firebaseCli": "absent",
+      "datadogCli": "absent",
+      "antigravityCli": "absent"
+    }
   },
   "nextAction": {
     "kind": "owner-action-required",
