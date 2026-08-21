@@ -43,7 +43,7 @@ describe("continuation state record", () => {
     expect(state.validation.unitTests).toEqual({
       status: "passed",
       files: 9,
-      tests: 19,
+      tests: 21,
     });
     expect(state.validation.githubActionsVerification).toBe("passed");
     expect(state.schedules.taskLevelDailyResearch.status).toBe("active");
