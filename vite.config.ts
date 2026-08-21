@@ -171,6 +171,26 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rolldownOptions: {
+      output: {
+        codeSplitting: {
+          groups: [
+            {
+              name: "react-runtime",
+              test: /node_modules\/(?:react|react-dom|scheduler|wouter)\//,
+            },
+            {
+              name: "ui-runtime",
+              test: /node_modules\/(?:@radix-ui|lucide-react|class-variance-authority|clsx|tailwind-merge|sonner)\//,
+            },
+            {
+              name: "data-runtime",
+              test: /node_modules\/(?:@trpc|@tanstack|superjson|zod)\//,
+            },
+          ],
+        },
+      },
+    },
   },
   server: {
     host: true,
