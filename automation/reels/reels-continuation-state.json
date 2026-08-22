@@ -59,6 +59,23 @@
         }
       ]
     },
+    "artifactIndexes": {
+      "status": "active-non-secret-local-metadata",
+      "researchDatabase": "automation/reels/research-database-index.json",
+      "scriptDatabase": "automation/reels/script-database-index.json",
+      "assetIndex": "automation/reels/asset-index.json",
+      "qualityControlIndex": "automation/reels/quality-control-index.json",
+      "errorRetryLog": "automation/reels/error-retry-log.json",
+      "batchIndex": "automation/reels/batch-index.json",
+      "driveRule": "These indexes record verified package facts and local workflow state only. They do not create future Drive folders or duplicate existing package uploads."
+    },
+    "directiveReconciliation": {
+      "source": "/home/ubuntu/upload/pasted_content_2.txt",
+      "status": "integrated-with-existing-safety-boundaries",
+      "storageModel": "Existing Batch_001 packages remain private and preserved. A future batch folder is created or reused only when that batch reaches its first evidence gate.",
+      "completionRule": "Only a rendered, QA-passed, source-metadata-complete and private-Drive-verified package is completed.",
+      "automationRule": "No unattended bulk video scheduler is created; the task scheduler does not establish a durable authenticated media worker."
+    },
     "lastInventory": {
       "date": "2026-08-22",
       "basis": "Read-only private Drive Batch_001 listing plus exact-package verification recorded in the Reel 0001 and Reel 0002 workflow records.",

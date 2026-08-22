@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "targetReels": 3000,
+  "batchSize": 30,
+  "plannedBatchCount": 100,
+  "currentBatch": "Batch_001",
+  "batches": [
+    {
+      "id": "Batch_001",
+      "reelRange": "0001-0030",
+      "verifiedCompleted": [
+        "0001",
+        "0002"
+      ],
+      "pendingCount": 28,
+      "status": "in-progress-private-packages-verified",
+      "folderPolicy": "Existing private Drive batch storage is reused; no duplicate folder is created."
+    }
+  ],
+  "futureBatchRule": "Batch_002 through Batch_100 are logical roadmap entries only. Create or reuse their private Drive folders only when their first Reel reaches an evidence gate."
+}

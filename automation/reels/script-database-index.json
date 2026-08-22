@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "database": "script-readiness-index",
+  "updatedAt": "2026-08-22",
+  "entries": [
+    {
+      "reelId": "0001",
+      "status": "used-drive-verified-package",
+      "language": "Hindi",
+      "format": "60-second vertical reel",
+      "sourceRecord": "automation/REEL_0001_SOURCE_VERIFICATION_2026-08-22.md",
+      "note": "Do not reconstruct or alter the completed script from metadata alone. The private package remains the source of the released media record."
+    },
+    {
+      "reelId": "0002",
+      "status": "used-drive-verified-package",
+      "language": "Hindi",
+      "format": "54.120-second vertical reel",
+      "sourceRecord": "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
+      "note": "The caption-safe V4 revision and timed Hindi SRT are retained in the private Drive package."
+    },
+    {
+      "reelId": "0003",
+      "status": "not-started",
+      "language": "Hindi",
+      "format": "approximately 60-second vertical reel",
+      "sourceRecord": null,
+      "note": "No script, claim, narration, or media is created until evidence and creative gates are complete."
+    }
+  ],
+  "integrityRule": "A script index entry is not proof of a completed Reel. It becomes completed only after matching QA and private-Drive package verification."
+}

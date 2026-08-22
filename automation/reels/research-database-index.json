@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "database": "research-findings-index",
+  "updatedAt": "2026-08-22",
+  "recordCount": 2,
+  "records": [
+    {
+      "id": "R-0001",
+      "reelId": "0001",
+      "topic": "Habit formation",
+      "subtopic": "Why 21 days is not a universal habit deadline",
+      "finding": "Habit automaticity develops with repeated behavior in a stable context, but the time course varies and should not be presented as a universal 21-day or 66-day deadline.",
+      "evidenceClassification": "Strong Evidence",
+      "sourceRecord": "automation/REEL_0001_SOURCE_VERIFICATION_2026-08-22.md",
+      "limitation": "The cited habit-formation literature does not justify a personal outcome guarantee or a fixed timeline for every behavior and person.",
+      "reelPotential": "used-drive-verified-package",
+      "usedStatus": "used"
+    },
+    {
+      "id": "R-0002",
+      "reelId": "0002",
+      "topic": "Memory and unfinished tasks",
+      "subtopic": "Zeigarnik effect, recall, and task resumption",
+      "finding": "Interrupted or incomplete tasks can receive greater cognitive accessibility in some contexts, but effect size and mechanisms vary; the effect is not a guarantee of better memory or motivation.",
+      "evidenceClassification": "Mixed Evidence",
+      "sourceRecord": "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
+      "limitation": "Interpretation must distinguish task-resumption research from broad claims about personality, productivity, or diagnosis.",
+      "reelPotential": "used-drive-verified-package",
+      "usedStatus": "used"
+    }
+  ],
+  "candidateRecords": [],
+  "integrityRule": "No future research record is marked used or completed until its reel passes all evidence, media, QA, and private-Drive package gates."
+}

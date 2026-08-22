@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "database": "quality-control-index",
+  "updatedAt": "2026-08-22",
+  "entries": [
+    {
+      "reelId": "0001",
+      "status": "passed-private-drive-verified",
+      "technical": "H.264/AAC, 720x1280, 25 fps, 60 seconds",
+      "visual": "Opaque top title band and high-contrast Hindi captions were reviewed from representative frames.",
+      "qaRecord": "automation/reels/REEL_0001_QA_2026-08-22.md"
+    },
+    {
+      "reelId": "0002",
+      "status": "passed-private-drive-verified-review-ready",
+      "technical": "H.264/AAC, 720x1280, 30 fps, 54.120 seconds",
+      "visual": "V4 sampled frames show the legacy-caption field fully masked with high-contrast Hindi captions and an uncovered lower visual field.",
+      "qaRecord": "automation/reels/REEL_0002_ACCESSIBILITY_REVISION_QA_2026-08-22.md"
+    }
+  ],
+  "blockingConditions": [
+    "unreadable captions",
+    "unsupported claim",
+    "failed technical probe",
+    "missing source metadata",
+    "unverified private Drive package"
+  ]
+}

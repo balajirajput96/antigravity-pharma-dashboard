@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "database": "artifact-index",
+  "updatedAt": "2026-08-22",
+  "entries": [
+    {
+      "reelId": "0001",
+      "packageStatus": "private-drive-verified",
+      "artifacts": [
+        "accessible 60-second MP4 revision",
+        "Hindi accessibility subtitle track",
+        "source-verification record",
+        "visual accessibility QA record"
+      ],
+      "repositoryStorageRule": "Metadata only; no media bytes are stored in this repository."
+    },
+    {
+      "reelId": "0002",
+      "packageStatus": "private-drive-verified-review-ready",
+      "artifacts": [
+        "accessibility MP4 revision V4",
+        "duration-matched Hindi SRT V2",
+        "accessibility revision QA record",
+        "independently verified research and source metadata"
+      ],
+      "repositoryStorageRule": "Metadata only; the original candidate and retained local correction attempts remain outside the repository."
+    }
+  ],
+  "integrityRule": "Asset presence is not treated as a completion signal without corresponding QA and private-Drive verification."
+}
