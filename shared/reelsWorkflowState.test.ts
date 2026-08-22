@@ -19,6 +19,8 @@ type ReelsWorkflowState = {
       researchStatus: string;
       evidenceRecord: string;
       driveCandidate: { video: string; sourceCaptions: string; visualQa: string };
+      package: string[];
+      drivePackageVerifiedAt: string;
       releaseStatus: string;
       externalPublishingStatus: string;
     };
@@ -63,18 +65,25 @@ describe("reels continuation state", () => {
     expect(state.reels["0001"].drivePackageVerifiedAt).toBe("2026-08-22");
     expect(state.reels["0001"].externalPublishingStatus).toBe("not-published");
     expect(state.reels["0002"]).toMatchObject({
-      status: "drive-candidate-audited-requires-caption-reconciliation",
+      status: "drive-uploaded-and-verified-accessibility-revision",
       topic: "Zeigarnik effect: interrupted tasks, recall, and resumption",
       researchStatus: "independently-verified",
       evidenceRecord: "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
-      releaseStatus: "not-release-approved",
+      drivePackageVerifiedAt: "2026-08-22",
+      releaseStatus: "private-drive-package-verified-review-ready",
       externalPublishingStatus: "not-published",
     });
     expect(state.reels["0002"].driveCandidate).toMatchObject({
       video: "H.264/AAC, 720x1280, 30 fps, 54.120 seconds",
       sourceCaptions:
-        "Hindi SRT is present, but its final cue ends at 58.5 seconds after the candidate video ends.",
+        "Original Hindi SRT is retained and ends at 58.5 seconds; corrected V2 Hindi SRT ends at 54.120 seconds and is paired with the accessibility revision.",
     });
+    expect(state.reels["0002"].package).toEqual([
+      "accessibility MP4 revision V4",
+      "duration-matched Hindi SRT V2",
+      "accessibility revision QA record",
+      "existing independently verified research and source metadata",
+    ]);
     expect(state.productionPolicy).toMatchObject({
       researchBeforeProduction: true,
       requireHindiCaptions: true,

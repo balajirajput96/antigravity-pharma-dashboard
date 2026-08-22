@@ -22,6 +22,16 @@ Accordingly, Reel 0002 must not use a percentage claim, a literal “brain RAM�
 
 However, the supplied source SRT ends at 58.5 seconds, 4.38 seconds after the candidate video ends. The candidate also uses some English loanwords in its large burned-in copy (for example, “interrupted,” “tendency,” “context,” and “step”), which needs an explicit Hindi-caption presentation decision rather than an assumed pass. These package inconsistencies mean the candidate remains retained but unclassified for release. No public distribution, bulk generation, or recurring reel schedule has been created.
 
+## Correction-preview result
+
+A replacement Hindi SRT was prepared with its final cue ending exactly at 54.120 seconds. A local overlay preview confirms that its Devanagari text is high-contrast and legible, but also confirms that an external SRT alone cannot correct the candidate’s existing burned-in captions: rendering it over the MP4 produces duplicate competing text. The next corrective artifact therefore must be a **new caption-safe MP4 revision** that preserves the original candidate, narration, visuals, and source package while masking the legacy caption area and rendering the corrected Hindi captions in a single safe band. This is a release-quality correction, not a replacement or deletion of any Drive asset.
+
+The first local MP4 accessibility revision (`V2`) was technically valid but failed visual acceptance: its semi-opaque caption panel left parts of the legacy burned-in captions visible beneath the new Hindi text. The V2 file is retained locally as an auditable failed attempt and must not be uploaded as the corrected package. The next local revision must use a fully opaque title/caption field that completely masks the legacy caption area before the corrected text is rendered.
+
+The second local MP4 accessibility revision (`V3`) also remained technically valid but failed visual acceptance. Its opaque top field ended before the lowest legacy caption rows, leaving a competing lower portion of the original English-mixed text visible. V3 is likewise retained only as a failed local artifact. The next revision must mask the full vertical region used by the legacy caption overlay and place the new Hindi text within a smaller, non-overlapping top-safe caption area.
+
+The third local MP4 accessibility revision (`V4`) passed the sampled visual acceptance check. Its fully opaque top-safe field masks the full legacy caption region, while the corrected high-contrast Hindi captions are positioned above the uncovered lower visual field. The original MP4, the candidate source SRT, and failed V2/V3 local attempts are retained; only V4 and the corrected duration-matched SRT qualify for the supplemental private Drive package. V4 preserves the original 54.120-second H.264/AAC, 720×1280, 30-fps technical profile.
+
 ## References
 
 [1] Ghibellini R, Meier B. [Interruption, recall and resumption: a meta-analysis of the Zeigarnik and Ovsiankina effects](https://www.nature.com/articles/s41599-025-05000-w). *Humanities and Social Sciences Communications*. 2025.

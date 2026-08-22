@@ -15,7 +15,7 @@
   "storage": {
     "provider": "Google Drive",
     "status": "verified-private-folder-access",
-    "folderPath": "Reels_Lab/Batch_001/Reel_0001",
+    "folderPath": "Reels_Lab/Batch_001",
     "folderIdRecordedOutsideRepository": true
   },
   "reels": {
@@ -34,16 +34,23 @@
       "externalPublishingStatus": "not-published"
     },
     "0002": {
-      "status": "drive-candidate-audited-requires-caption-reconciliation",
+      "status": "drive-uploaded-and-verified-accessibility-revision",
       "topic": "Zeigarnik effect: interrupted tasks, recall, and resumption",
       "researchStatus": "independently-verified",
       "evidenceRecord": "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
       "driveCandidate": {
         "video": "H.264/AAC, 720x1280, 30 fps, 54.120 seconds",
-        "sourceCaptions": "Hindi SRT is present, but its final cue ends at 58.5 seconds after the candidate video ends.",
-        "visualQa": "Representative frames are legible and compositionally consistent; remaining on-screen English terms should be reviewed against Hindi-caption requirements."
+        "sourceCaptions": "Original Hindi SRT is retained and ends at 58.5 seconds; corrected V2 Hindi SRT ends at 54.120 seconds and is paired with the accessibility revision.",
+        "visualQa": "Sampled V4 frames show a fully masked legacy-caption field, high-contrast Hindi captions, and an uncovered lower visual field."
       },
-      "releaseStatus": "not-release-approved",
+      "package": [
+        "accessibility MP4 revision V4",
+        "duration-matched Hindi SRT V2",
+        "accessibility revision QA record",
+        "existing independently verified research and source metadata"
+      ],
+      "drivePackageVerifiedAt": "2026-08-22",
+      "releaseStatus": "private-drive-package-verified-review-ready",
       "externalPublishingStatus": "not-published"
     }
   },
@@ -66,7 +73,7 @@
     "reason": "The current task scheduler and free media-generation quota do not establish a durable, authenticated bulk-video worker. Future scheduling requires a bounded approved workflow, source-verification gate, generation capacity, and Drive authorization check."
   },
   "nextAction": {
-    "type": "caption-package-reconciliation",
-    "description": "Retain the existing Reel 0002 candidate and placeholders. Before any release classification, reconcile the source subtitle end time and Hindi-caption presentation through an authorized Drive update, then re-probe and visually review the revised package."
+    "type": "evidence-gated-reel-0003-research-planning",
+    "description": "Keep Reel 0001 and Reel 0002 private and preserved. Before any new Reel 0003 video production, independently verify a bounded source set, separate evidence from interpretation, define the creative brief, complete source/script/clip/review gates, and verify a private Drive package. Do not create a bulk-generation or recurring media schedule."
   }
 }
