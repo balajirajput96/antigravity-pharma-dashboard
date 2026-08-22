@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "workflow": "hindi-research-reels",
+  "scope": {
+    "separateFrom": "agy_pharma_job_task",
+    "allowedTopics": [
+      "psychology",
+      "neuroscience",
+      "philosophy",
+      "spirituality only when clearly labeled as interpretation"
+    ],
+    "language": "Hindi",
+    "targetFormat": "60-second vertical reel"
+  },
+  "storage": {
+    "provider": "Google Drive",
+    "status": "verified-private-folder-access",
+    "folderPath": "Reels_Lab/Batch_001/Reel_0001",
+    "folderIdRecordedOutsideRepository": true
+  },
+  "reels": {
+    "0001": {
+      "topic": "Habit formation: why 21 days is not a universal rule",
+      "status": "drive-uploaded-and-verified-accessibility-revision",
+      "evidenceRecord": "automation/REEL_0001_SOURCE_VERIFICATION_2026-08-22.md",
+      "package": [
+        "accessible 60-second MP4 revision",
+        "Hindi accessibility subtitle track",
+        "source verification record",
+        "visual accessibility QA record"
+      ],
+      "drivePackageVerifiedAt": "2026-08-22",
+      "qualitySummary": "Readable opaque title band, high-contrast Hindi captions, and source-safe closing card verified from representative frames.",
+      "externalPublishingStatus": "not-published"
+    },
+    "0002": {
+      "status": "queued-not-started",
+      "topic": null,
+      "researchStatus": "not-started",
+      "externalPublishingStatus": "not-published"
+    }
+  },
+  "productionPolicy": {
+    "researchBeforeProduction": true,
+    "requirePrimaryOrHighQualitySources": true,
+    "separateEvidenceFromInterpretation": true,
+    "requireHindiCaptions": true,
+    "requireVisualQa": true,
+    "requireDrivePackageVerification": true,
+    "maxGenerationPerAuthorizedReviewCycle": 1,
+    "automaticBulkGeneration": false,
+    "automaticExternalPublishing": false,
+    "noMedicalOrMentalHealthDiagnosis": true,
+    "noPromiseOfPersonalOutcome": true,
+    "noPrivateOrSensitiveData": true
+  },
+  "scheduling": {
+    "status": "not-created",
+    "reason": "The current task scheduler and free media-generation quota do not establish a durable, authenticated bulk-video worker. Future scheduling requires a bounded approved workflow, source-verification gate, generation capacity, and Drive authorization check."
+  },
+  "nextAction": {
+    "type": "research-only",
+    "description": "Select Reel 0002 only after its topic, sources, evidence boundary, Hindi script, and production package are independently verified."
+  }
+}
