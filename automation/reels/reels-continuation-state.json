@@ -34,9 +34,16 @@
       "externalPublishingStatus": "not-published"
     },
     "0002": {
-      "status": "queued-not-started",
-      "topic": null,
-      "researchStatus": "not-started",
+      "status": "drive-candidate-audited-requires-caption-reconciliation",
+      "topic": "Zeigarnik effect: interrupted tasks, recall, and resumption",
+      "researchStatus": "independently-verified",
+      "evidenceRecord": "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
+      "driveCandidate": {
+        "video": "H.264/AAC, 720x1280, 30 fps, 54.120 seconds",
+        "sourceCaptions": "Hindi SRT is present, but its final cue ends at 58.5 seconds after the candidate video ends.",
+        "visualQa": "Representative frames are legible and compositionally consistent; remaining on-screen English terms should be reviewed against Hindi-caption requirements."
+      },
+      "releaseStatus": "not-release-approved",
       "externalPublishingStatus": "not-published"
     }
   },
@@ -59,7 +66,7 @@
     "reason": "The current task scheduler and free media-generation quota do not establish a durable, authenticated bulk-video worker. Future scheduling requires a bounded approved workflow, source-verification gate, generation capacity, and Drive authorization check."
   },
   "nextAction": {
-    "type": "research-only",
-    "description": "Select Reel 0002 only after its topic, sources, evidence boundary, Hindi script, and production package are independently verified."
+    "type": "caption-package-reconciliation",
+    "description": "Retain the existing Reel 0002 candidate and placeholders. Before any release classification, reconcile the source subtitle end time and Hindi-caption presentation through an authorized Drive update, then re-probe and visually review the revised package."
   }
 }

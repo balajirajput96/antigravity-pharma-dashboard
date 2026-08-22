@@ -13,7 +13,15 @@ type ReelsWorkflowState = {
       drivePackageVerifiedAt: string;
       externalPublishingStatus: string;
     };
-    "0002": { status: string; topic: null; researchStatus: string };
+    "0002": {
+      status: string;
+      topic: string;
+      researchStatus: string;
+      evidenceRecord: string;
+      driveCandidate: { video: string; sourceCaptions: string; visualQa: string };
+      releaseStatus: string;
+      externalPublishingStatus: string;
+    };
   };
   productionPolicy: {
     researchBeforeProduction: boolean;
@@ -55,9 +63,17 @@ describe("reels continuation state", () => {
     expect(state.reels["0001"].drivePackageVerifiedAt).toBe("2026-08-22");
     expect(state.reels["0001"].externalPublishingStatus).toBe("not-published");
     expect(state.reels["0002"]).toMatchObject({
-      status: "queued-not-started",
-      topic: null,
-      researchStatus: "not-started",
+      status: "drive-candidate-audited-requires-caption-reconciliation",
+      topic: "Zeigarnik effect: interrupted tasks, recall, and resumption",
+      researchStatus: "independently-verified",
+      evidenceRecord: "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
+      releaseStatus: "not-release-approved",
+      externalPublishingStatus: "not-published",
+    });
+    expect(state.reels["0002"].driveCandidate).toMatchObject({
+      video: "H.264/AAC, 720x1280, 30 fps, 54.120 seconds",
+      sourceCaptions:
+        "Hindi SRT is present, but its final cue ends at 58.5 seconds after the candidate video ends.",
     });
     expect(state.productionPolicy).toMatchObject({
       researchBeforeProduction: true,
