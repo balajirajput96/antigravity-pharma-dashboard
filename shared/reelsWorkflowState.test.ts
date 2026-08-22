@@ -6,6 +6,34 @@ type ReelsWorkflowState = {
   workflow: string;
   scope: { separateFrom: string; language: string; targetFormat: string };
   storage: { status: string; folderIdRecordedOutsideRepository: boolean };
+  masterProgress: {
+    target: number;
+    verifiedCompleted: number;
+    pending: number;
+    failed: { count: number; reelIds: string[]; definition: string };
+    retryQueue: string[];
+    currentBatch: {
+      id: string;
+      sequence: number;
+      reelRange: string;
+      verifiedCompleted: number;
+      pending: number;
+      status: string;
+    };
+    currentReel: string;
+    batchRoadmap: {
+      batchSize: number;
+      plannedBatchCount: number;
+      rangeRule: string;
+      advanceRule: string;
+    };
+    sourceRegistry: {
+      status: string;
+      location: string;
+      entries: Array<{ reelId: string; topic: string; evidenceRecord: string }>;
+    };
+    lastInventory: { date: string; basis: string; publicationStatus: string };
+  };
   reels: {
     "0001": {
       status: string;
@@ -59,6 +87,45 @@ describe("reels continuation state", () => {
       status: "verified-private-folder-access",
       folderIdRecordedOutsideRepository: true,
     });
+    expect(state.masterProgress).toMatchObject({
+      target: 3000,
+      verifiedCompleted: 2,
+      pending: 2998,
+      retryQueue: [],
+      currentReel: "0003",
+      lastInventory: {
+        date: "2026-08-22",
+        publicationStatus: "not-published",
+      },
+    });
+    expect(state.masterProgress.failed).toMatchObject({
+      count: 0,
+      reelIds: [],
+    });
+    expect(state.masterProgress.currentBatch).toEqual({
+      id: "Batch_001",
+      sequence: 1,
+      reelRange: "0001-0030",
+      verifiedCompleted: 2,
+      pending: 28,
+      status: "in-progress",
+    });
+    expect(state.masterProgress.batchRoadmap).toMatchObject({
+      batchSize: 30,
+      plannedBatchCount: 100,
+    });
+    expect(state.masterProgress.sourceRegistry.entries).toEqual([
+      {
+        reelId: "0001",
+        topic: "Habit formation: why 21 days is not a universal rule",
+        evidenceRecord: "automation/REEL_0001_SOURCE_VERIFICATION_2026-08-22.md",
+      },
+      {
+        reelId: "0002",
+        topic: "Zeigarnik effect: interrupted tasks, recall, and resumption",
+        evidenceRecord: "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
+      },
+    ]);
     expect(state.reels["0001"].status).toBe(
       "drive-uploaded-and-verified-accessibility-revision"
     );

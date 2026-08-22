@@ -18,7 +18,15 @@ Every reel must progress through research, evidence review, Hindi scripting, vis
 
 ## Continuation Rule
 
-`reels-continuation-state.json` is the non-secret system of record. It names Reel 0001 as privately Drive-verified and leaves Reel 0002 queued without inventing its topic or evidence. The workflow creates at most one reel per authorized review cycle. It does not schedule bulk video production, publish content externally, create social accounts, or use private user data.
+`reels-continuation-state.json` is the non-secret system of record. It records Reel 0001 and Reel 0002 as privately Drive-verified accessibility packages, without inventing completion for any future reel. The workflow creates at most one reel per authorized review cycle. It does not schedule bulk video production, publish content externally, create social accounts, or use private user data.
+
+## Master Progress and Batch Roadmap
+
+The `masterProgress` object is the restart-safe tally for the requested 3,000-reel mission. It reports only **actual private-Drive-verified packages** as completed; a concept, a script, a generated asset, a local render, or an unverified Drive upload never increments the tally. The same object records pending, failed, retry-queue, current-batch, and current-reel fields so an interrupted session can resume without recreating completed work.
+
+Each batch contains 30 zero-padded reel IDs, giving 100 planned batches for 3,000 reels. A future batch folder is not pre-created merely to simulate progress; it is created or reused only when its first reel reaches an evidence gate. A batch advances only after all of its 30 private Drive packages are actually verified. The current two verified packages remain in `Batch_001`; Reel 0003 is the next pending item, not a completed or rendered reel.
+
+> The master tally is an audit record, not an authorization to bypass evidence, creative-review, media-generation, Drive-verification, or publication boundaries.
 
 ## Publication Boundary
 

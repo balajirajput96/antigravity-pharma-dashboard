@@ -18,6 +18,53 @@
     "folderPath": "Reels_Lab/Batch_001",
     "folderIdRecordedOutsideRepository": true
   },
+  "masterProgress": {
+    "target": 3000,
+    "verifiedCompleted": 2,
+    "pending": 2998,
+    "failed": {
+      "count": 0,
+      "reelIds": [],
+      "definition": "Only a reel that cannot pass its evidence, production, QA, or private-Drive verification gate is counted as failed. Retained local revision attempts are not counted as failed reels."
+    },
+    "retryQueue": [],
+    "currentBatch": {
+      "id": "Batch_001",
+      "sequence": 1,
+      "reelRange": "0001-0030",
+      "verifiedCompleted": 2,
+      "pending": 28,
+      "status": "in-progress"
+    },
+    "currentReel": "0003",
+    "batchRoadmap": {
+      "batchSize": 30,
+      "plannedBatchCount": 100,
+      "rangeRule": "Batch n contains reel IDs ((n-1)*30+1) through n*30, zero-padded to four digits. Create or reuse a private Drive batch folder only when that batch is actually reached and its first evidence gate passes.",
+      "advanceRule": "Advance to the next batch only after all 30 reels in the current batch are actual private-Drive-verified packages; do not mark a package complete from planning, generated assets, or an unverified upload."
+    },
+    "sourceRegistry": {
+      "status": "active",
+      "location": "automation/reels and matching private Drive package metadata",
+      "entries": [
+        {
+          "reelId": "0001",
+          "topic": "Habit formation: why 21 days is not a universal rule",
+          "evidenceRecord": "automation/REEL_0001_SOURCE_VERIFICATION_2026-08-22.md"
+        },
+        {
+          "reelId": "0002",
+          "topic": "Zeigarnik effect: interrupted tasks, recall, and resumption",
+          "evidenceRecord": "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md"
+        }
+      ]
+    },
+    "lastInventory": {
+      "date": "2026-08-22",
+      "basis": "Read-only private Drive Batch_001 listing plus exact-package verification recorded in the Reel 0001 and Reel 0002 workflow records.",
+      "publicationStatus": "not-published"
+    }
+  },
   "reels": {
     "0001": {
       "topic": "Habit formation: why 21 days is not a universal rule",
