@@ -27,7 +27,14 @@
       "reelIds": [],
       "definition": "Only a reel that cannot pass its evidence, production, QA, or private-Drive verification gate is counted as failed. Retained local revision attempts are not counted as failed reels."
     },
-    "retryQueue": [],
+    "retryQueue": [
+      {
+        "reelId": "0003",
+        "gate": "caption-free vertical video generation",
+        "status": "capacity-blocked-not-failed",
+        "record": "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md"
+      }
+    ],
     "currentBatch": {
       "id": "Batch_001",
       "sequence": 1,
@@ -56,6 +63,11 @@
           "reelId": "0002",
           "topic": "Zeigarnik effect: interrupted tasks, recall, and resumption",
           "evidenceRecord": "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md"
+        },
+        {
+          "reelId": "0003",
+          "topic": "Retrieval practice: recalling rather than rereading",
+          "evidenceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md"
         }
       ]
     },
@@ -116,6 +128,21 @@
       "drivePackageVerifiedAt": "2026-08-22",
       "releaseStatus": "private-drive-package-verified-review-ready",
       "externalPublishingStatus": "not-published"
+    },
+    "0003": {
+      "status": "research-script-complete-video-generation-capacity-blocked",
+      "topic": "Retrieval practice: recalling rather than rereading",
+      "researchStatus": "independently-verified",
+      "evidenceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
+      "productionBlueprint": "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
+      "narration": "Local Hindi narration WAV was generated from the verified script; it is not a completed Drive package.",
+      "videoGeneration": {
+        "status": "blocked-free-plan-daily-limit",
+        "attemptCount": 1,
+        "retryRecord": "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md"
+      },
+      "releaseStatus": "not-release-approved",
+      "externalPublishingStatus": "not-published"
     }
   },
   "productionPolicy": {
@@ -137,7 +164,7 @@
     "reason": "The current task scheduler and free media-generation quota do not establish a durable, authenticated bulk-video worker. Future scheduling requires a bounded approved workflow, source-verification gate, generation capacity, and Drive authorization check."
   },
   "nextAction": {
-    "type": "evidence-gated-reel-0003-research-planning",
-    "description": "Keep Reel 0001 and Reel 0002 private and preserved. Before any new Reel 0003 video production, independently verify a bounded source set, separate evidence from interpretation, define the creative brief, complete source/script/clip/review gates, and verify a private Drive package. Do not create a bulk-generation or recurring media schedule."
+    "type": "reel-0003-video-generation-capacity-retry",
+    "description": "Keep Reel 0001 and Reel 0002 private and preserved. Reel 0003 research, script, creative brief, visual plan, narration, and caption design are retained. Resume only at the unavailable caption-free video-generation gate when capacity is available; then complete QA and a verified private Drive package. Do not create a bulk-generation or recurring media schedule."
   }
 }

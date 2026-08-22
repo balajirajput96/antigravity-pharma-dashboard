@@ -1,8 +1,19 @@
 {
   "schemaVersion": "1.0",
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "reelFailureCount": 0,
-  "retryQueue": [],
+  "retryQueue": [
+    {
+      "reelId": "0003",
+      "gate": "caption-free vertical video generation",
+      "status": "capacity-blocked-not-failed",
+      "attemptCount": 1,
+      "recordedAt": "2026-08-23",
+      "reason": "The free-plan daily video-generation quota rejected the first planned eight-second visual clip before any video file was created.",
+      "retryCondition": "Use an available video-generation quota or an owner-enabled plan, then restart at the video-generation gate without repeating verified research, script, or narration work.",
+      "preservationRule": "Retain the research draft, production blueprint, generated narration, and visual-reference request. Do not count the reel as completed, failed, Drive-uploaded, or publicly published."
+    }
+  ],
   "resolvedArtifactRevisions": [
     {
       "reelId": "0002",

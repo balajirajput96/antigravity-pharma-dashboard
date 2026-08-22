@@ -21,11 +21,11 @@
     },
     {
       "reelId": "0003",
-      "status": "not-started",
-      "language": "Hindi",
+      "status": "evidence-and-creative-preproduction-complete-media-pending",
+      "language": "Hindi (Devanagari captions)",
       "format": "approximately 60-second vertical reel",
-      "sourceRecord": null,
-      "note": "No script, claim, narration, or media is created until evidence and creative gates are complete."
+      "sourceRecord": "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
+      "note": "The script and clip plan use qualified learning evidence only. Narration, media, captions, and Drive package work remain pending."
     }
   ],
   "integrityRule": "A script index entry is not proof of a completed Reel. It becomes completed only after matching QA and private-Drive package verification."

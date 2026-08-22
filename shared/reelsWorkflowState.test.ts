@@ -11,7 +11,12 @@ type ReelsWorkflowState = {
     verifiedCompleted: number;
     pending: number;
     failed: { count: number; reelIds: string[]; definition: string };
-    retryQueue: string[];
+    retryQueue: Array<{
+      reelId: string;
+      gate: string;
+      status: string;
+      record: string;
+    }>;
     currentBatch: {
       id: string;
       sequence: number;
@@ -49,6 +54,16 @@ type ReelsWorkflowState = {
       driveCandidate: { video: string; sourceCaptions: string; visualQa: string };
       package: string[];
       drivePackageVerifiedAt: string;
+      releaseStatus: string;
+      externalPublishingStatus: string;
+    };
+    "0003": {
+      status: string;
+      topic: string;
+      researchStatus: string;
+      evidenceRecord: string;
+      productionBlueprint: string;
+      videoGeneration: { status: string; attemptCount: number; retryRecord: string };
       releaseStatus: string;
       externalPublishingStatus: string;
     };
@@ -91,13 +106,20 @@ describe("reels continuation state", () => {
       target: 3000,
       verifiedCompleted: 2,
       pending: 2998,
-      retryQueue: [],
       currentReel: "0003",
       lastInventory: {
         date: "2026-08-22",
         publicationStatus: "not-published",
       },
     });
+    expect(state.masterProgress.retryQueue).toEqual([
+      {
+        reelId: "0003",
+        gate: "caption-free vertical video generation",
+        status: "capacity-blocked-not-failed",
+        record: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
+      },
+    ]);
     expect(state.masterProgress.failed).toMatchObject({
       count: 0,
       reelIds: [],
@@ -125,6 +147,11 @@ describe("reels continuation state", () => {
         topic: "Zeigarnik effect: interrupted tasks, recall, and resumption",
         evidenceRecord: "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
       },
+      {
+        reelId: "0003",
+        topic: "Retrieval practice: recalling rather than rereading",
+        evidenceRecord: "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
+      },
     ]);
     expect(state.reels["0001"].status).toBe(
       "drive-uploaded-and-verified-accessibility-revision"
@@ -151,6 +178,20 @@ describe("reels continuation state", () => {
       "accessibility revision QA record",
       "existing independently verified research and source metadata",
     ]);
+    expect(state.reels["0003"]).toMatchObject({
+      status: "research-script-complete-video-generation-capacity-blocked",
+      topic: "Retrieval practice: recalling rather than rereading",
+      researchStatus: "independently-verified",
+      evidenceRecord: "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
+      productionBlueprint: "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
+      releaseStatus: "not-release-approved",
+      externalPublishingStatus: "not-published",
+    });
+    expect(state.reels["0003"].videoGeneration).toEqual({
+      status: "blocked-free-plan-daily-limit",
+      attemptCount: 1,
+      retryRecord: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
+    });
     expect(state.productionPolicy).toMatchObject({
       researchBeforeProduction: true,
       requireHindiCaptions: true,

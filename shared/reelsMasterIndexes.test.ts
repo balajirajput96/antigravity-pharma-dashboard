@@ -26,9 +26,10 @@ type MasterState = {
 describe("reels master indexes", () => {
   it("keeps verified counts, Batch_001 records, and safety boundaries consistent", () => {
     const state = readJson<MasterState>("automation/reels/reels-continuation-state.json");
-    const research = readJson<{ recordCount: number; records: { reelId: string }[] }>(
-      "automation/reels/research-database-index.json"
-    );
+    const research = readJson<{
+      recordCount: number;
+      records: { reelId: string; usedStatus: string; reelPotential: string }[];
+    }>("automation/reels/research-database-index.json");
     const assets = readJson<{ entries: { reelId: string; packageStatus: string }[] }>(
       "automation/reels/asset-index.json"
     );
@@ -49,14 +50,36 @@ describe("reels master indexes", () => {
     expect(state.masterProgress.target).toBe(3000);
     expect(state.masterProgress.verifiedCompleted).toBe(2);
     expect(state.masterProgress.pending).toBe(2998);
-    expect(research.recordCount).toBe(state.masterProgress.verifiedCompleted);
-    expect(research.records.map(({ reelId }) => reelId)).toEqual(["0001", "0002"]);
+    expect(research.recordCount).toBe(3);
+    expect(research.records.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);
+    expect(
+      research.records.filter(({ usedStatus }) => usedStatus === "used").map(({ reelId }) => reelId)
+    ).toEqual(["0001", "0002"]);
+    expect(
+      research.records.find(({ reelId }) => reelId === "0003")
+    ).toMatchObject({
+      usedStatus: "not-yet-produced",
+      reelPotential: "preproduction-evidence-verified",
+    });
     expect(assets.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002"]);
     expect(quality.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002"]);
     expect(assets.entries.every(({ packageStatus }) => packageStatus.startsWith("private-drive-verified"))).toBe(true);
     expect(quality.entries.every(({ status }) => status.startsWith("passed-private-drive-verified"))).toBe(true);
     expect(errors.reelFailureCount).toBe(state.masterProgress.failed.count);
-    expect(errors.retryQueue).toEqual(state.masterProgress.retryQueue);
+    expect(errors.retryQueue).toHaveLength(state.masterProgress.retryQueue.length);
+    expect(errors.retryQueue[0]).toMatchObject({
+      reelId: "0003",
+      gate: "caption-free vertical video generation",
+      status: "capacity-blocked-not-failed",
+      attemptCount: 1,
+      recordedAt: "2026-08-23",
+    });
+    expect(state.masterProgress.retryQueue[0]).toMatchObject({
+      reelId: "0003",
+      gate: "caption-free vertical video generation",
+      status: "capacity-blocked-not-failed",
+      record: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
+    });
     expect(batches).toMatchObject({
       targetReels: state.masterProgress.target,
       batchSize: 30,

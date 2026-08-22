@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "database": "research-findings-index",
   "updatedAt": "2026-08-22",
-  "recordCount": 2,
+  "recordCount": 3,
   "records": [
     {
       "id": "R-0001",
@@ -27,6 +27,18 @@
       "limitation": "Interpretation must distinguish task-resumption research from broad claims about personality, productivity, or diagnosis.",
       "reelPotential": "used-drive-verified-package",
       "usedStatus": "used"
+    },
+    {
+      "id": "R-0003",
+      "reelId": "0003",
+      "topic": "Learning and memory",
+      "subtopic": "Retrieval practice versus passive rereading",
+      "finding": "Practice testing/retrieval practice is evidence-supported for learning in many studied contexts, but effects vary with implementation, learner, outcome, and setting.",
+      "evidenceClassification": "Strong Evidence",
+      "sourceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
+      "limitation": "The evidence does not support a fixed score gain, a universal outcome, a treatment claim, or a guarantee for every learner.",
+      "reelPotential": "preproduction-evidence-verified",
+      "usedStatus": "not-yet-produced"
     }
   ],
   "candidateRecords": [],
