@@ -10,9 +10,10 @@
       "reelRange": "0001-0030",
       "verifiedCompleted": [
         "0001",
-        "0002"
+        "0002",
+        "0003"
       ],
-      "pendingCount": 28,
+      "pendingCount": 27,
       "status": "in-progress-private-packages-verified",
       "folderPolicy": "Existing private Drive batch storage is reused; no duplicate folder is created."
     }

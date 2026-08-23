@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "database": "script-readiness-index",
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "entries": [
     {
       "reelId": "0001",
@@ -21,11 +21,11 @@
     },
     {
       "reelId": "0003",
-      "status": "evidence-creative-narration-and-first-local-clip-complete-capacity-blocked",
+      "status": "used-private-drive-verified-package",
       "language": "Hindi (Devanagari captions)",
       "format": "approximately 60-second vertical reel",
       "sourceRecord": "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
-      "note": "The script and clip plan use qualified learning evidence only. Hindi narration and Clip 01 are local-only; complementary media, captions, final QA, and Drive package work remain pending."
+      "note": "The script and clip plan use qualified learning evidence only. The final 59.571-second captioned reel, Hindi SRT, source metadata, and QA record are exact-name verified in the private Drive package; raw local production assets remain preserved."
     }
   ],
   "integrityRule": "A script index entry is not proof of a completed Reel. It becomes completed only after matching QA and private-Drive package verification."

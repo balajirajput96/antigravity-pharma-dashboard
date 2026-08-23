@@ -2,20 +2,7 @@
   "schemaVersion": "1.0",
   "updatedAt": "2026-08-23",
   "reelFailureCount": 0,
-  "retryQueue": [
-    {
-      "reelId": "0003",
-      "gate": "caption-free vertical video generation",
-      "status": "capacity-blocked-not-failed",
-      "attemptCount": 3,
-      "generatedClipCount": 1,
-      "capacityBlockedAttemptCount": 2,
-      "recordedAt": "2026-08-23",
-      "reason": "Attempt 1 was blocked by the free-plan daily quota. After a capacity retry, Clip 01 was generated locally, but the complementary Clip 02 request was blocked by the same daily quota. No completed MP4 assembly or Drive package exists.",
-      "retryCondition": "Use an available video-generation quota or an owner-enabled plan, then resume from the complementary visual-clip generation and QA gates without repeating verified research, script, narration, or local Clip 01 work.",
-      "preservationRule": "Retain the research draft, production blueprint, generated narration, local Clip 01, and visual-reference request. Do not count the reel as completed, failed, Drive-uploaded, or publicly published."
-    }
-  ],
+  "retryQueue": [],
   "resolvedArtifactRevisions": [
     {
       "reelId": "0002",
@@ -28,6 +15,12 @@
       "revision": "V3",
       "issue": "The lower portion of the legacy caption field remained visible in visual QA.",
       "resolution": "Retained the failed local revision and produced V4 with full legacy-caption masking before upload."
+    },
+    {
+      "reelId": "0003",
+      "revision": "procedural-local-fallback-and-V2-final-assembly",
+      "issue": "The complementary external visual request was capacity-blocked after Clip 01 was generated locally.",
+      "resolution": "Preserved the quota-block record and local assets, created a caption-free procedural fallback under the approved visual plan, completed bounded technical/visual/audio-caption QA, then exact-name verified the final MP4, SRT, QA record, and source metadata in a separate private Drive package."
     }
   ],
   "queueRule": "A Reel enters retryQueue only when it cannot pass an evidence, production, QA, or private-Drive verification gate after bounded diagnosis. Resolved local artifact revisions are retained for audit but do not inflate failed Reel counts."

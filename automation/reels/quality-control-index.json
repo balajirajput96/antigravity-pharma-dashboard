@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "database": "quality-control-index",
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "entries": [
     {
       "reelId": "0001",
@@ -16,6 +16,13 @@
       "technical": "H.264/AAC, 720x1280, 30 fps, 54.120 seconds",
       "visual": "V4 sampled frames show the legacy-caption field fully masked with high-contrast Hindi captions and an uncovered lower visual field.",
       "qaRecord": "automation/reels/REEL_0002_ACCESSIBILITY_REVISION_QA_2026-08-22.md"
+    },
+    {
+      "reelId": "0003",
+      "status": "passed-private-drive-verified-review-ready",
+      "technical": "H.264/AAC, 720x1280, 24 fps, 59.571 seconds; final MP4 and V4 short-cue Hindi SRT parser checks pass.",
+      "visual": "Representative hook, evidence, limitation, takeaway, and closing frames show readable high-contrast Hindi captions with maintained safe-area and procedural visual continuity.",
+      "qaRecord": "automation/reels/REEL_0003_FINAL_LOCAL_QA_2026-08-23.md"
     }
   ],
   "blockingConditions": [

@@ -70,28 +70,28 @@ describe("reels master indexes", () => {
     }>("automation/reels/drive-candidate-folder-inventory.json");
 
     expect(state.masterProgress.target).toBe(3000);
-    expect(state.masterProgress.verifiedCompleted).toBe(2);
-    expect(state.masterProgress.pending).toBe(2998);
+    expect(state.masterProgress.verifiedCompleted).toBe(3);
+    expect(state.masterProgress.pending).toBe(2997);
     expect(research.recordCount).toBe(3);
     expect(research.records.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);
     expect(
       research.records.filter(({ usedStatus }) => usedStatus === "used").map(({ reelId }) => reelId)
-    ).toEqual(["0001", "0002"]);
+    ).toEqual(["0001", "0002", "0003"]);
     expect(
       research.records.find(({ reelId }) => reelId === "0003")
     ).toMatchObject({
-      usedStatus: "not-yet-produced",
-      reelPotential: "evidence-verified-local-clip-pending",
+      usedStatus: "used",
+      reelPotential: "used-private-drive-verified-package",
     });
     expect(assets.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);
-    expect(quality.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002"]);
+    expect(quality.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);
     expect(
       assets.entries
         .filter(({ packageStatus }) => packageStatus.startsWith("private-drive-verified"))
         .map(({ reelId }) => reelId)
-    ).toEqual(["0001", "0002"]);
+    ).toEqual(["0001", "0002", "0003"]);
     expect(assets.entries.find(({ reelId }) => reelId === "0003")).toMatchObject({
-      packageStatus: "local-only-partial-segment-qa-passed-pending-remaining-clips-and-final-reel-qa",
+      packageStatus: "private-drive-verified-review-ready",
     });
     expect(assets.entries.find(({ reelId }) => reelId === "0003")?.narrationTechnicalIntegrity).toContain(
       "47.440 seconds"
@@ -99,21 +99,8 @@ describe("reels master indexes", () => {
     expect(quality.entries.every(({ status }) => status.startsWith("passed-private-drive-verified"))).toBe(true);
     expect(errors.reelFailureCount).toBe(state.masterProgress.failed.count);
     expect(errors.retryQueue).toHaveLength(state.masterProgress.retryQueue.length);
-    expect(errors.retryQueue[0]).toMatchObject({
-      reelId: "0003",
-      gate: "caption-free vertical video generation",
-      status: "capacity-blocked-not-failed",
-      attemptCount: 3,
-      generatedClipCount: 1,
-      capacityBlockedAttemptCount: 2,
-      recordedAt: "2026-08-23",
-    });
-    expect(state.masterProgress.retryQueue[0]).toMatchObject({
-      reelId: "0003",
-      gate: "caption-free vertical video generation",
-      status: "capacity-blocked-not-failed",
-      record: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
-    });
+    expect(errors.retryQueue).toEqual([]);
+    expect(state.masterProgress.retryQueue).toEqual([]);
     expect(batches).toMatchObject({
       targetReels: state.masterProgress.target,
       batchSize: 30,
@@ -122,7 +109,7 @@ describe("reels master indexes", () => {
     });
     expect(batches.batches[0]).toMatchObject({
       id: "Batch_001",
-      verifiedCompleted: ["0001", "0002"],
+      verifiedCompleted: ["0001", "0002", "0003"],
       pendingCount: state.masterProgress.currentBatch.pending,
     });
     expect(state.masterProgress.artifactIndexes.errorRetryLog).toBe(

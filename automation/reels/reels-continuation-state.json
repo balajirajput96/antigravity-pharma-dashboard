@@ -20,30 +20,23 @@
   },
   "masterProgress": {
     "target": 3000,
-    "verifiedCompleted": 2,
-    "pending": 2998,
+    "verifiedCompleted": 3,
+    "pending": 2997,
     "failed": {
       "count": 0,
       "reelIds": [],
       "definition": "Only a reel that cannot pass its evidence, production, QA, or private-Drive verification gate is counted as failed. Retained local revision attempts are not counted as failed reels."
     },
-    "retryQueue": [
-      {
-        "reelId": "0003",
-        "gate": "caption-free vertical video generation",
-        "status": "capacity-blocked-not-failed",
-        "record": "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md"
-      }
-    ],
+    "retryQueue": [],
     "currentBatch": {
       "id": "Batch_001",
       "sequence": 1,
       "reelRange": "0001-0030",
-      "verifiedCompleted": 2,
-      "pending": 28,
+      "verifiedCompleted": 3,
+      "pending": 27,
       "status": "in-progress"
     },
-    "currentReel": "0003",
+    "currentReel": "0004",
     "batchRoadmap": {
       "batchSize": 30,
       "plannedBatchCount": 100,
@@ -91,7 +84,7 @@
     },
     "lastInventory": {
       "date": "2026-08-23",
-      "basis": "Read-only private Drive Batch_001 listing, existing exact-package verification recorded for Reel 0001 and Reel 0002, and a retained-artifact reconciliation record.",
+      "basis": "Read-only private Drive Batch_001 listing, exact-package verification recorded for Reel 0001 through Reel 0003, and a retained-artifact reconciliation record.",
       "reconciliationRecord": "automation/reels/DRIVE_INVENTORY_RECONCILIATION_2026-08-23.md",
       "candidateFolderInventory": "automation/reels/drive-candidate-folder-inventory.json",
       "candidateFolderCounts": {
@@ -139,12 +132,12 @@
       "externalPublishingStatus": "not-published"
     },
     "0003": {
-      "status": "research-script-narration-and-first-clip-partial-capacity-blocked",
+      "status": "private-drive-package-verified",
       "topic": "Retrieval practice: recalling rather than rereading",
       "researchStatus": "independently-verified",
       "evidenceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
       "productionBlueprint": "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
-      "narration": "Local Hindi narration WAV was generated from the verified script; it is not a completed Drive package.",
+      "narration": "The approved Hindi V3 narration is retained locally and is embedded in the verified final private-package MP4; raw narration WAV remains local-only.",
       "narrationTechnicalCheck": {
         "record": "automation/reels/REEL_0003_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
         "format": "PCM s16le WAV, 24 kHz mono",
@@ -160,14 +153,28 @@
         }
       },
       "videoGeneration": {
-        "status": "clip-01-local-generated-clip-02-capacity-blocked",
+        "status": "clip-01-local-generated-external-clip-02-capacity-blocked-local-procedural-fallback-assembled",
         "attemptCount": 3,
         "generatedClipCount": 1,
         "capacityBlockedAttemptCount": 2,
-        "localArtifact": "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; technical and bounded three-frame visual QA recorded; pending complementary clips and final-reel QA)",
+        "localArtifact": "/home/ubuntu/reels_audit/reel_0003/REEL_0003_RETRIEVAL_PRACTICE_HI_V2_LOCAL.mp4 (59.571-second assembled source candidate using preserved Clip 01, local caption-free procedural fallback, V3 narration, and V4 short-cue captions; its final MP4 derivative is now exact-name verified in the private Drive package)",
         "retryRecord": "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md"
       },
-      "releaseStatus": "not-release-approved",
+      "localCandidateQa": "automation/reels/REEL_0003_FINAL_LOCAL_CANDIDATE_QA_2026-08-23.md",
+      "finalLocalQa": "automation/reels/REEL_0003_FINAL_LOCAL_QA_2026-08-23.md",
+      "package": [
+        "REEL_0003_RETRIEVAL_PRACTICE_HI_FINAL.mp4",
+        "REEL_0003_CAPTIONS_HI_FINAL.srt",
+        "REEL_0003_FINAL_QA_2026-08-23.md",
+        "REEL_0003_SOURCE_METADATA_2026-08-23.md"
+      ],
+      "drivePackage": {
+        "folderName": "Reel_0003_Retrieval_Practice_Final",
+        "verifiedAt": "2026-08-23",
+        "verification": "Exact-name listing confirmed four non-trashed files with expected MIME types and the intended private package parent."
+      },
+      "drivePackageVerifiedAt": "2026-08-23",
+      "releaseStatus": "private-drive-package-verified-review-ready",
       "externalPublishingStatus": "not-published"
     }
   },
@@ -190,7 +197,7 @@
     "reason": "The current task scheduler and free media-generation quota do not establish a durable, authenticated bulk-video worker. Future scheduling requires a bounded approved workflow, source-verification gate, generation capacity, and Drive authorization check."
   },
   "nextAction": {
-    "type": "reel-0003-video-generation-capacity-retry",
-    "description": "Keep Reel 0001 and Reel 0002 private and preserved. Reel 0003 research, script, creative brief, visual plan, narration, and local Clip 01 are retained. Resume at the unavailable caption-free video generation for complementary visual clips when capacity is available; then technically and visually QA all clips, assemble captions, and verify a private Drive package. Do not create a bulk-generation or recurring media schedule."
+    "type": "reel-0004-evidence-discovery",
+    "description": "Keep the three verified private packages and unclassified candidate folders preserved. Select a new unique Reel 0004 evidence topic, complete independent source verification and an evidence-safe Hindi script before any media work. Do not create a bulk-generation or recurring media schedule."
   }
 }

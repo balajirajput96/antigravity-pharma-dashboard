@@ -125,22 +125,15 @@ describe("reels continuation state", () => {
     });
     expect(state.masterProgress).toMatchObject({
       target: 3000,
-      verifiedCompleted: 2,
-      pending: 2998,
-      currentReel: "0003",
+      verifiedCompleted: 3,
+      pending: 2997,
+      currentReel: "0004",
       lastInventory: {
         date: "2026-08-23",
         publicationStatus: "not-published",
       },
     });
-    expect(state.masterProgress.retryQueue).toEqual([
-      {
-        reelId: "0003",
-        gate: "caption-free vertical video generation",
-        status: "capacity-blocked-not-failed",
-        record: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
-      },
-    ]);
+    expect(state.masterProgress.retryQueue).toEqual([]);
     expect(state.masterProgress.failed).toMatchObject({
       count: 0,
       reelIds: [],
@@ -149,8 +142,8 @@ describe("reels continuation state", () => {
       id: "Batch_001",
       sequence: 1,
       reelRange: "0001-0030",
-      verifiedCompleted: 2,
-      pending: 28,
+      verifiedCompleted: 3,
+      pending: 27,
       status: "in-progress",
     });
     expect(state.masterProgress.batchRoadmap).toMatchObject({
@@ -200,12 +193,13 @@ describe("reels continuation state", () => {
       "existing independently verified research and source metadata",
     ]);
     expect(state.reels["0003"]).toMatchObject({
-      status: "research-script-narration-and-first-clip-partial-capacity-blocked",
+      status: "private-drive-package-verified",
       topic: "Retrieval practice: recalling rather than rereading",
       researchStatus: "independently-verified",
       evidenceRecord: "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
       productionBlueprint: "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
-      releaseStatus: "not-release-approved",
+      drivePackageVerifiedAt: "2026-08-23",
+      releaseStatus: "private-drive-package-verified-review-ready",
       externalPublishingStatus: "not-published",
     });
     expect(state.reels["0003"].narrationTechnicalCheck).toEqual({
@@ -225,12 +219,12 @@ describe("reels continuation state", () => {
       },
     });
     expect(state.reels["0003"].videoGeneration).toEqual({
-      status: "clip-01-local-generated-clip-02-capacity-blocked",
+      status: "clip-01-local-generated-external-clip-02-capacity-blocked-local-procedural-fallback-assembled",
       attemptCount: 3,
       generatedClipCount: 1,
       capacityBlockedAttemptCount: 2,
       localArtifact:
-        "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; technical and bounded three-frame visual QA recorded; pending complementary clips and final-reel QA)",
+        "/home/ubuntu/reels_audit/reel_0003/REEL_0003_RETRIEVAL_PRACTICE_HI_V2_LOCAL.mp4 (59.571-second assembled source candidate using preserved Clip 01, local caption-free procedural fallback, V3 narration, and V4 short-cue captions; its final MP4 derivative is now exact-name verified in the private Drive package)",
       retryRecord: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
     });
     expect(state.productionPolicy).toMatchObject({

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "database": "research-findings-index",
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "recordCount": 3,
   "records": [
     {
@@ -37,8 +37,8 @@
       "evidenceClassification": "Strong Evidence",
       "sourceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
       "limitation": "The evidence does not support a fixed score gain, a universal outcome, a treatment claim, or a guarantee for every learner.",
-      "reelPotential": "evidence-verified-local-clip-pending",
-      "usedStatus": "not-yet-produced"
+      "reelPotential": "used-private-drive-verified-package",
+      "usedStatus": "used"
     }
   ],
   "candidateRecords": [],
