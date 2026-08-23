@@ -69,6 +69,13 @@ type ReelsWorkflowState = {
         durationSeconds: number;
         status: string;
         assemblyGate: string;
+        v3TimingCandidate: {
+          record: string;
+          format: string;
+          durationSeconds: number;
+          speechToTextFidelity: string;
+          storage: string;
+        };
       };
       videoGeneration: {
         status: string;
@@ -205,9 +212,17 @@ describe("reels continuation state", () => {
       record: "automation/reels/REEL_0003_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
       format: "PCM s16le WAV, 24 kHz mono",
       durationSeconds: 47.44,
-      status: "technically-readable-pending-deliberate-timing-reconciliation",
+      status: "original-retained-v3-local-timing-candidate-created",
       assemblyGate:
-        "The approved ~60-second storyboard and final caption timeline must be reconciled through measured narration or an evidence-safe timeline revision; do not pad silence to conceal the mismatch.",
+        "Use the local V3 59.571-second timing candidate only after final clip, caption, audio, and package QA; it was derived through a 0.80× tempo-preserving stretch with no silence padding.",
+      v3TimingCandidate: {
+        record: "automation/reels/REEL_0003_NARRATION_V3_TIMING_QA_2026-08-23.md",
+        format: "PCM s16le WAV, 24 kHz mono",
+        durationSeconds: 59.571,
+        speechToTextFidelity:
+          "completed-hindi-transcript-matches-approved-evidence-safe-script",
+        storage: "local-only",
+      },
     });
     expect(state.reels["0003"].videoGeneration).toEqual({
       status: "clip-01-local-generated-clip-02-capacity-blocked",

@@ -30,9 +30,10 @@
       "packageStatus": "local-only-partial-segment-qa-passed-pending-remaining-clips-and-final-reel-qa",
       "artifacts": [
         "Hindi narration WAV",
+        "measured 59.571-second Hindi narration V3 local timing candidate",
         "caption-free visual Clip 01 MP4"
       ],
-      "narrationTechnicalIntegrity": "Hindi narration WAV: PCM s16le, 24 kHz mono, 47.440 seconds; verified locally on 2026-08-23. The source is technically readable but requires deliberate timing reconciliation against the ~60-second storyboard before final assembly.",
+      "narrationTechnicalIntegrity": "Original Hindi narration WAV: PCM s16le, 24 kHz mono, 47.440 seconds. Preserved V3 local timing candidate: PCM s16le, 24 kHz mono, 59.571 seconds after a 0.80× tempo-preserving stretch of regenerated V2; successful Hindi transcription confirms the approved evidence-safe script content. V3 remains local-only pending final audio/visual/caption QA.",
       "technicalIntegrity": "Clip 01: H.264/AAC, 720x1280, 24 fps, 8.000 seconds; confirmed with ffprobe on 2026-08-23.",
       "boundedVisualQa": "Opening, mid, and closing frames were reviewed on 2026-08-23. The vertical composition is coherent and shows no visible text, watermark, logo, or obvious fatal segment defect; this does not approve a final assembly.",
       "completionBoundary": "Local assets do not count as a completed reel. No assembled video, captions, private Drive package, or external publication exists.",

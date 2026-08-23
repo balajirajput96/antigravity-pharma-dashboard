@@ -14,7 +14,7 @@ On 2026-08-23, the first planned caption-free vertical visual clip was submitted
 | --- | --- | --- |
 | Evidence research | Independently verified | `REEL_0003_RESEARCH_DRAFT_2026-08-22.md` |
 | Script and clip plan | Prepared from the verified research | `REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md` |
-| Hindi narration | Generated locally; PCM s16le 24 kHz mono, 47.440 seconds. Technically readable but requires a deliberate timing reconciliation against the ~60-second storyboard before final assembly. | `/home/ubuntu/reels_audit/reel_0003/REEL_0003_NARRATION_HI.wav` |
+| Hindi narration | Original and V2 narrations are retained. A local V3 timing candidate is PCM s16le 24 kHz mono, 59.571 seconds after a 0.80× tempo-preserving stretch; its Hindi transcript matches the approved evidence-safe script. It remains pending final audio, caption, visual, and package QA. | `/home/ubuntu/reels_audit/reel_0003/REEL_0003_NARRATION_HI_V3_60S_CANDIDATE.wav` |
 | Clip 01 | Generated locally; technical and bounded segment-level visual QA completed, not a completed package | `/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4` |
 | Reference visual request | Pending service result; not used as a completed artifact | project storage reservation only |
 
