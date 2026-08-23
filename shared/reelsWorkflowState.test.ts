@@ -63,7 +63,14 @@ type ReelsWorkflowState = {
       researchStatus: string;
       evidenceRecord: string;
       productionBlueprint: string;
-      videoGeneration: { status: string; attemptCount: number; retryRecord: string };
+      videoGeneration: {
+        status: string;
+        attemptCount: number;
+        generatedClipCount: number;
+        capacityBlockedAttemptCount: number;
+        localArtifact: string;
+        retryRecord: string;
+      };
       releaseStatus: string;
       externalPublishingStatus: string;
     };
@@ -179,7 +186,7 @@ describe("reels continuation state", () => {
       "existing independently verified research and source metadata",
     ]);
     expect(state.reels["0003"]).toMatchObject({
-      status: "research-script-complete-video-generation-capacity-blocked",
+      status: "research-script-narration-and-first-clip-partial-capacity-blocked",
       topic: "Retrieval practice: recalling rather than rereading",
       researchStatus: "independently-verified",
       evidenceRecord: "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
@@ -188,8 +195,11 @@ describe("reels continuation state", () => {
       externalPublishingStatus: "not-published",
     });
     expect(state.reels["0003"].videoGeneration).toEqual({
-      status: "blocked-free-plan-daily-limit",
-      attemptCount: 1,
+      status: "clip-01-local-generated-clip-02-capacity-blocked",
+      attemptCount: 3,
+      generatedClipCount: 1,
+      capacityBlockedAttemptCount: 2,
+      localArtifact: "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; pending technical and visual QA)",
       retryRecord: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
     });
     expect(state.productionPolicy).toMatchObject({

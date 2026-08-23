@@ -7,11 +7,13 @@
       "reelId": "0003",
       "gate": "caption-free vertical video generation",
       "status": "capacity-blocked-not-failed",
-      "attemptCount": 1,
+      "attemptCount": 3,
+      "generatedClipCount": 1,
+      "capacityBlockedAttemptCount": 2,
       "recordedAt": "2026-08-23",
-      "reason": "The free-plan daily video-generation quota rejected the first planned eight-second visual clip before any video file was created.",
-      "retryCondition": "Use an available video-generation quota or an owner-enabled plan, then restart at the video-generation gate without repeating verified research, script, or narration work.",
-      "preservationRule": "Retain the research draft, production blueprint, generated narration, and visual-reference request. Do not count the reel as completed, failed, Drive-uploaded, or publicly published."
+      "reason": "Attempt 1 was blocked by the free-plan daily quota. After a capacity retry, Clip 01 was generated locally, but the complementary Clip 02 request was blocked by the same daily quota. No completed MP4 assembly or Drive package exists.",
+      "retryCondition": "Use an available video-generation quota or an owner-enabled plan, then resume from the complementary visual-clip generation and QA gates without repeating verified research, script, narration, or local Clip 01 work.",
+      "preservationRule": "Retain the research draft, production blueprint, generated narration, local Clip 01, and visual-reference request. Do not count the reel as completed, failed, Drive-uploaded, or publicly published."
     }
   ],
   "resolvedArtifactRevisions": [

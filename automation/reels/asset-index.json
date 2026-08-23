@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "database": "artifact-index",
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "entries": [
     {
       "reelId": "0001",
@@ -24,6 +24,17 @@
         "independently verified research and source metadata"
       ],
       "repositoryStorageRule": "Metadata only; the original candidate and retained local correction attempts remain outside the repository."
+    },
+    {
+      "reelId": "0003",
+      "packageStatus": "local-only-pending-remaining-clips-and-qa",
+      "artifacts": [
+        "Hindi narration WAV",
+        "caption-free visual Clip 01 MP4"
+      ],
+      "technicalIntegrity": "Clip 01: H.264/AAC, 720x1280, 24 fps, 8.000 seconds; confirmed with ffprobe on 2026-08-23.",
+      "completionBoundary": "Local assets do not count as a completed reel. No assembled video, captions, private Drive package, or external publication exists.",
+      "repositoryStorageRule": "Metadata only; local media stays outside the repository until a complete QA-passed private package is available."
     }
   ],
   "integrityRule": "Asset presence is not treated as a completion signal without corresponding QA and private-Drive verification."

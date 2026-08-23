@@ -59,11 +59,18 @@ describe("reels master indexes", () => {
       research.records.find(({ reelId }) => reelId === "0003")
     ).toMatchObject({
       usedStatus: "not-yet-produced",
-      reelPotential: "preproduction-evidence-verified",
+      reelPotential: "evidence-verified-local-clip-pending",
     });
-    expect(assets.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002"]);
+    expect(assets.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);
     expect(quality.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002"]);
-    expect(assets.entries.every(({ packageStatus }) => packageStatus.startsWith("private-drive-verified"))).toBe(true);
+    expect(
+      assets.entries
+        .filter(({ packageStatus }) => packageStatus.startsWith("private-drive-verified"))
+        .map(({ reelId }) => reelId)
+    ).toEqual(["0001", "0002"]);
+    expect(assets.entries.find(({ reelId }) => reelId === "0003")).toMatchObject({
+      packageStatus: "local-only-pending-remaining-clips-and-qa",
+    });
     expect(quality.entries.every(({ status }) => status.startsWith("passed-private-drive-verified"))).toBe(true);
     expect(errors.reelFailureCount).toBe(state.masterProgress.failed.count);
     expect(errors.retryQueue).toHaveLength(state.masterProgress.retryQueue.length);
@@ -71,7 +78,9 @@ describe("reels master indexes", () => {
       reelId: "0003",
       gate: "caption-free vertical video generation",
       status: "capacity-blocked-not-failed",
-      attemptCount: 1,
+      attemptCount: 3,
+      generatedClipCount: 1,
+      capacityBlockedAttemptCount: 2,
       recordedAt: "2026-08-23",
     });
     expect(state.masterProgress.retryQueue[0]).toMatchObject({

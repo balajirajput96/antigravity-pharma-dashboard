@@ -130,15 +130,18 @@
       "externalPublishingStatus": "not-published"
     },
     "0003": {
-      "status": "research-script-complete-video-generation-capacity-blocked",
+      "status": "research-script-narration-and-first-clip-partial-capacity-blocked",
       "topic": "Retrieval practice: recalling rather than rereading",
       "researchStatus": "independently-verified",
       "evidenceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
       "productionBlueprint": "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
       "narration": "Local Hindi narration WAV was generated from the verified script; it is not a completed Drive package.",
       "videoGeneration": {
-        "status": "blocked-free-plan-daily-limit",
-        "attemptCount": 1,
+        "status": "clip-01-local-generated-clip-02-capacity-blocked",
+        "attemptCount": 3,
+        "generatedClipCount": 1,
+        "capacityBlockedAttemptCount": 2,
+        "localArtifact": "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; pending technical and visual QA)",
         "retryRecord": "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md"
       },
       "releaseStatus": "not-release-approved",
@@ -165,6 +168,6 @@
   },
   "nextAction": {
     "type": "reel-0003-video-generation-capacity-retry",
-    "description": "Keep Reel 0001 and Reel 0002 private and preserved. Reel 0003 research, script, creative brief, visual plan, narration, and caption design are retained. Resume only at the unavailable caption-free video-generation gate when capacity is available; then complete QA and a verified private Drive package. Do not create a bulk-generation or recurring media schedule."
+    "description": "Keep Reel 0001 and Reel 0002 private and preserved. Reel 0003 research, script, creative brief, visual plan, narration, and local Clip 01 are retained. Resume at the unavailable caption-free video generation for complementary visual clips when capacity is available; then technically and visually QA all clips, assemble captions, and verify a private Drive package. Do not create a bulk-generation or recurring media schedule."
   }
 }
