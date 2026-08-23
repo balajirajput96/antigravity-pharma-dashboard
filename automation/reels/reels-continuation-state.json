@@ -89,8 +89,10 @@
       "automationRule": "No unattended bulk video scheduler is created; the task scheduler does not establish a durable authenticated media worker."
     },
     "lastInventory": {
-      "date": "2026-08-22",
-      "basis": "Read-only private Drive Batch_001 listing plus exact-package verification recorded in the Reel 0001 and Reel 0002 workflow records.",
+      "date": "2026-08-23",
+      "basis": "Read-only private Drive Batch_001 listing, existing exact-package verification recorded for Reel 0001 and Reel 0002, and a retained-artifact reconciliation record.",
+      "reconciliationRecord": "automation/reels/DRIVE_INVENTORY_RECONCILIATION_2026-08-23.md",
+      "unclassifiedArtifactsRule": "Additional folders or loose artifacts remain preserved and unclassified until independently validated against evidence, rendered-media, QA, and exact private-package gates.",
       "publicationStatus": "not-published"
     }
   },
@@ -141,7 +143,7 @@
         "attemptCount": 3,
         "generatedClipCount": 1,
         "capacityBlockedAttemptCount": 2,
-        "localArtifact": "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; pending technical and visual QA)",
+        "localArtifact": "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; technical and bounded three-frame visual QA recorded; pending complementary clips and final-reel QA)",
         "retryRecord": "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md"
       },
       "releaseStatus": "not-release-approved",

@@ -21,3 +21,7 @@ On 2026-08-23, the first planned caption-free vertical visual clip was submitted
 ## Restart condition
 
 Resume when the video-generation quota is available or the owner enables a plan with sufficient video-generation capacity. Generate the missing complementary visual clips, preserve the existing research/script/narration/Clip 01, perform technical and visual QA, assemble captions, and upload only a fully verified private Drive package. Do not mark Reel 0003 complete, create a bulk schedule, or publish externally before those gates pass.
+
+## Same-window continuation
+
+No additional generation request was sent in the same quota window after the recorded daily-limit response. Repeating it would not establish new capacity and could consume another attempt without producing the missing Clip 02. A bounded local review has since confirmed the technical properties of Clip 01 and inspected opening, mid, and closing frames for segment-level composition; this does not remove the capacity blocker or satisfy final-reel quality control.

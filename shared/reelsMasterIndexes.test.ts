@@ -15,6 +15,11 @@ type MasterState = {
     retryQueue: unknown[];
     currentBatch: { id: string; verifiedCompleted: number; pending: number };
     artifactIndexes: Record<string, string>;
+    lastInventory: {
+      date: string;
+      reconciliationRecord: string;
+      unclassifiedArtifactsRule: string;
+    };
   };
   productionPolicy: {
     automaticBulkGeneration: boolean;
@@ -69,7 +74,7 @@ describe("reels master indexes", () => {
         .map(({ reelId }) => reelId)
     ).toEqual(["0001", "0002"]);
     expect(assets.entries.find(({ reelId }) => reelId === "0003")).toMatchObject({
-      packageStatus: "local-only-pending-remaining-clips-and-qa",
+      packageStatus: "local-only-partial-segment-qa-passed-pending-remaining-clips-and-final-reel-qa",
     });
     expect(quality.entries.every(({ status }) => status.startsWith("passed-private-drive-verified"))).toBe(true);
     expect(errors.reelFailureCount).toBe(state.masterProgress.failed.count);
@@ -102,6 +107,13 @@ describe("reels master indexes", () => {
     });
     expect(state.masterProgress.artifactIndexes.errorRetryLog).toBe(
       "automation/reels/error-retry-log.json"
+    );
+    expect(state.masterProgress.lastInventory).toMatchObject({
+      date: "2026-08-23",
+      reconciliationRecord: "automation/reels/DRIVE_INVENTORY_RECONCILIATION_2026-08-23.md",
+    });
+    expect(state.masterProgress.lastInventory.unclassifiedArtifactsRule).toContain(
+      "independently validated"
     );
     expect(state.productionPolicy.automaticBulkGeneration).toBe(false);
     expect(state.productionPolicy.automaticExternalPublishing).toBe(false);

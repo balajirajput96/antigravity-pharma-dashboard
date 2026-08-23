@@ -115,7 +115,7 @@ describe("reels continuation state", () => {
       pending: 2998,
       currentReel: "0003",
       lastInventory: {
-        date: "2026-08-22",
+        date: "2026-08-23",
         publicationStatus: "not-published",
       },
     });
@@ -199,7 +199,8 @@ describe("reels continuation state", () => {
       attemptCount: 3,
       generatedClipCount: 1,
       capacityBlockedAttemptCount: 2,
-      localArtifact: "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; pending technical and visual QA)",
+      localArtifact:
+        "/home/ubuntu/reels_audit/reel_0003/REEL_0003_CLIP_01.mp4 (local-only; technical and bounded three-frame visual QA recorded; pending complementary clips and final-reel QA)",
       retryRecord: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
     });
     expect(state.productionPolicy).toMatchObject({
