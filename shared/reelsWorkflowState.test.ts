@@ -63,6 +63,13 @@ type ReelsWorkflowState = {
       researchStatus: string;
       evidenceRecord: string;
       productionBlueprint: string;
+      narrationTechnicalCheck: {
+        record: string;
+        format: string;
+        durationSeconds: number;
+        status: string;
+        assemblyGate: string;
+      };
       videoGeneration: {
         status: string;
         attemptCount: number;
@@ -193,6 +200,14 @@ describe("reels continuation state", () => {
       productionBlueprint: "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
       releaseStatus: "not-release-approved",
       externalPublishingStatus: "not-published",
+    });
+    expect(state.reels["0003"].narrationTechnicalCheck).toEqual({
+      record: "automation/reels/REEL_0003_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
+      format: "PCM s16le WAV, 24 kHz mono",
+      durationSeconds: 47.44,
+      status: "technically-readable-pending-deliberate-timing-reconciliation",
+      assemblyGate:
+        "The approved ~60-second storyboard and final caption timeline must be reconciled through measured narration or an evidence-safe timeline revision; do not pad silence to conceal the mismatch.",
     });
     expect(state.reels["0003"].videoGeneration).toEqual({
       status: "clip-01-local-generated-clip-02-capacity-blocked",

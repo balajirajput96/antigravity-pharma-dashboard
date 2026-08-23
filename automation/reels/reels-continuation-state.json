@@ -145,6 +145,13 @@
       "evidenceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
       "productionBlueprint": "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
       "narration": "Local Hindi narration WAV was generated from the verified script; it is not a completed Drive package.",
+      "narrationTechnicalCheck": {
+        "record": "automation/reels/REEL_0003_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
+        "format": "PCM s16le WAV, 24 kHz mono",
+        "durationSeconds": 47.44,
+        "status": "technically-readable-pending-deliberate-timing-reconciliation",
+        "assemblyGate": "The approved ~60-second storyboard and final caption timeline must be reconciled through measured narration or an evidence-safe timeline revision; do not pad silence to conceal the mismatch."
+      },
       "videoGeneration": {
         "status": "clip-01-local-generated-clip-02-capacity-blocked",
         "attemptCount": 3,

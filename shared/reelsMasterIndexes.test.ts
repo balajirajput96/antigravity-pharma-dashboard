@@ -41,7 +41,9 @@ describe("reels master indexes", () => {
       recordCount: number;
       records: { reelId: string; usedStatus: string; reelPotential: string }[];
     }>("automation/reels/research-database-index.json");
-    const assets = readJson<{ entries: { reelId: string; packageStatus: string }[] }>(
+    const assets = readJson<{
+      entries: { reelId: string; packageStatus: string; narrationTechnicalIntegrity?: string }[];
+    }>(
       "automation/reels/asset-index.json"
     );
     const quality = readJson<{ entries: { reelId: string; status: string }[] }>(
@@ -91,6 +93,9 @@ describe("reels master indexes", () => {
     expect(assets.entries.find(({ reelId }) => reelId === "0003")).toMatchObject({
       packageStatus: "local-only-partial-segment-qa-passed-pending-remaining-clips-and-final-reel-qa",
     });
+    expect(assets.entries.find(({ reelId }) => reelId === "0003")?.narrationTechnicalIntegrity).toContain(
+      "47.440 seconds"
+    );
     expect(quality.entries.every(({ status }) => status.startsWith("passed-private-drive-verified"))).toBe(true);
     expect(errors.reelFailureCount).toBe(state.masterProgress.failed.count);
     expect(errors.retryQueue).toHaveLength(state.masterProgress.retryQueue.length);
