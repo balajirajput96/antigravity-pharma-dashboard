@@ -18,6 +18,12 @@ type MasterState = {
     lastInventory: {
       date: string;
       reconciliationRecord: string;
+      candidateFolderInventory: string;
+      candidateFolderCounts: {
+        totalFolders: number;
+        countedVerifiedPackages: number;
+        unclassifiedCandidateFolders: number;
+      };
       unclassifiedArtifactsRule: string;
     };
   };
@@ -111,9 +117,18 @@ describe("reels master indexes", () => {
     expect(state.masterProgress.lastInventory).toMatchObject({
       date: "2026-08-23",
       reconciliationRecord: "automation/reels/DRIVE_INVENTORY_RECONCILIATION_2026-08-23.md",
+      candidateFolderInventory: "automation/reels/drive-candidate-folder-inventory.json",
+      candidateFolderCounts: {
+        totalFolders: 94,
+        countedVerifiedPackages: 2,
+        unclassifiedCandidateFolders: 92,
+      },
     });
     expect(state.masterProgress.lastInventory.unclassifiedArtifactsRule).toContain(
       "independently validated"
+    );
+    expect(state.masterProgress.artifactIndexes.candidateFolderInventory).toBe(
+      "automation/reels/drive-candidate-folder-inventory.json"
     );
     expect(state.productionPolicy.automaticBulkGeneration).toBe(false);
     expect(state.productionPolicy.automaticExternalPublishing).toBe(false);

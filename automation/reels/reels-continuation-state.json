@@ -79,6 +79,7 @@
       "qualityControlIndex": "automation/reels/quality-control-index.json",
       "errorRetryLog": "automation/reels/error-retry-log.json",
       "batchIndex": "automation/reels/batch-index.json",
+      "candidateFolderInventory": "automation/reels/drive-candidate-folder-inventory.json",
       "driveRule": "These indexes record verified package facts and local workflow state only. They do not create future Drive folders or duplicate existing package uploads."
     },
     "directiveReconciliation": {
@@ -92,6 +93,12 @@
       "date": "2026-08-23",
       "basis": "Read-only private Drive Batch_001 listing, existing exact-package verification recorded for Reel 0001 and Reel 0002, and a retained-artifact reconciliation record.",
       "reconciliationRecord": "automation/reels/DRIVE_INVENTORY_RECONCILIATION_2026-08-23.md",
+      "candidateFolderInventory": "automation/reels/drive-candidate-folder-inventory.json",
+      "candidateFolderCounts": {
+        "totalFolders": 94,
+        "countedVerifiedPackages": 2,
+        "unclassifiedCandidateFolders": 92
+      },
       "unclassifiedArtifactsRule": "Additional folders or loose artifacts remain preserved and unclassified until independently validated against evidence, rendered-media, QA, and exact private-package gates.",
       "publicationStatus": "not-published"
     }

@@ -19,6 +19,8 @@ The master state continues to count only Reel 0001 and Reel 0002 as complete. A 
 
 The Batch_001 listing is paginated and contains additional candidate folders and root-level artifacts beyond the two packages represented in the restart-safe master indexes. Some names overlap or use alternative topics/versions. No item was reclassified, copied, moved, modified, uploaded, or removed during this inventory.
 
+The folder-only reconciliation then identified **94 retained folders**, representing **59 logical numeric labels from 0001 through 0059**. Only the already verified Reel 0001 and Reel 0002 packages remain in the master count. The remaining **92 folders are unclassified candidates**. There are 92 unique exact folder names because `Reel_0004_Hawthorne_Effect` and `Reel_0007_Affect_Labeling` each occur twice. Drive identifiers remain outside the repository; the non-secret aggregate is retained in `automation/reels/drive-candidate-folder-inventory.json`.
+
 > **Control:** Existing Drive contents must remain preserved. Any future reconciliation must validate each candidate independently against the same evidence, rendered-media, QA, and exact-package gates before changing completion counts.
 
 ## Current Next Action

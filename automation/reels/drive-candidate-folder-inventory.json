@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "inventoryDate": "2026-08-23",
+  "scope": "read-only private Batch_001 folder-only inventory",
+  "method": "Connected Google Drive list filtered to direct, non-trashed folders and ordered by name; no folder contents were read, modified, moved, shared, uploaded, or deleted.",
+  "folderIdRecordedOutsideRepository": true,
+  "counts": {
+    "totalFolders": 94,
+    "countedVerifiedPackages": 2,
+    "unclassifiedCandidateFolders": 92,
+    "logicalNumericLabels": 59,
+    "uniqueExactNames": 92
+  },
+  "labelRange": {
+    "lowest": "0001",
+    "highest": "0059"
+  },
+  "duplicateExactFolderNames": [
+    "Reel_0004_Hawthorne_Effect",
+    "Reel_0007_Affect_Labeling"
+  ],
+  "countedVerifiedReelIds": [
+    "0001",
+    "0002"
+  ],
+  "classification": {
+    "unclassifiedCandidatesExcludedFromVerifiedCount": true,
+    "completionGate": "Each candidate must independently satisfy evidence, rendered-media, final QA, source-metadata, and exact private-Drive-package verification before it can affect completion counts.",
+    "preservationRule": "Retain all folders and files. Do not overwrite, move, delete, publish, or treat names/duplicates as proof of completion."
+  }
+}
