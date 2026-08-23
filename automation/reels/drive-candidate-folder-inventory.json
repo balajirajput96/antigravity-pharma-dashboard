@@ -27,5 +27,25 @@
     "unclassifiedCandidatesExcludedFromVerifiedCount": true,
     "completionGate": "Each candidate must independently satisfy evidence, rendered-media, final QA, source-metadata, and exact private-Drive-package verification before it can affect completion counts.",
     "preservationRule": "Retain all folders and files. Do not overwrite, move, delete, publish, or treat names/duplicates as proof of completion."
-  }
+  },
+  "candidateAudits": [
+    {
+      "displayFolderName": "Reel_0003",
+      "auditRecord": "automation/reels/REEL_0003_CANDIDATE_DRIVE_READ_ONLY_AUDIT_2026-08-23.md",
+      "status": "unclassified-release-hold",
+      "countedAsVerified": false,
+      "reelIdentifierCollision": "The candidate uses the 0003 label but has an if-then-planning topic; the active local Reel 0003 is a separate retrieval-practice production and the records must not be merged.",
+      "independentlyChecked": {
+        "sourceBoundary": "passed",
+        "technicalMedia": "passed",
+        "sampledVisualCaptionReadability": "passed-partial"
+      },
+      "releaseHoldReasons": [
+        "Metadata target-folder identifier does not match the candidate folder.",
+        "Metadata says ready for upload although the candidate is already retained in Drive.",
+        "Caption-to-narration alignment was not independently verified after the bounded local transcription attempt returned no result.",
+        "Full-duration visual, caption-timing, and package-consistency review is still required."
+      ]
+    }
+  ]
 }

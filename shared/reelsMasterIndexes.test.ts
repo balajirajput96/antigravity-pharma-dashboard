@@ -57,6 +57,15 @@ describe("reels master indexes", () => {
       currentBatch: string;
       batches: { id: string; verifiedCompleted: string[]; pendingCount: number }[];
     }>("automation/reels/batch-index.json");
+    const candidateInventory = readJson<{
+      candidateAudits: {
+        displayFolderName: string;
+        status: string;
+        countedAsVerified: boolean;
+        reelIdentifierCollision: string;
+        releaseHoldReasons: string[];
+      }[];
+    }>("automation/reels/drive-candidate-folder-inventory.json");
 
     expect(state.masterProgress.target).toBe(3000);
     expect(state.masterProgress.verifiedCompleted).toBe(2);
@@ -130,6 +139,15 @@ describe("reels master indexes", () => {
     expect(state.masterProgress.artifactIndexes.candidateFolderInventory).toBe(
       "automation/reels/drive-candidate-folder-inventory.json"
     );
+    expect(candidateInventory.candidateAudits).toEqual([
+      expect.objectContaining({
+        displayFolderName: "Reel_0003",
+        status: "unclassified-release-hold",
+        countedAsVerified: false,
+      }),
+    ]);
+    expect(candidateInventory.candidateAudits[0].reelIdentifierCollision).toContain("must not be merged");
+    expect(candidateInventory.candidateAudits[0].releaseHoldReasons).toHaveLength(4);
     expect(state.productionPolicy.automaticBulkGeneration).toBe(false);
     expect(state.productionPolicy.automaticExternalPublishing).toBe(false);
     expect(state.scheduling.status).toBe("not-created");
