@@ -61,6 +61,11 @@
           "reelId": "0003",
           "topic": "Retrieval practice: recalling rather than rereading",
           "evidenceRecord": "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md"
+        },
+        {
+          "reelId": "0004",
+          "topic": "Spacing effect: a learning plan, not a magic calendar",
+          "evidenceRecord": "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md"
         }
       ]
     },
@@ -176,6 +181,22 @@
       "drivePackageVerifiedAt": "2026-08-23",
       "releaseStatus": "private-drive-package-verified-review-ready",
       "externalPublishingStatus": "not-published"
+    },
+    "0004": {
+      "status": "evidence-script-narration-local-ready",
+      "topic": "Spacing effect: a learning plan, not a magic calendar",
+      "researchStatus": "independently-verified",
+      "evidenceRecord": "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
+      "productionBlueprint": "automation/reels/REEL_0004_PRODUCTION_BLUEPRINT_2026-08-23.md",
+      "narrationTechnicalCheck": {
+        "record": "automation/reels/REEL_0004_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
+        "format": "PCM s16le WAV, 24 kHz mono",
+        "durationSeconds": 60.12,
+        "storage": "local-only",
+        "status": "technically-readable-pending-visuals-captions-final-qa-and-private-package"
+      },
+      "releaseStatus": "not-complete",
+      "externalPublishingStatus": "not-published"
     }
   },
   "productionPolicy": {
@@ -197,7 +218,7 @@
     "reason": "The current task scheduler and free media-generation quota do not establish a durable, authenticated bulk-video worker. Future scheduling requires a bounded approved workflow, source-verification gate, generation capacity, and Drive authorization check."
   },
   "nextAction": {
-    "type": "reel-0004-evidence-discovery",
-    "description": "Keep the three verified private packages and unclassified candidate folders preserved. Select a new unique Reel 0004 evidence topic, complete independent source verification and an evidence-safe Hindi script before any media work. Do not create a bulk-generation or recurring media schedule."
+    "type": "reel-0004-local-visual-production",
+    "description": "Keep the three verified private packages and unclassified candidate folders preserved. Reel 0004 has independently verified spacing-effect research, an evidence-safe Hindi script, and a local 60.120-second narration. Build only caption-free visuals that obey the approved no-universal-calendar constraints, then complete timed captions, QA, and exact private-package verification before counting it. Do not create a bulk-generation or recurring media schedule."
   }
 }

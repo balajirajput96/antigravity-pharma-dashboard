@@ -72,8 +72,8 @@ describe("reels master indexes", () => {
     expect(state.masterProgress.target).toBe(3000);
     expect(state.masterProgress.verifiedCompleted).toBe(3);
     expect(state.masterProgress.pending).toBe(2997);
-    expect(research.recordCount).toBe(3);
-    expect(research.records.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);
+    expect(research.recordCount).toBe(4);
+    expect(research.records.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003", "0004"]);
     expect(
       research.records.filter(({ usedStatus }) => usedStatus === "used").map(({ reelId }) => reelId)
     ).toEqual(["0001", "0002", "0003"]);
@@ -82,6 +82,10 @@ describe("reels master indexes", () => {
     ).toMatchObject({
       usedStatus: "used",
       reelPotential: "used-private-drive-verified-package",
+    });
+    expect(research.records.find(({ reelId }) => reelId === "0004")).toMatchObject({
+      usedStatus: "not-yet-produced",
+      reelPotential: "evidence-verified-not-yet-scripted",
     });
     expect(assets.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);
     expect(quality.entries.map(({ reelId }) => reelId)).toEqual(["0001", "0002", "0003"]);

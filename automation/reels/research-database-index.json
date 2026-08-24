@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "database": "research-findings-index",
   "updatedAt": "2026-08-23",
-  "recordCount": 3,
+  "recordCount": 4,
   "records": [
     {
       "id": "R-0001",
@@ -39,6 +39,18 @@
       "limitation": "The evidence does not support a fixed score gain, a universal outcome, a treatment claim, or a guarantee for every learner.",
       "reelPotential": "used-private-drive-verified-package",
       "usedStatus": "used"
+    },
+    {
+      "id": "R-0004",
+      "reelId": "0004",
+      "topic": "Learning and memory",
+      "subtopic": "Spacing is not a magic calendar",
+      "finding": "Distributed learning episodes can support later retention better than immediately massed repetitions in many studied contexts, but the useful interval depends in part on the later test delay and context.",
+      "evidenceClassification": "Strong Evidence, qualified",
+      "sourceRecord": "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
+      "limitation": "No fixed 24-hour, expanding, or universal interval is justified for every learner, material, outcome, or setting; the evidence does not guarantee marks, recall, or treatment outcomes.",
+      "reelPotential": "evidence-verified-not-yet-scripted",
+      "usedStatus": "not-yet-produced"
     }
   ],
   "candidateRecords": [],

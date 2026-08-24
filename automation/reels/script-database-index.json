@@ -26,6 +26,14 @@
       "format": "approximately 60-second vertical reel",
       "sourceRecord": "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
       "note": "The script and clip plan use qualified learning evidence only. The final 59.571-second captioned reel, Hindi SRT, source metadata, and QA record are exact-name verified in the private Drive package; raw local production assets remain preserved."
+    },
+    {
+      "reelId": "0004",
+      "status": "evidence-safe-script-and-blueprint-ready",
+      "language": "Hindi (Devanagari planned captions)",
+      "format": "approximately 55–60-second vertical reel",
+      "sourceRecord": "automation/reels/REEL_0004_PRODUCTION_BLUEPRINT_2026-08-23.md",
+      "note": "The approved script distinguishes a qualified spacing-effect synthesis from a single child-study illustration, rejects fixed schedules and outcome guarantees, and reserves the lower visual area for captions. Narration, media, QA, and private Drive package verification remain pending."
     }
   ],
   "integrityRule": "A script index entry is not proof of a completed Reel. It becomes completed only after matching QA and private-Drive package verification."

@@ -88,6 +88,22 @@ type ReelsWorkflowState = {
       releaseStatus: string;
       externalPublishingStatus: string;
     };
+    "0004": {
+      status: string;
+      topic: string;
+      researchStatus: string;
+      evidenceRecord: string;
+      productionBlueprint: string;
+      narrationTechnicalCheck: {
+        record: string;
+        format: string;
+        durationSeconds: number;
+        storage: string;
+        status: string;
+      };
+      releaseStatus: string;
+      externalPublishingStatus: string;
+    };
   };
   productionPolicy: {
     researchBeforeProduction: boolean;
@@ -166,6 +182,11 @@ describe("reels continuation state", () => {
         topic: "Retrieval practice: recalling rather than rereading",
         evidenceRecord: "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
       },
+      {
+        reelId: "0004",
+        topic: "Spacing effect: a learning plan, not a magic calendar",
+        evidenceRecord: "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
+      },
     ]);
     expect(state.reels["0001"].status).toBe(
       "drive-uploaded-and-verified-accessibility-revision"
@@ -226,6 +247,22 @@ describe("reels continuation state", () => {
       localArtifact:
         "/home/ubuntu/reels_audit/reel_0003/REEL_0003_RETRIEVAL_PRACTICE_HI_V2_LOCAL.mp4 (59.571-second assembled source candidate using preserved Clip 01, local caption-free procedural fallback, V3 narration, and V4 short-cue captions; its final MP4 derivative is now exact-name verified in the private Drive package)",
       retryRecord: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
+    });
+    expect(state.reels["0004"]).toMatchObject({
+      status: "evidence-script-narration-local-ready",
+      topic: "Spacing effect: a learning plan, not a magic calendar",
+      researchStatus: "independently-verified",
+      evidenceRecord: "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
+      productionBlueprint: "automation/reels/REEL_0004_PRODUCTION_BLUEPRINT_2026-08-23.md",
+      narrationTechnicalCheck: {
+        record: "automation/reels/REEL_0004_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
+        format: "PCM s16le WAV, 24 kHz mono",
+        durationSeconds: 60.12,
+        storage: "local-only",
+        status: "technically-readable-pending-visuals-captions-final-qa-and-private-package",
+      },
+      releaseStatus: "not-complete",
+      externalPublishingStatus: "not-published",
     });
     expect(state.productionPolicy).toMatchObject({
       researchBeforeProduction: true,
