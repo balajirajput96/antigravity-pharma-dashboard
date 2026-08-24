@@ -101,6 +101,13 @@ type ReelsWorkflowState = {
         storage: string;
         status: string;
       };
+      finalProductionGate: {
+        record: string;
+        status: string;
+        finalRenderAllowed: boolean;
+        driveUploadAllowed: boolean;
+        verifiedCountEligible: boolean;
+      };
       releaseStatus: string;
       externalPublishingStatus: string;
     };
@@ -249,7 +256,7 @@ describe("reels continuation state", () => {
       retryRecord: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
     });
     expect(state.reels["0004"]).toMatchObject({
-      status: "evidence-script-narration-local-ready",
+      status: "evidence-script-narration-local-visual-ready-confirmation-required",
       topic: "Spacing effect: a learning plan, not a magic calendar",
       researchStatus: "independently-verified",
       evidenceRecord: "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
@@ -260,6 +267,13 @@ describe("reels continuation state", () => {
         durationSeconds: 60.12,
         storage: "local-only",
         status: "technically-readable-pending-visuals-captions-final-qa-and-private-package",
+      },
+      finalProductionGate: {
+        record: "automation/reels/REEL_0004_FINAL_PRODUCTION_GATE_2026-08-24.md",
+        status: "explicit-current-brief-confirmation-required",
+        finalRenderAllowed: false,
+        driveUploadAllowed: false,
+        verifiedCountEligible: false,
       },
       releaseStatus: "not-complete",
       externalPublishingStatus: "not-published",

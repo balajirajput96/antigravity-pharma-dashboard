@@ -183,7 +183,7 @@
       "externalPublishingStatus": "not-published"
     },
     "0004": {
-      "status": "evidence-script-narration-local-ready",
+      "status": "evidence-script-narration-local-visual-ready-confirmation-required",
       "topic": "Spacing effect: a learning plan, not a magic calendar",
       "researchStatus": "independently-verified",
       "evidenceRecord": "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
@@ -194,6 +194,13 @@
         "durationSeconds": 60.12,
         "storage": "local-only",
         "status": "technically-readable-pending-visuals-captions-final-qa-and-private-package"
+      },
+      "finalProductionGate": {
+        "record": "automation/reels/REEL_0004_FINAL_PRODUCTION_GATE_2026-08-24.md",
+        "status": "explicit-current-brief-confirmation-required",
+        "finalRenderAllowed": false,
+        "driveUploadAllowed": false,
+        "verifiedCountEligible": false
       },
       "releaseStatus": "not-complete",
       "externalPublishingStatus": "not-published"
@@ -218,7 +225,7 @@
     "reason": "The current task scheduler and free media-generation quota do not establish a durable, authenticated bulk-video worker. Future scheduling requires a bounded approved workflow, source-verification gate, generation capacity, and Drive authorization check."
   },
   "nextAction": {
-    "type": "reel-0004-local-visual-production",
-    "description": "Keep the three verified private packages and unclassified candidate folders preserved. Reel 0004 has independently verified spacing-effect research, an evidence-safe Hindi script, and a local 60.120-second narration. Build only caption-free visuals that obey the approved no-universal-calendar constraints, then complete timed captions, QA, and exact private-package verification before counting it. Do not create a bulk-generation or recurring media schedule."
+    "type": "reel-0004-final-production-brief-confirmation",
+    "description": "Keep the three verified private packages and unclassified candidate folders preserved. Reel 0004 has independently verified spacing-effect research, an evidence-safe Hindi script, a local 60.120-second narration, and local visual readiness. Its current detailed brief must be explicitly confirmed before final rendering, captions, QA, or private package upload. Do not create a bulk-generation or recurring media schedule."
   }
 }
