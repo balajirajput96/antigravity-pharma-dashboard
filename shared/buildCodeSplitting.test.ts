@@ -4,7 +4,10 @@ import { describe, expect, it } from "vitest";
 
 describe("production build code splitting", () => {
   it("keeps stable React, UI, and data dependency chunk groups configured", () => {
-    const config = readFileSync(resolve(process.cwd(), "vite.config.ts"), "utf8");
+    const config = readFileSync(
+      resolve(process.cwd(), "vite.config.ts"),
+      "utf8"
+    );
 
     expect(config).toContain("codeSplitting");
     expect(config).toContain('name: "react-runtime"');

@@ -51,7 +51,11 @@ type ReelsWorkflowState = {
       topic: string;
       researchStatus: string;
       evidenceRecord: string;
-      driveCandidate: { video: string; sourceCaptions: string; visualQa: string };
+      driveCandidate: {
+        video: string;
+        sourceCaptions: string;
+        visualQa: string;
+      };
       package: string[];
       drivePackageVerifiedAt: string;
       releaseStatus: string;
@@ -177,22 +181,26 @@ describe("reels continuation state", () => {
       {
         reelId: "0001",
         topic: "Habit formation: why 21 days is not a universal rule",
-        evidenceRecord: "automation/REEL_0001_SOURCE_VERIFICATION_2026-08-22.md",
+        evidenceRecord:
+          "automation/REEL_0001_SOURCE_VERIFICATION_2026-08-22.md",
       },
       {
         reelId: "0002",
         topic: "Zeigarnik effect: interrupted tasks, recall, and resumption",
-        evidenceRecord: "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
+        evidenceRecord:
+          "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
       },
       {
         reelId: "0003",
         topic: "Retrieval practice: recalling rather than rereading",
-        evidenceRecord: "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
+        evidenceRecord:
+          "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
       },
       {
         reelId: "0004",
         topic: "Spacing effect: a learning plan, not a magic calendar",
-        evidenceRecord: "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
+        evidenceRecord:
+          "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
       },
     ]);
     expect(state.reels["0001"].status).toBe(
@@ -204,7 +212,8 @@ describe("reels continuation state", () => {
       status: "drive-uploaded-and-verified-accessibility-revision",
       topic: "Zeigarnik effect: interrupted tasks, recall, and resumption",
       researchStatus: "independently-verified",
-      evidenceRecord: "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
+      evidenceRecord:
+        "automation/reels/REEL_0002_DISCOVERY_AUDIT_2026-08-22.md",
       drivePackageVerifiedAt: "2026-08-22",
       releaseStatus: "private-drive-package-verified-review-ready",
       externalPublishingStatus: "not-published",
@@ -225,20 +234,23 @@ describe("reels continuation state", () => {
       topic: "Retrieval practice: recalling rather than rereading",
       researchStatus: "independently-verified",
       evidenceRecord: "automation/reels/REEL_0003_RESEARCH_DRAFT_2026-08-22.md",
-      productionBlueprint: "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
+      productionBlueprint:
+        "automation/reels/REEL_0003_PRODUCTION_BLUEPRINT_2026-08-22.md",
       drivePackageVerifiedAt: "2026-08-23",
       releaseStatus: "private-drive-package-verified-review-ready",
       externalPublishingStatus: "not-published",
     });
     expect(state.reels["0003"].narrationTechnicalCheck).toEqual({
-      record: "automation/reels/REEL_0003_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
+      record:
+        "automation/reels/REEL_0003_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
       format: "PCM s16le WAV, 24 kHz mono",
       durationSeconds: 47.44,
       status: "original-retained-v3-local-timing-candidate-created",
       assemblyGate:
         "Use the local V3 59.571-second timing candidate only after final clip, caption, audio, and package QA; it was derived through a 0.80× tempo-preserving stretch with no silence padding.",
       v3TimingCandidate: {
-        record: "automation/reels/REEL_0003_NARRATION_V3_TIMING_QA_2026-08-23.md",
+        record:
+          "automation/reels/REEL_0003_NARRATION_V3_TIMING_QA_2026-08-23.md",
         format: "PCM s16le WAV, 24 kHz mono",
         durationSeconds: 59.571,
         speechToTextFidelity:
@@ -247,29 +259,36 @@ describe("reels continuation state", () => {
       },
     });
     expect(state.reels["0003"].videoGeneration).toEqual({
-      status: "clip-01-local-generated-external-clip-02-capacity-blocked-local-procedural-fallback-assembled",
+      status:
+        "clip-01-local-generated-external-clip-02-capacity-blocked-local-procedural-fallback-assembled",
       attemptCount: 3,
       generatedClipCount: 1,
       capacityBlockedAttemptCount: 2,
       localArtifact:
         "/home/ubuntu/reels_audit/reel_0003/REEL_0003_RETRIEVAL_PRACTICE_HI_V2_LOCAL.mp4 (59.571-second assembled source candidate using preserved Clip 01, local caption-free procedural fallback, V3 narration, and V4 short-cue captions; its final MP4 derivative is now exact-name verified in the private Drive package)",
-      retryRecord: "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
+      retryRecord:
+        "automation/reels/REEL_0003_PRODUCTION_BLOCKER_2026-08-23.md",
     });
     expect(state.reels["0004"]).toMatchObject({
-      status: "evidence-script-narration-local-visual-ready-confirmation-required",
+      status:
+        "evidence-script-narration-local-visual-ready-confirmation-required",
       topic: "Spacing effect: a learning plan, not a magic calendar",
       researchStatus: "independently-verified",
       evidenceRecord: "automation/reels/REEL_0004_RESEARCH_DRAFT_2026-08-23.md",
-      productionBlueprint: "automation/reels/REEL_0004_PRODUCTION_BLUEPRINT_2026-08-23.md",
+      productionBlueprint:
+        "automation/reels/REEL_0004_PRODUCTION_BLUEPRINT_2026-08-23.md",
       narrationTechnicalCheck: {
-        record: "automation/reels/REEL_0004_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
+        record:
+          "automation/reels/REEL_0004_NARRATION_TECHNICAL_CHECK_2026-08-23.md",
         format: "PCM s16le WAV, 24 kHz mono",
         durationSeconds: 60.12,
         storage: "local-only",
-        status: "technically-readable-pending-visuals-captions-final-qa-and-private-package",
+        status:
+          "technically-readable-pending-visuals-captions-final-qa-and-private-package",
       },
       finalProductionGate: {
-        record: "automation/reels/REEL_0004_FINAL_PRODUCTION_GATE_2026-08-24.md",
+        record:
+          "automation/reels/REEL_0004_FINAL_PRODUCTION_GATE_2026-08-24.md",
         status: "explicit-current-brief-confirmation-required",
         finalRenderAllowed: false,
         driveUploadAllowed: false,
